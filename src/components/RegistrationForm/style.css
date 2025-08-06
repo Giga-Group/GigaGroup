@@ -1,0 +1,219 @@
+.registration-form-overlay {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 350px;
+}
+
+.registration-form-container {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.registration-form-container h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #CAAB06;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(202, 171, 6, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #CAAB06;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #b8990a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(202, 171, 6, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-form-overlay {
+        position: absolute;
+        top: auto;
+        bottom: 30px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: calc(100% - 40px);
+        max-width: 380px;
+        margin: 0;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .registration-form-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 25px 20px;
+        text-align: center;
+    }
+}
+
+/* Tablet and medium screens */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .registration-form-overlay {
+        right: 3%;
+        width: 300px;
+    }
+    
+    .registration-form-container {
+        padding: 25px 20px;
+    }
+}
+
+/* Small tablets and large mobile landscape */
+@media (max-width: 991px) and (min-width: 769px) {
+    .registration-form-overlay {
+        right: 2%;
+        width: 280px;
+    }
+    
+    .registration-form-container {
+        padding: 22px 18px;
+    }
+    
+    .registration-form-container h3 {
+        font-size: 22px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .registration-form-overlay {
+        bottom: 20px;
+        width: calc(100% - 30px);
+        max-width: 320px;
+    }
+    
+    .registration-form-container {
+        padding: 20px 15px;
+    }
+    
+    .registration-form-container h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .registration-form-overlay {
+        width: calc(100% - 20px);
+        max-width: 300px;
+        bottom: 15px;
+    }
+    
+    .registration-form-container {
+        padding: 18px 12px;
+    }
+    
+    .registration-form-container h3 {
+        font-size: 16px;
+    }
+}
+
+/* Mobile landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
+    .registration-form-overlay {
+        position: absolute;
+        top: 10px;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        max-width: calc(100vw - 40px);
+    }
+    
+    .registration-form-container {
+        padding: 15px;
+    }
+    
+    .registration-form-container h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    .form-group input {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .submit-btn {
+        padding: 10px;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+}

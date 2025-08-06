@@ -20,9 +20,9 @@ const HomePage2 =() => {
             <About2/>
             <ServiceSection sClass={'section-bg'}/>
             <ProjectSectionS2/>
-            <TeamSection/>
+            {/* <TeamSection/> */}
             <Testimonial/>
-            <BlogSection/>
+            {/* <BlogSection/> */}
             <Footer/>
             <Scrollbar/>
         </Fragment>

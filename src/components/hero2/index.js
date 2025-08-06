@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Link } from 'react-router-dom'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import RegistrationForm from '../RegistrationForm';
 
 import hero1 from '../../images/slider/slide-1.jpg'
 import hero2 from '../../images/slider/slide-2.jpg'
@@ -25,20 +26,31 @@ class Hero2 extends Component {
         };
 
         return (
-            <section className="wpo-box-style">
+            <section>
                 <div className={`wpo-hero-slider wpo-hero-style-2 ${this.props.heroClass}`}>
                     <div className="hero-container">
                         <div className="hero-wrapper">
                             <Slider {...settings}>
-                                <div className="hero-slide">
-                                    <div className="slide-inner" style={{ backgroundImage: `url(${hero1})` }}>
+                                <div className="hero-slide" style={{height: '100vh', width: '100vw'}}>
+                                    <div className="slide-inner video-slide" style={{height: '100vh', width: '100vw'}}>
+                                        <div className="video-background">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/Uo93XmFEVj4?autoplay=1&mute=1&loop=1&playlist=Uo93XmFEVj4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+                                                // src="https://www.youtube.com/embed/l6EzZafb1Pk?autoplay=1&mute=1&loop=1&playlist=l6EzZafb1Pk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+                                                title="YouTube video player"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                                ></iframe>
+                                            <div className="video-overlay"></div>
+                                        </div>
                                         <div className="container-fluid">
                                             <div className="slide-content">
                                                 <div className="slide-title">
-                                                    <h2>Creating Your Dream</h2>
+                                                    <h2>Al Ghurair Giga</h2>
                                                 </div>
                                                 <div className="slide-title-sub">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum, justo, habitant.</p>
+                                                    <p>From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>
                                                 </div>
                                                 <div className="clearfix"></div>
                                                 <div className="slide-btns">
@@ -48,7 +60,7 @@ class Hero2 extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="hero-slide">
+                                {/* <div className="hero-slide">
                                     <div className="slide-inner" style={{ backgroundImage: `url(${hero2})` }}>
                                         <div className="container-fluid">
                                             <div className="slide-content">
@@ -56,7 +68,7 @@ class Hero2 extends Component {
                                                     <h2>Creating Your Dream</h2>
                                                 </div>
                                                 <div className="slide-title-sub">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum, justo, habitant.</p>
+                                                    <p>From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>
                                                 </div>
                                                 <div className="clearfix"></div>
                                                 <div className="slide-btns">
@@ -74,7 +86,7 @@ class Hero2 extends Component {
                                                     <h2>Creating Your Dream</h2>
                                                 </div>
                                                 <div className="slide-title-sub">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum, justo, habitant.</p>
+                                                    <p>From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>
                                                 </div>
                                                 <div className="clearfix"></div>
                                                 <div className="slide-btns">
@@ -83,8 +95,10 @@ class Hero2 extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </Slider>
+                            {/* Registration Form Overlay - positioned above video */}
+                            <RegistrationForm />
                         </div>
                     </div>
                 </div>

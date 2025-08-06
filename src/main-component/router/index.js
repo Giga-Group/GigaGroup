@@ -40,19 +40,19 @@ const AllRoute = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Homepage/>} />
-          <Route path='home' element={<Homepage/>} />
-          <Route path='home2' element={<Homepage2/>} />
-          <Route path='home3' element={<Homepage3/>} />
-          <Route path='home4' element={<Homepage4/>} />
-          <Route path='home5' element={<Homepage5/>} />
+          <Route exact path='/' element={<Homepage2/>} />
+          <Route path='home' element={<Homepage2/>} />
+          {/* <Route path='home2' element={<Homepage2/>} /> */}
+          {/* <Route path='home3' element={<Homepage3/>} /> */}
+          {/* <Route path='home4' element={<Homepage4/>} /> */}
+          {/* <Route path='home5' element={<Homepage5/>} /> */}
           <Route path='about' element={<AboutPage/>} />
           <Route path='project-single/:id' element={<ProjectSinglePage/>} />
           <Route path='service-single/:id' element={<ServiceSinglePage/>} />
           <Route path='team-single/:id' element={<TeamSinglePage/>} />
           <Route path='service' element={<ServicePage/>} />
           <Route path='service-s2' element={<ServicePageS2/>} />
-          <Route path='project' element={<ProjectPage/>} />
+          <Route path='projects' element={<ProjectPage/>} />
           <Route path='project-s2' element={<ProjectPageS2/>} />
           <Route path='pricing' element={<PricingPage/>} />
           <Route path='testimonial' element={<TestimonialPage/>} />

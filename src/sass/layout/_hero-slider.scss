@@ -10,8 +10,8 @@
 .static-hero,
 .static-hero-s2,
 .static-hero-s3{
-	width: 100%;
-	height: 1000px;
+	width: 100vw;
+	height: 100vh;
 	display: flex;
 	position: relative;
 	z-index: 0;
@@ -138,6 +138,146 @@
 	.swiper-button-next {
 		@include media-query(991px) {
 			display: none;
+		}
+	}
+
+	// Video slide styles
+	.video-slide {
+		position: relative;
+		overflow: hidden;
+
+		.video-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: 1;
+
+			@include media-query(767px) {
+				/* Ensure video covers full container on mobile */
+				width: 100%;
+				height: 100%;
+				min-height: 100%;
+			}
+
+			@include media-query(480px) {
+				/* Additional mobile optimizations */
+				background-color: #000;
+			}
+
+			iframe {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100vw;
+				height: 56.25vw; /* 16:9 aspect ratio */
+				min-width: 100%;
+				min-height: 100%;
+				transform: translate(-50%, -50%);
+				border: none;
+				pointer-events: none;
+				object-fit: cover;
+
+				@include media-query(1199px) {
+					width: 177.78vh; /* Maintain 16:9 ratio based on height */
+					height: 100vh;
+				}
+
+				@include media-query(991px) {
+					width: 115.56vh;
+					height: 65vh;
+				}
+
+				@include media-query(767px) {
+					width: 133.33vw;
+					height: 75vw;
+					min-width: 120%;
+					min-height: 120%;
+				}
+
+				@include media-query(575px) {
+					width: 150vw;
+					height: 84.375vw;
+					min-width: 130%;
+					min-height: 130%;
+				}
+
+				@include media-query(480px) {
+					width: 160vw;
+					height: 90vw;
+					min-width: 140%;
+					min-height: 140%;
+				}
+
+				@include media-query(360px) {
+					width: 180vw;
+					height: 101.25vw;
+					min-width: 150%;
+					min-height: 150%;
+				}
+			}
+
+			.video-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.4);
+				z-index: 2;
+
+				@include media-query(767px) {
+					background: rgba(0, 0, 0, 0.5);
+				}
+
+				@include media-query(480px) {
+					background: rgba(0, 0, 0, 0.6);
+				}
+			}
+		}
+
+		.container-fluid {
+			position: relative;
+			z-index: 1001;
+			height: 100%;
+		}
+
+		.slide-content {
+			position: relative;
+			z-index: 1001;
+			color: #fff;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+			@include media-query(768px) {
+				/* Adjust positioning on mobile to avoid form overlap */
+				align-items: flex-start;
+				padding-left: 20px;
+				padding-right: 20px;
+				max-width: 70%;
+			}
+
+			@include media-query(480px) {
+				/* Further adjustments for small mobile */
+				max-width: 80%;
+				padding-left: 15px;
+				padding-right: 15px;
+				justify-content: flex-start;
+				padding-top: 80px;
+			}
+
+			@include media-query(360px) {
+				/* Very small screens */
+				max-width: 85%;
+				padding-top: 60px;
+			}
 		}
 	}
 
@@ -544,17 +684,28 @@
 wpo-hero-style-2
 --------------------------------------------*/
 .wpo-hero-style-2{
-	height: 850px;
+	height: 100vh;
 
 	@include media-query(991px) {
-		height: 650px;
+		height: 70vh;
+		min-height: 600px;
 	}
 
 	@include media-query(767px) {
-		height: 500px;
+		height: 60vh;
+		min-height: 500px;
 	}
 	@include media-query(540px) {
-		height: 450px;
+		height: 55vh;
+		min-height: 450px;
+	}
+	@include media-query(480px) {
+		height: 50vh;
+		min-height: 400px;
+	}
+	@include media-query(360px) {
+		height: 45vh;
+		min-height: 350px;
 	}
 
 	.slide-inner{
@@ -564,17 +715,28 @@ wpo-hero-style-2
 	}
 
 	.slick-slide{
-		height: 850px;
+		height: 100vh;
 
 		@include media-query(991px) {
-			height: 650px;
+			height: 70vh;
+			min-height: 600px;
 		}
 
 		@include media-query(767px) {
-			height: 500px;
+			height: 60vh;
+			min-height: 500px;
 		}
 		@include media-query(540px) {
-			height: 450px;
+			height: 55vh;
+			min-height: 450px;
+		}
+		@include media-query(480px) {
+			height: 50vh;
+			min-height: 400px;
+		}
+		@include media-query(360px) {
+			height: 45vh;
+			min-height: 350px;
 		}
 		.slide-content{
 			padding-bottom: 90px;
@@ -583,6 +745,18 @@ wpo-hero-style-2
 				padding: 0;
 				text-align: center;
 				max-width: 600px;
+			}
+
+			@include media-query(768px) {
+				/* Ensure text doesn't overlap with form on mobile */
+				padding: 20px 20px 0 20px;
+				max-width: 70%;
+				text-align: left;
+			}
+
+			@include media-query(480px) {
+				padding: 15px 15px 0 15px;
+				max-width: 75%;
 			}
 
 		}
@@ -1011,7 +1185,7 @@ hero style 3
 
 
 	.slick-slide{
-		height: 1000px;
+		height: 100vh;
 
 		@include media-query(991px) {
 			height: 600px;

@@ -7,6 +7,7 @@ import Projects from '../../api/project'
 
 class ProjectSection extends Component {
     render() {
+        console.log(Projects);
         var settings = {
             dots: false,
             arrows: true,
