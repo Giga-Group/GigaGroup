@@ -8,12 +8,18 @@
 }
 
 .registration-form-container {
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(15px);
+    background: transparent;
+    backdrop-filter: none;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.registration-form-container:hover {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
 }
 
 .registration-form-container h3 {
@@ -33,8 +39,8 @@
 .form-group input {
     width: 100%;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     color: #fff;
     font-size: 16px;
@@ -42,14 +48,19 @@
     box-sizing: border-box;
 }
 
+.form-group input:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
 .form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .form-group input:focus {
     outline: none;
     border-color: #CAAB06;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(202, 171, 6, 0.3);
 }

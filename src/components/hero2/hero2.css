@@ -1,0 +1,14 @@
+/* Mobile optimization: Hide paragraph text on mobile for better form visibility */
+@media (max-width: 768px) {
+    .mobile-hidden-text {
+        display: none !important;
+    }
+}
+
+/* Tablet view: Make text more subtle */
+@media (max-width: 991px) and (min-width: 769px) {
+    .mobile-hidden-text {
+        opacity: 0.5;
+        font-size: 14px;
+    }
+}

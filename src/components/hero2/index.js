@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RegistrationForm from '../RegistrationForm';
+import './hero2.css';
 
 import hero1 from '../../images/slider/slide-1.jpg'
 import hero2 from '../../images/slider/slide-2.jpg'
@@ -47,15 +48,15 @@ class Hero2 extends Component {
                                         <div className="container-fluid">
                                             <div className="slide-content">
                                                 <div className="slide-title">
-                                                    <h2>Al Ghurair Giga</h2>
+                                                    <h2 className="mobile-hidden-text">Al Ghurair Giga</h2>
                                                 </div>
                                                 <div className="slide-title-sub">
-                                                    <p>From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>
+                                                    <p className="mobile-hidden-text">From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>
                                                 </div>
                                                 <div className="clearfix"></div>
-                                                <div className="slide-btns">
+                                                {/* <div className="slide-btns">
                                                     <Link to="/about" className="theme-btn">Discover More</Link>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>
