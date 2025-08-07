@@ -6,7 +6,7 @@ import ProjectSection from '../../components/Projects';
 import ServiceSection from '../../components/Services';
 import FunFact from '../../components/FunFact';
 import TeamSection from '../../components/TeamSection';
-import Testimonial from '../../components/Testimonial';
+import VideoTestimonials from '../../components/VideoTestimonials';
 import BlogSection from '../../components/BlogSection';
 import Footer from '../../components/footer';
 import Scrollbar from '../../components/scrollbar'
@@ -24,7 +24,7 @@ const HomePage =() => {
             <ServiceSection/>
             <FunFact/>
             <TeamSection/>
-            <Testimonial/>
+            <VideoTestimonials/>
             <BlogSection/>
             <Footer/>
             <Scrollbar/>

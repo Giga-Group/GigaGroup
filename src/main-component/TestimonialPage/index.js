@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar'
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
-import Testimonial from '../../components/Testimonial'
+import VideoTestimonials from '../../components/VideoTestimonials'
 import Logo from '../../images/logo.svg'
 
 
@@ -11,8 +11,8 @@ const TestimonialPage =() => {
     return(
         <Fragment>
             <Navbar Logo={Logo}/>
-            <PageTitle pageTitle={'Testimonilal'} pagesub={'Testimonilal'}/> 
-            <Testimonial tClass="style-2"/>
+            <PageTitle pageTitle={'Celebrity Testimonials'} pagesub={'Celebrity Testimonials'}/> 
+            <VideoTestimonials/>
             <Footer ftClass={'wpo-site-footer-s2'}/>
             <Scrollbar/>
         </Fragment>

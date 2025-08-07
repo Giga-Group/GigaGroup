@@ -5,7 +5,7 @@ import About2 from '../../components/about2';
 import ProjectSectionS2 from '../../components/ProjectsS2';
 import ServiceSection from '../../components/Services';
 import TeamSection from '../../components/TeamSection';
-import Testimonial from '../../components/Testimonial';
+import VideoTestimonials from '../../components/VideoTestimonials';
 import BlogSection from '../../components/BlogSection';
 import Footer from '../../components/footer';
 import Scrollbar from '../../components/scrollbar'
@@ -21,7 +21,7 @@ const HomePage2 =() => {
             <ServiceSection sClass={'section-bg'}/>
             <ProjectSectionS2/>
             {/* <TeamSection/> */}
-            <Testimonial/>
+            <VideoTestimonials/>
             {/* <BlogSection/> */}
             <Footer/>
             <Scrollbar/>
