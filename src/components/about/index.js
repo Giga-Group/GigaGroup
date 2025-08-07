@@ -19,11 +19,11 @@ const About = (props) => {
                     <div className="col-lg-7 col-md-12 colsm-12">
                         <div className="wpo-about-text">
                             <div className="wpo-about-title">
-                                <span>About Us</span>
-                                <h2>We Offer You Profesional Interior Design</h2>
+                                <span>About Al Ghurair Giga Pakistan</span>
+                                <h2>The Pinnacle Of Modern Living & Architectural Excellence</h2>
                             </div>
-                        <h5>Over 25 years Liarch helping investors building their drea & business goals go to the perfection</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac enim aliquam feugiat ullamcorper. Id risus mattis neque, ullamcorper. Sed sit commodo vestibulum cras in cras. Nec proin scelerisque quis nisl vitae, egestas non. Fringilla auctor.</p>
+                        <h5>Over 60+ years of excellence helping investors and families achieve their dream homes and business goals in Pakistan's most prestigious developments</h5>
+                        <p>Al Ghurair Giga Pakistan (Pvt) Ltd stands as a testament to visionary leadership and unwavering commitment to quality. Founded by Haji Abdul Rahim Giga in 1956 in Dubai's textile industry, our journey began with one bold step that has blossomed into a giant enterprise spanning across Pakistan and the UAE. Today, we're proud to deliver world-class residential and commercial projects with 99.99% customer satisfaction, 5,000+ employees worldwide, and over 7 million square feet of premium real estate.</p>
                             <div className="btns">
                                 <Link to="/about" onClick={ClickHandler} className="theme-btn">Discover More</Link>
                                 <ul>

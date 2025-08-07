@@ -24,24 +24,24 @@ const Footer = (props) =>{
                             <p>Al Ghurair Giga Pakistan is a leading real estate developer with 70 years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
                             <ul>
                                 <li>
-                                    <Link onClick={ClickHandler} to="/">
+                                    <a href="https://www.facebook.com/AGGPPL" target="_blank" rel="noopener noreferrer">
                                         <i className="ti-facebook"></i>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link onClick={ClickHandler} to="/">
-                                        <i className="ti-twitter-alt"></i>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link onClick={ClickHandler} to="/">
+                                    <a href="https://www.instagram.com/alghurairgiga/" target="_blank" rel="noopener noreferrer">
                                         <i className="ti-instagram"></i>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link onClick={ClickHandler} to="/">
-                                        <i className="ti-google"></i>
-                                    </Link>
+                                    <a href="https://www.linkedin.com/company/giga-group-of-companies" target="_blank" rel="noopener noreferrer">
+                                        <i className="ti-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@GigaGroupPakistan" target="_blank" rel="noopener noreferrer">
+                                        <i className="ti-youtube"></i>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

@@ -18,8 +18,8 @@ const About2 = (props) => {
                             <div className="wpo-about-img-left">
                                 <img src={abimg} alt=""/>
                                     <div className="wpo-about-img-text">
-                                        <h2>25+</h2>
-                                        <p>Years of Experience</p>
+                                        <h2>60+</h2>
+                                        <p>Years of Excellence</p>
                                     </div>
                             </div>
                             <div className="wpo-about-img-right">
@@ -30,14 +30,15 @@ const About2 = (props) => {
                     <div className="col-lg-6 col-md-12 colsm-12">
                         <div className="wpo-about-text">
                             <div className="wpo-about-title">
-                                <span>About Us</span>
-                                <h2>We Offer You Profesional Interior Design</h2>
+                                <span>About Al Ghurair Giga Pakistan</span>
+                                <h2>Building Dreams, Shaping Communities Since 1956</h2>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consctetur adipiscing elit. Aceim aliquam feugiat ullamcorper. Id risus mattis.</p>
+                            <p>Al Ghurair Giga Pakistan (Pvt) Ltd is a trusted name in real estate development with over 60 years of excellence. Founded by Haji Abdul Rahim Giga in 1956 in Dubai's textile industry, what started as one bold step has evolved into a giant enterprise that continues to grow and branch out across Pakistan and the UAE.</p>
                             <ul className="ab-list">
-                                <li>We provide free initial consultation and support.</li>
-                                <li>We have the professional designers team.</li>
-                                <li>We work with some of the most successful businesses.</li>
+                                <li>Over 60+ years of architectural excellence and premium quality development</li>
+                                <li>5,000+ employees worldwide delivering world-class projects</li>
+                                <li>7M+ sq ft of commercial & residential space with 99.99% customer satisfaction</li>
+                                <li>Iconic projects like Giga City, Goldcrest Views, and Giga Mall redefining urban living</li>
                             </ul>
                             <div className="btns">
                                 <Link to="/about" onClick={ClickHandler} className="theme-btn">Discover More</Link>
