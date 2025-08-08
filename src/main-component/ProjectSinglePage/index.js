@@ -147,7 +147,7 @@ const ProjectSinglePage = (props) => {
                                         </div>
                                     </div>
                                     <RelatedProject/>
-                                    <Discuss/>
+                                    <Discuss currentProject={projectDetails.title} />
                                 </div>
                             </div>
                         </div>

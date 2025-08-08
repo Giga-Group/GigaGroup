@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import { processFormSubmission } from '../../utils/formSubmission';
 
 class RegistrationForm extends Component {
     constructor(props) {
@@ -17,12 +18,29 @@ class RegistrationForm extends Component {
         });
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Registration submitted:', this.state);
-        // Add your form submission logic here
-        alert('Thank you for your interest! We will contact you soon.');
-        this.setState({ fullName: '', email: '', contact: '' });
+        
+        const formData = {
+            name: this.state.fullName,
+            email: this.state.email,
+            contact: this.state.contact,
+            project: 'Registration Interest',
+            message: 'Lead from registration form',
+            source: 'Registration'
+        };
+        
+        await processFormSubmission(
+            formData,
+            () => {
+                // Success callback - reset form
+                this.setState({ fullName: '', email: '', contact: '' });
+            },
+            (error) => {
+                // Error callback
+                console.error('Registration submission error:', error);
+            }
+        );
     }
 
     render() {

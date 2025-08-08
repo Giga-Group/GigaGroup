@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Projects from '../../api/project'
+import { processFormSubmission } from '../../utils/formSubmission'
 
 
 class ContactForm extends Component {
@@ -7,10 +9,9 @@ class ContactForm extends Component {
     state = {
         name: '',
         email: '',
-        subject: '',
-        lastname: '',
-        events: '',
-        notes: '',
+        contact: '',
+        message: '',
+        project: '',
         error: {}
     }
 
@@ -28,12 +29,7 @@ class ContactForm extends Component {
     subimtHandler = (e) => {
         e.preventDefault();
 
-        const { name,
-            email,
-            subject,
-            lastname,
-            events,
-            notes, error } = this.state;
+        const { name, email, contact, message, project, error } = this.state;
 
         if (name === '') {
             error.name = "Please enter your name";
@@ -41,82 +37,83 @@ class ContactForm extends Component {
         if (email === '') {
             error.email = "Please enter your email";
         }
-        if (subject === '') {
-            error.subject = "Please enter your subject";
+        if (contact === '') {
+            error.contact = "Please enter your contact number";
         }
-        if (lastname === '') {
-            error.lastname = "Please enter your Lastname";
-        }
-        if (events === '') {
-            error.events = "Select your event list";
-        }
-        if (notes === '') {
-            error.notes = "Please enter your note";
-        }
-
 
         if (error) {
             this.setState({
                 error
             })
         }
-        if (error.name === '' && error.email === '' && error.email === '' && error.lastname === '' && error.subject === '' && error.events === '' && error.notes === '') {
-            this.setState({
-                name: '',
-                email: '',
-                subject: '',
-                events: '',
-                notes: '',
-                error: {}
-            })
+        if (error.name === '' && error.email === '' && error.contact === '') {
+            const formData = {
+                name: this.state.name,
+                email: this.state.email,
+                contact: this.state.contact,
+                project: this.state.project || 'Not specified',
+                message: this.state.message || 'No message',
+                source: 'Contact'
+            };
+            
+            processFormSubmission(
+                formData,
+                () => {
+                    // Success callback - reset form
+                    this.setState({
+                        name: '',
+                        email: '',
+                        contact: '',
+                        message: '',
+                        project: '',
+                        error: {}
+                    });
+                },
+                (error) => {
+                    // Error callback
+                    console.error('Contact form submission error:', error);
+                }
+            );
         }
     }
 
     render(){
-        const { name,
-            email,
-            subject,
-            lastname,
-            error } = this.state;
+        const { name, email, contact, message, project, error } = this.state;
 
         return(
             <form onSubmit={this.subimtHandler} className="form">
                 <div className="row justify-content-center">
                     <div className="col-lg-6 col-md-6 col-12">
                         <div className="form-field">
-                            <input value={name} onChange={this.changeHandler} type="text" name="name" placeholder="Name"/>
+                            <input value={name} onChange={this.changeHandler} type="text" name="name" placeholder="Full Name" required/>
                             <p>{error.name ? error.name : ''}</p>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6 col-12">
                         <div className="form-field">
-                            <input value={lastname} onChange={this.changeHandler} type="text" name="lastname" placeholder="Lastname"/>
-                            <p>{error.lastname ? error.lastname : ''}</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6 col-12">
-                        <div className="form-field">
-                            <input onChange={this.changeHandler} value={email} type="email" name="email" placeholder="Email"/>
+                            <input onChange={this.changeHandler} value={email} type="email" name="email" placeholder="Email Address" required/>
                             <p>{error.email ? error.email : ''}</p>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6 col-12">
                         <div className="form-field">
-                            <select className="form-control" onChange={this.changeHandler} value={subject} type="text" name="subject">
-                                <option >Service</option>
-                                <option>Architecture</option>
-                                <option>The Rehearsal Dinner</option>
-                                <option>The Afterparty</option>
-                                <option>Videographers</option>
-                                <option>Perfect Cake</option>
-                                <option>All Of The Above</option>
+                            <input value={contact} onChange={this.changeHandler} type="tel" name="contact" placeholder="Contact Number" required/>
+                            <p>{error.contact ? error.contact : ''}</p>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-12">
+                        <div className="form-field">
+                            <select className="form-control" onChange={this.changeHandler} value={project} name="project">
+                                <option value="">Interested in Project</option>
+                                {Projects.map((proj) => (
+                                    <option key={proj.Id} value={proj.title}>{proj.title}</option>
+                                ))}
                             </select>
-                            <p>{error.subject ? error.subject : ''}</p>
                         </div>
                     </div>
                     <div className="col-lg-12">
                         <div className="form-field">
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <textarea name="message" value={message} onChange={this.changeHandler} placeholder="Message (Optional)"></textarea>
                         </div>
                     </div>
                     <div className="col-lg-12">
