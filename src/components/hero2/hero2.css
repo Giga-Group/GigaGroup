@@ -1,14 +1,15 @@
-/* Mobile optimization: Hide paragraph text on mobile for better form visibility */
+/* Mobile optimization: Hide text on mobile for better form visibility */
 @media (max-width: 768px) {
     .mobile-hidden-text {
         display: none !important;
     }
 }
 
-/* Tablet view: Make text more subtle */
+/* Tablet view: Make text more subtle but still visible */
 @media (max-width: 991px) and (min-width: 769px) {
     .mobile-hidden-text {
-        opacity: 0.5;
+        opacity: 0.7;
         font-size: 14px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 }

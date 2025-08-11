@@ -168,7 +168,7 @@ function sendDailyLeadSummary() {
     
     // Send email
     MailApp.sendEmail({
-      to: 'info@alghurairgiga.com',
+      to: 'gigagroup.dev@gmail.com',
       subject: `Daily Lead Report - Al Ghurair Giga (${todaysLeads.length} New Leads)`,
       htmlBody: emailBody
     });

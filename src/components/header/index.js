@@ -114,7 +114,7 @@ const Header = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-2 col-2">
+                            {/* <div className="col-lg-3 col-md-2 col-2">
                                 <div className="header-right">
                                     <div className="header-search-form-wrapper">
                                         <div className="cart-search-contact">
@@ -179,7 +179,7 @@ const Header = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </nav>

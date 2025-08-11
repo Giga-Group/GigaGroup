@@ -36,7 +36,8 @@ class Hero2 extends Component {
                                     <div className="slide-inner video-slide" style={{height: '100vh', width: '100vw'}}>
                                         <div className="video-background">
                                             <iframe
-                                                src="https://www.youtube.com/embed/Uo93XmFEVj4?autoplay=1&mute=1&loop=1&playlist=Uo93XmFEVj4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+                                            // https://youtu.be/2J8bn2BLVCY
+                                                src="https://www.youtube.com/embed/2J8bn2BLVCY?autoplay=1&mute=1&loop=1&playlist=2J8bn2BLVCY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
                                                 // src="https://www.youtube.com/embed/l6EzZafb1Pk?autoplay=1&mute=1&loop=1&playlist=l6EzZafb1Pk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
                                                 title="YouTube video player"
                                                 frameBorder="0"
