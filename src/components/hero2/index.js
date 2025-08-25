@@ -37,7 +37,7 @@ class Hero2 extends Component {
                                         <div className="video-background">
                                             <iframe
                                             // https://youtu.be/2J8bn2BLVCY
-                                                src="https://www.youtube.com/embed/2J8bn2BLVCY?autoplay=1&mute=1&loop=1&playlist=2J8bn2BLVCY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+                                                src="https://www.youtube.com/embed/lxOWww4vfmY?autoplay=1&mute=1&loop=1&playlist=lxOWww4vfmY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
                                                 // src="https://www.youtube.com/embed/l6EzZafb1Pk?autoplay=1&mute=1&loop=1&playlist=l6EzZafb1Pk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
                                                 title="YouTube video player"
                                                 frameBorder="0"

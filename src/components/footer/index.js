@@ -24,12 +24,12 @@ const Footer = (props) =>{
                             <p>Al Ghurair Giga Pakistan is a leading real estate developer with 70 years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
                             <ul>
                                 <li>
-                                    <a href="https://www.facebook.com/AGGPPL" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.facebook.com/GigaGroupPakistan/" target="_blank" rel="noopener noreferrer">
                                         <i className="ti-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/alghurairgiga/" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.instagram.com/gigagrouppakistan" target="_blank" rel="noopener noreferrer">
                                         <i className="ti-instagram"></i>
                                     </a>
                                 </li>
