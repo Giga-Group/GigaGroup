@@ -15,7 +15,7 @@ const ServiceSection = (props) => {
     return (
         <div className={`wpo-service-area section-padding ${props.sClass}`}>
             <div className="container">
-                <SectionTitle subTitle={'Our Capabilities'} MainTitle={'What We Do'}/>
+                <SectionTitle subTitle={'Why Choose Giga Group'} MainTitle={'Why Us'}/>
                 <div className="row align-items-center">
                     {Services.slice(0,6).map((service, sitem) => (
                         <div className="col-lg-4 col-md-6 col-12" key={sitem}>

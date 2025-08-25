@@ -28,124 +28,140 @@ const ProjectSinglePage = (props) => {
                                     <div className="row align-items-center">
                                         <div className="col-lg-7">
                                             <div className="wpo-project-single-title">
-                                                <h3>{projectDetails.title} Project</h3>
+                                                <h3>{projectDetails.title}</h3>
+                                                <h4>{projectDetails.subTitle}</h4>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus dis posuere
-                                                amet
-                                                tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, platea condimentum
-                                                cursus
-                                                velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit
-                                                dictum
-                                                quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id
-                                                aliquet duis
-                                                sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit
-                                                curabitur
-                                                amet risus bibendum. Posuere et eget orci, tempor enim.</p>
-                                            <p>Hac nibh fermentum nisi, platea condimentum cursus velit dui. Massa volutpat
-                                                odio
-                                                facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra
-                                                est, at
-                                                rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit
-                                                sit Et nisi in libero facilisis sed est. Elit curabitur amet risus bibendum.
-                                                Posuere et eget orci. sed velit dictum quam. Id risus pharetra est</p>
+                                            {projectDetails.description.map((desc, index) => (
+                                                <p key={index}>{desc}</p>
+                                            ))}
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="wpo-project-single-content-des-right">
                                                 <ul>
-                                                    <li>Location :<span>7 Lake Street,London</span></li>
-                                                    <li>Client :<span>wpOceans</span></li>
-                                                    <li>Architect :<span>Harry Johnson</span></li>
-                                                    <li>Project Type :<span>Interior</span></li>
-                                                    <li>Duration :<span>6 Month</span></li>
-                                                    <li>Completion :<span>15 Apr 2022</span></li>
-                                                    <li>Share :<span>Architectural, Business</span></li>
+                                                <li>Location : <span>{projectDetails.projectDetails.location}</span></li>
+                                                <li>Retrun : <span>{projectDetails.projectDetails.returnPotential}</span></li>
+                                                <li>Interiors : <span>{projectDetails.projectDetails.interiors}</span></li>
+                                                <li>Parking : <span>{projectDetails.projectDetails.parking}</span></li>
+                                                <li>Amenities : <span>{projectDetails.projectDetails.amenities}</span></li>
+                                                <li>Security : <span>{projectDetails.projectDetails.security}</span></li>
+                                                <li>Connectivity : <span>{projectDetails.projectDetails.connectivity}</span></li>
+                                                <li>Status : <span>{projectDetails.projectDetails.status}</span></li>
+                                                <li>Project Type : <span>{projectDetails.projectDetails.projectType}</span></li>
+                                                 <li>Category : <span>{projectDetails.projectDetails.category}</span></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="wpo-project-single-main-img">
-                                        <img src={projectDetails.ps1img} alt=""/>
+                                        <img src={projectDetails.ps1img} alt={projectDetails.title}/>
                                     </div>
+                                    
+                                    {/* Design Philosophy Section */}
+                                    <div className="wpo-project-single-item">
+                                        <div className="wpo-project-single-title">
+                                            <h3>{projectDetails.designPhilosophy.title}</h3>
+                                        </div>
+                                        <p>{projectDetails.designPhilosophy.description}</p>
+                                        <ul>
+                                            {projectDetails.designPhilosophy.philosophy.map((item, index) => (
+                                                <li key={index}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Project Features Section */}
                                     <div className="wpo-project-single-item list-widget">
                                         <div className="row">
                                             <div className="col-lg-6">
                                                 <div className="wpo-project-single-title">
-                                                    <h3>Our Strategies</h3>
+                                                    <h3>{projectDetails.projectFeatures.title}</h3>
                                                 </div>
-                                                <p>Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum
-                                                    quam. Id
-                                                    risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                                                    sollicitudin diam.</p>
+                                                <p>{projectDetails.projectFeatures.description}</p>
                                                 <ul>
-                                                    <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                                    <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                                    <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                                    <li>Massa volutpat odio facilisis purus sit elementum.</li>
-                                                    <li>Elit curabitur amet risus bibendum.</li>
+                                                    {projectDetails.projectFeatures.features.map((feature, index) => (
+                                                        <li key={index}>{feature}</li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                             <div className="col-lg-6">
                                                 <div className="wpo-project-single-item-quote">
-                                                    <p>"Amazing looking theme and instantly turns your application into a great
-                                                        looking one. Really shows that pro_ fessionals built this theme up. Very
-                                                        happy with the way the theme looks ."</p>
-                                                    <span>Robert - <span>Yellow Theme</span></span>
+                                                    <p>"{projectDetails.testimonial.quote}"</p>
+                                                    <span>{projectDetails.testimonial.author} - <span>{projectDetails.testimonial.designation}</span></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="wpo-project-single-item">
-                                        <div className="wpo-project-single-title">
-                                            <h3>Our approach</h3>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat suspendisse aenean
-                                            tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi
-                                            eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit
-                                            elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae
-                                            id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem
-                                            adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce
-                                            vulputate diam interdum morbi ac a.</p>
-                                    </div>
+
+                                    {/* Project Gallery */}
                                     <div className="wpo-project-single-gallery">
                                         <div className="row mt-4">
                                             <div className="col-md-6 col-sm-6 col-12">
                                                 <div className="wpo-p-details-img">
-                                                    <img src={projectDetails.psub1img1} alt=""/>
+                                                    <img src={projectDetails.psub1img1} alt={projectDetails.title}/>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 col-sm-6 col-12">
                                                 <div className="wpo-p-details-img">
-                                                    <img src={projectDetails.psub1img2} alt=""/>
+                                                    <img src={projectDetails.psub1img2} alt={projectDetails.title}/>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    {/* Project Amenities and Why Choose Sections */}
                                     <div className="wpo-project-single-item list-widget">
                                         <div className="row">
                                             <div className="col-lg-6">
                                                 <div className="wpo-project-single-title">
-                                                    <h3>Resieved goals</h3>
+                                                    <h3>{projectDetails.projectAmenities.title}</h3>
                                                 </div>
+                                                <p>{projectDetails.projectAmenities.description}</p>
                                                 <ul>
-                                                    <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                                    <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                                    <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                                    <li>Massa volutpat odio facilisis purus sit elementum.</li>
+                                                    {projectDetails.projectAmenities.amenities.map((amenity, index) => (
+                                                        <li key={index}>{amenity}</li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                             <div className="col-lg-6 list-widget-s">
                                                 <div className="wpo-project-single-title">
-                                                    <h3>Results</h3>
+                                                    <h3>{projectDetails.whyChoose.title}</h3>
                                                 </div>
+                                                <p>{projectDetails.whyChoose.description}</p>
                                                 <ul>
-                                                    <li>Mauris dignissim blandit cursus imperdiet accumsan lorem.</li>
-                                                    <li>Nam id in non sed cras purus nunc et.</li>
-                                                    <li>Mauris orci, cursus nisl odio est adipiscing gravida magna eget.</li>
-                                                    <li>Quis mauris vel felis convallis nulla dignissim.</li>
+                                                    {projectDetails.whyChoose.reasons.map((reason, index) => (
+                                                        <li key={index}>{reason}</li>
+                                                    ))}
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+
+                                    {/* Investment Highlights Section */}
+                                    {/* <div className="wpo-project-single-item">
+                                        <div className="wpo-project-single-title">
+                                            <h3>{projectDetails.investmentHighlights.title}</h3>
+                                        </div>
+                                        <p>{projectDetails.investmentHighlights.description}</p>
+                                        <ul>
+                                            {projectDetails.investmentHighlights.highlights.map((highlight, index) => (
+                                                <li key={index}>{highlight}</li>
+                                            ))}
+                                        </ul>
+                                    </div> */}
+
+                                    {/* Location Advantages Section */}
+                                    {/* <div className="wpo-project-single-item">
+                                        <div className="wpo-project-single-title">
+                                            <h3>{projectDetails.locationAdvantages.title}</h3>
+                                        </div>
+                                        <p>{projectDetails.locationAdvantages.description}</p>
+                                        <ul>
+                                            {projectDetails.locationAdvantages.advantages.map((advantage, index) => (
+                                                <li key={index}>{advantage}</li>
+                                            ))}
+                                        </ul>
+                                    </div> */}
+
                                     <RelatedProject/>
                                     <Discuss currentProject={projectDetails.title} />
                                 </div>

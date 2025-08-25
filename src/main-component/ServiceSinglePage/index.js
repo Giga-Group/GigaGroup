@@ -32,15 +32,8 @@ const ServiceSinglePage = (props) => {
                                     <div className="wpo-service-single-title">
                                         <h3>{serviceDetails.sTitle}</h3>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus dis posuere amet
-                                        tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, platea condimentum cursus
-                                        velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum
-                                        quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                                        sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur
-                                        amet risus bibendum. Posuere et eget orci, tempor enim.</p>
-                                    <p>Hac nibh fermentum nisi, platea condimentum cursus velit dui. Massa volutpat odio
-                                        facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at
-                                        rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit.</p>
+                                    <p>When you choose Giga Group for your project, you're selecting a partner with over 65 years of proven excellence across multiple industries. From real estate development to retail management, our comprehensive approach ensures every aspect of your investment is handled with precision and care.</p>
+                                    <p>We understand that your investment is more than just a property - it's a foundation for your future, a place for your business to grow, and a legacy for generations to come. That's why we approach every project with the same dedication and attention to detail, regardless of size or scope.</p>
                                     <div className="row mt-4">
                                         <div className="col-md-6 col-sm-6 col-12">
                                             <div className="wpo-p-details-img">
@@ -56,40 +49,32 @@ const ServiceSinglePage = (props) => {
                                 </div>
                                 <div className="wpo-service-single-item list-widget">
                                     <div className="wpo-service-single-title">
-                                        <h3>Our Capabilities</h3>
+                                        <h3>Why Choose Us</h3>
                                     </div>
-                                    <p>Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum quam. Id
-                                        risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis
-                                        sollicitudin diam.</p>
+                                    <p>Our commitment to excellence is reflected in every project we undertake. We combine international standards with local expertise, ensuring your investment not only meets but exceeds global benchmarks while serving local market needs perfectly.</p>
                                     <ul>
-                                        <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                        <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                        <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                        <li>Massa volutpat odio facilisis purus sit elementum.</li>
-                                        <li>Elit curabitur amet risus bibendum.</li>
+                                        <li>Proven legacy since 1956 with operations across Pakistan, UAE, and other countries</li>
+                                        <li>Multi-sector expertise spanning real estate, retail, trading, and manufacturing</li>
+                                        <li>Iconic project portfolio including Giga Mall Islamabad and Goldcrest Views</li>
+                                        <li>Strategic locations in prime areas like DHA Phase II Islamabad</li>
+                                        <li>Comprehensive development approach creating complete communities</li>
                                     </ul>
                                 </div>
                                 <div className="wpo-service-single-item">
                                     <div className="wpo-service-single-title">
                                         <h3>Our approach</h3>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat suspendisse aenean
-                                        tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi
-                                        eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit
-                                        elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae
-                                        id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem
-                                        adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce
-                                        vulputate diam interdum morbi ac a.</p>
+                                    <p>We believe in a comprehensive approach that goes beyond traditional real estate development. Our process begins with understanding market dynamics, client needs, and community requirements, then translating those insights into integrated developments that create lasting value for all stakeholders.</p>
                                 </div>
                                 <div className="wpo-service-single-item list-widget">
                                     <div className="wpo-service-single-title">
                                         <h3>Our Work Process</h3>
                                     </div>
                                     <ul>
-                                        <li>Non saed velit dictum quam risus pharetra esta.</li>
-                                        <li>Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.</li>
-                                        <li>Hac nibh fermentum nisi, platea condimentum cursus.</li>
-                                        <li>Massa volutpat odio facilisis purus sit elementum.</li>
+                                        <li>Market research and strategic location analysis for optimal investment potential</li>
+                                        <li>Comprehensive project planning and development strategy formulation</li>
+                                        <li>Integrated design and construction with quality assurance systems</li>
+                                        <li>Community development and post-completion management services</li>
                                     </ul>
                                 </div>
                                 <RelatedService/>
