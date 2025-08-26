@@ -32,7 +32,7 @@ class Hero2 extends Component {
                     <div className="hero-container">
                         <div className="hero-wrapper">
                             <Slider {...settings}>
-                                <div className="hero-slide" style={{height: '100vh', width: '100vw'}}>
+                                <div className="hero-slide">
                                     <div className="slide-inner video-slide" style={{height: '100vh', width: '100vw'}}>
                                         <div className="video-background">
                                             <iframe
@@ -49,7 +49,7 @@ class Hero2 extends Component {
                                         <div className="container-fluid">
                                             <div className="slide-content">
                                                 <div className="slide-title">
-                                                    <h2 className="mobile-hidden-text">Al Ghurair Giga</h2>
+                                                    <h2 className="mobile-hidden-text">Giga Group</h2>
                                                 </div>
                                                 <div className="slide-title-sub">
                                                     <p className="mobile-hidden-text">From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>

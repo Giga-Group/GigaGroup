@@ -173,7 +173,7 @@
 				left: 50%;
 				width: 100vw;
 				height: 56.25vw; /* 16:9 aspect ratio */
-				min-width: 100%;
+				min-width: 570%;
 				min-height: 100%;
 				transform: translate(-50%, -50%);
 				border: none;
@@ -183,29 +183,33 @@
 				@include media-query(1199px) {
 					width: 177.78vh; /* Maintain 16:9 ratio based on height */
 					height: 100vh;
+					min-width: 570%;
+
 				}
 
 				@include media-query(991px) {
 					width: 115.56vh;
 					height: 65vh;
+					min-width: 570%;
+
 				}
 
 				@include media-query(767px) {
 					width: 133.33vw;
 					height: 75vw;
-					min-width: 120%;
+					min-width: 570%;
 					min-height: 120%;
 				}
 
 				@include media-query(575px) {
-					width: 150vw;
+					width: 570%;
 					height: 84.375vw;
 					min-width: 130%;
 					min-height: 130%;
 				}
 
 				@include media-query(480px) {
-					width: 160vw;
+					width: 570%;
 					height: 90vw;
 					min-width: 140%;
 					min-height: 140%;
@@ -214,7 +218,7 @@
 				@include media-query(360px) {
 					width: 180vw;
 					height: 101.25vw;
-					min-width: 150%;
+					min-width: 570%;
 					min-height: 150%;
 				}
 			}
