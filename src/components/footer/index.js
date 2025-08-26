@@ -103,7 +103,7 @@ const Footer = (props) =>{
                 <div className="row">
                     <div className="col col-xs-12">
                         <ul>
-                            <li>&copy; 2025 Al Ghurair Giga Pakistan. All Rights Reserved.</li>
+                            <li>&copy; 2025 Giga Group. All Rights Reserved.</li>
                             <li><Link onClick={ClickHandler} to="/">Terms of use |</Link> <Link onClick={ClickHandler} to="/">Privacy Environmental Policy</Link></li>
                         </ul>
                     </div>
