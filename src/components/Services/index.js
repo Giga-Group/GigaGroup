@@ -23,7 +23,7 @@ const ServiceSection = (props) => {
                                 <i className={service.icon}></i>
                                 <h2>{service.sTitle}</h2>
                                 <p>{service.description}</p>
-                                <Link onClick={ClickHandler} to={`/service-single/${service.Id}`}>Learn More...</Link>
+                                {/* <Link onClick={ClickHandler} to={`/service-single/${service.Id}`}>Learn More...</Link> */}
                             </div>
                         </div>
                     ))}

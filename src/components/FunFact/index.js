@@ -15,11 +15,7 @@ const FunFact = (props) => {
         {
             title: '10M+ sq ft',
             subTitle: 'Projects Delivered',
-        },
-        {
-            title: '5+',
-            subTitle: 'Awards Won',
-        },
+        }
 
 
     ]

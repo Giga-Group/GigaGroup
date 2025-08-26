@@ -6,12 +6,12 @@ const config = {
   googleScriptUrl: process.env.REACT_APP_GOOGLE_SCRIPT_URL,
   
   // Email Configuration (defaults provided)
-  contactEmail: process.env.REACT_APP_CONTACT_EMAIL || 'info@alghurairgiga.com',
+  contactEmail: process.env.REACT_APP_CONTACT_EMAIL || 'info@gigagroup.com',
   reportsEmail: process.env.REACT_APP_REPORTS_EMAIL || 'gigagroup.dev@gmail.com',
   
   // Company Information (defaults provided)
-  companyName: process.env.REACT_APP_COMPANY_NAME || 'Al Ghurair Giga Pakistan',
-  companyPhone: process.env.REACT_APP_COMPANY_PHONE || '+92 51 111 244 244',
+  companyName: process.env.REACT_APP_COMPANY_NAME || 'Giga Group',
+  companyPhone: process.env.REACT_APP_COMPANY_PHONE || '+92 (51) 111 786 123',
   companyAddress: process.env.REACT_APP_COMPANY_ADDRESS || 'Downtown Giga, DHA Phase II Islamabad, Pakistan-44000',
   
   // API Configuration (defaults provided)

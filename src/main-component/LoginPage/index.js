@@ -51,7 +51,7 @@ const LoginPage = (props) => {
             const email = value.email;
 
             if (email.match(userRegex)) {
-                toast.success('Welcome to Al Ghurair Giga Pakistan!');
+                toast.success('Welcome to Giga Group!');
                 push('/home');
             }
         } else {

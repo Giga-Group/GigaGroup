@@ -48,13 +48,7 @@ class VideoTestimonials extends Component {
         };
 
         const videoTestimonials = [
-            {
-                name: "Chef Gulzar",
-                title: "Celebrity Chef",
-                imageUrl: require("../../images/testimonial/chef-gulzar.jpeg"),
-                videoUrl: "https://goldcrestviews.com.pk/wp-content/uploads/2025/07/Chef-Gulzar-at-Goldcrest-Views-Islamabad-Model-Apartments-Giga-Mall-Islamabad-Giga-Mall-720p-h264.mp4",
-                description: "Celebrity Chef Gulzar shares his experience at Goldcrest Views Model Apartments in Giga Mall Islamabad"
-            },
+
             {
                 name: "Faisal Qureshi",
                 title: "Actor & Host",
@@ -75,6 +69,12 @@ class VideoTestimonials extends Component {
                 imageUrl: require("../../images/testimonial/ushna.jpeg"),
                 videoUrl: "https://goldcrestviews.com.pk/wp-content/uploads/2025/07/Actress-Ushna-Shah-at-Goldcrest-Views-Model-Apartments-in-Giga-Mall-Islamabad-Full-Video-Giga-Mall-720p-h264.mp4",
                 description: "Actress Ushna Shah shares her thoughts about Goldcrest Views Model Apartments in Giga Mall Islamabad"
+            },            {
+                name: "Chef Gulzar",
+                title: "Celebrity Chef",
+                imageUrl: require("../../images/testimonial/chef-gulzar.jpeg"),
+                videoUrl: "https://goldcrestviews.com.pk/wp-content/uploads/2025/07/Chef-Gulzar-at-Goldcrest-Views-Islamabad-Model-Apartments-Giga-Mall-Islamabad-Giga-Mall-720p-h264.mp4",
+                description: "Celebrity Chef Gulzar shares his experience at Goldcrest Views Model Apartments in Giga Mall Islamabad"
             }
         ];
 

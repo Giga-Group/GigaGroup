@@ -21,7 +21,7 @@ const Footer = (props) =>{
                             <div className="logo widget-title">
                                 <Link onClick={ClickHandler} className="logo" to="/"><img src={Logo} alt=""/></Link>
                             </div>
-                            <p>Al Ghurair Giga Pakistan is a leading real estate developer with 70 years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
+                            <p>Giga Group is a leading real estate developer with 70 years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/GigaGroupPakistan/" target="_blank" rel="noopener noreferrer">
@@ -76,8 +76,8 @@ const Footer = (props) =>{
                                 <ul>
                                     <li><i className="fi flaticon-location"></i>Downtown Giga, Defence Housing Authority <br/> 
                                     Phase II Islamabad, Pakistan-44000</li>
-                                    <li><i className="fi flaticon-telephone"></i>+92 (51) 111 244 244</li>
-                                    <li><i className="fi flaticon-email"></i>info@alghurairgiga.com</li>
+                                    <li><i className="fi flaticon-telephone"></i>+92 (51) 111 786 123</li>
+                                    <li><i className="fi flaticon-email"></i>info@gigagroup.com</li>
                                 </ul>
                             </div>
                         </div>

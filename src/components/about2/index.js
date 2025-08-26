@@ -30,10 +30,10 @@ const About2 = (props) => {
                     <div className="col-lg-6 col-md-12 colsm-12">
                         <div className="wpo-about-text">
                             <div className="wpo-about-title">
-                                <span>About Al Ghurair Giga Pakistan</span>
+                                <span>About Giga Group</span>
                                 <h2>Building Dreams, Shaping Communities Since 1956</h2>
                             </div>
-                            <p>Al Ghurair Giga Pakistan (Pvt) Ltd is a trusted name in real estate development with over 60 years of excellence. Founded by Haji Abdul Rahim Giga in 1956 in Dubai's textile industry, what started as one bold step has evolved into a giant enterprise that continues to grow and branch out across Pakistan and the UAE.</p>
+                            <p>Giga Groupis a trusted name in real estate development with over 60 years of excellence. Founded by Haji Abdul Rahim Giga in 1956 in Dubai's textile industry, what started as one bold step has evolved into a giant enterprise that continues to grow and branch out across Pakistan and the UAE.</p>
                             <ul className="ab-list">
                                 <li>Over 60+ years of architectural excellence and premium quality development</li>
                                 <li>5,000+ employees worldwide delivering world-class projects</li>
