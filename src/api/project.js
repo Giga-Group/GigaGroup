@@ -1,28 +1,42 @@
-import pimg1 from '../images/projects/1.jpg'
-import pimg2 from '../images/projects/2.jpg'
-import pimg3 from '../images/projects/3.jpg'
+import gcv from '../images/projects/gcv.jpg'
+import gcc from '../images/projects/gcc.jpg'
+import gme from '../images/projects/gme.jpg'
 import pimg4 from '../images/projects/4.jpg'
 import pimg5 from '../images/projects/5.jpg'
 import pimg6 from '../images/projects/6.jpg'
 
-import ps1img1 from '../images/project-single/1.jpg'
-import ps1img2 from '../images/project-single/2.jpg'
-import ps1img3 from '../images/project-single/3.jpg'
-import ps1img4 from '../images/project-single/4.jpg'
-import ps1img5 from '../images/project-single/5.jpg'
-import ps1img6 from '../images/project-single/6.jpg'
+import gccM1 from '../images/project-single/gcc-m1.jpg'
+import gcvM1 from '../images/project-single/gcv-m1.jpg'
+import gbcM1 from '../images/project-single/gbc-m1.jpg'
+import gmeM1 from '../images/project-single/gme-m1.jpg'
+import cprM1 from '../images/project-single/cpr-m1.jpg'
+import wtcM1 from '../images/project-single/wtc-m1.jpg'
 
-import psub1img1 from '../images/project-single/p1.jpg'
-import psub1img2 from '../images/project-single/p2.jpg'
+import psub1img1 from '../images/project-single/gcc-s1.jpg'
+import psub1img2 from '../images/project-single/gcc-s2.jpg'
 
+import gcvS1 from '../images/project-single/gcv-s1.jpg'
+import gcvS2 from '../images/project-single/gcv-s2.jpg'
+
+import gccS1 from '../images/project-single/gcc-s1.jpg'
+import gccS2 from '../images/project-single/gcc-s2.jpg'
+
+import wtcS1 from '../images/project-single/wtc-s1.jpg'
+import wtcS2 from '../images/project-single/wtc-s2.jpg'
+
+import gbcS1 from '../images/project-single/gbc-s1.jpg'
+import gbcS2 from '../images/project-single/gbc-s2.jpg'
+
+import cprS1 from '../images/project-single/cpr-s1.jpg'
+import cprS2 from '../images/project-single/cpr-s2.jpg'
 const Projects = [
     {
         Id: '1',
-        pImg: pimg1,
-        ps1img: ps1img1,
-        psub1img1: psub1img1,
-        psub1img2: psub1img2,
-        title: 'Gold Crest Views',
+        pImg: gcv,
+        ps1img: gcvM1,
+        psub1img1: gcvS1,
+        psub1img2: gcvS2,
+        title: 'Goldcrest Views',
         subTitle: 'Luxury Residential Complex',
         
         // Main description paragraphs (existing)
@@ -129,11 +143,11 @@ const Projects = [
 
     {
         Id: '2',
-        pImg: pimg2,
-        ps1img: ps1img2,
-        psub1img1: psub1img1,
-        psub1img2: psub1img2,
-        title: 'Gold Crest Commercial',
+        pImg: gcc,
+        ps1img: gccM1,
+        psub1img1: gccS1,
+        psub1img2: gccS2,
+        title: 'Goldcrest Commercial',
         subTitle: 'Premium Commercial Complex',
         
         description: [
@@ -232,8 +246,8 @@ const Projects = [
 
     {
         Id: '3',
-        pImg: pimg3,
-        ps1img: ps1img3,
+        pImg: gme,
+        ps1img: gmeM1,
         psub1img1: psub1img1,
         psub1img2: psub1img2,
         title: 'Giga Mall Extension',
@@ -337,9 +351,9 @@ const Projects = [
     {
         Id: '4',
         pImg: pimg4,
-        ps1img: ps1img4,
-        psub1img1: psub1img1,
-        psub1img2: psub1img2,
+        ps1img: gbcM1,
+        psub1img1: gbcS1,
+        psub1img2: gbcS2,
         title: 'Giga Business Complex',
         subTitle: 'Corporate Hub',
         
@@ -452,9 +466,9 @@ const Projects = [
     {
         Id: '5',
         pImg: pimg5,
-        ps1img: ps1img5,
-        psub1img1: psub1img1,
-        psub1img2: psub1img2,
+        ps1img: cprM1,
+        psub1img1: cprS1,
+        psub1img2: cprS2,
         title: 'Central Palace Residence',
         subTitle: 'Ultra-Luxury Living',
         
@@ -567,9 +581,9 @@ const Projects = [
     {
         Id: '6',
         pImg: pimg6,
-        ps1img: ps1img6,
-        psub1img1: psub1img1,
-        psub1img2: psub1img2,
+        ps1img: wtcM1,
+        psub1img1: wtcS1,
+        psub1img2: wtcS2,
         title: 'Giga Mall WTC',
         subTitle: 'World Trade Center',
         
