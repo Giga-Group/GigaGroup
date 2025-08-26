@@ -29,10 +29,19 @@ import gbcS2 from '../images/project-single/gbc-s2.jpg'
 
 import cprS1 from '../images/project-single/cpr-s1.jpg'
 import cprS2 from '../images/project-single/cpr-s2.jpg'
+
+import gcvBanner from '../images/banner/gcv-banner.jpg'
+import gccBanner from '../images/banner/gcc-banner.jpg'
+import gmeBanner from '../images/banner/gme-banner.jpg'
+import gbcBanner from '../images/banner/gbc-banner.jpg'
+import cprBanner from '../images/banner/cpr-banner.jpg'
+import wtcBanner from '../images/banner/wtc-banner.jpg'
+
 const Projects = [
     {
         Id: '1',
         pImg: gcv,
+        coverImage: gcvBanner,
         ps1img: gcvM1,
         psub1img1: gcvS1,
         psub1img2: gcvS2,
@@ -144,6 +153,7 @@ const Projects = [
     {
         Id: '2',
         pImg: gcc,
+        coverImage: gccBanner,
         ps1img: gccM1,
         psub1img1: gccS1,
         psub1img2: gccS2,
@@ -247,6 +257,7 @@ const Projects = [
     {
         Id: '3',
         pImg: gme,
+        coverImage: gmeBanner,
         ps1img: gmeM1,
         psub1img1: psub1img1,
         psub1img2: psub1img2,
@@ -351,6 +362,7 @@ const Projects = [
     {
         Id: '4',
         pImg: pimg4,
+        coverImage: gbcBanner,
         ps1img: gbcM1,
         psub1img1: gbcS1,
         psub1img2: gbcS2,
@@ -466,6 +478,7 @@ const Projects = [
     {
         Id: '5',
         pImg: pimg5,
+        coverImage: cprBanner,
         ps1img: cprM1,
         psub1img1: cprS1,
         psub1img2: cprS2,
@@ -581,6 +594,7 @@ const Projects = [
     {
         Id: '6',
         pImg: pimg6,
+        coverImage: wtcBanner,
         ps1img: wtcM1,
         psub1img1: wtcS1,
         psub1img2: wtcS2,

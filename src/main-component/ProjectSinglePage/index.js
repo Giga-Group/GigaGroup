@@ -18,7 +18,11 @@ const ProjectSinglePage = (props) => {
     return (
         <Fragment>
             <Navbar Logo={Logo}/>
-            <PageTitle pageTitle={projectDetails.title} pagesub={'Project'} />
+            <PageTitle 
+                pageTitle={projectDetails.title} 
+                pagesub={'Project'} 
+                backgroundImage={projectDetails.coverImage}
+            />
             <div className="wpo-project-single-area section-padding">
                 <div className="container">
                     <div className="row justify-content-center">

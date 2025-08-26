@@ -2,8 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const PageTitle = (props) => {
+    const backgroundStyle = props.backgroundImage ? {
+        backgroundImage: `url(${props.backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat'
+    } : {};
+
     return(
-        <section className="wpo-page-title">
+        <section className="wpo-page-title" style={backgroundStyle}>
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">

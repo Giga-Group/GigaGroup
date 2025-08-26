@@ -11,15 +11,20 @@ import VideoTestimonials from '../../components/VideoTestimonials';
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
 import Logo from '../../images/logo.svg'
-import abimg from '../../images/about.jpg'
+import abimg from '../../images/banner/projects.jpg'
+import aboutImage from '../../images/about.jpg'
 
 
 const AboutPage =() => {
     return(
         <Fragment>
             <Navbar Logo={Logo}/>
-            <PageTitle pageTitle={'About Us'} pagesub={'About'}/> 
-            <About abimg={abimg}/>
+            <PageTitle 
+                pageTitle={'About Us'} 
+                pagesub={'About'}
+                backgroundImage={abimg}
+            /> 
+            <About abimg={aboutImage}/>
             <ProjectSection/>
             <ServiceSection/>
             <FunFact fnClass={'wpo-fun-fact-section-s2'}/>
