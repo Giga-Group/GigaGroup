@@ -30,6 +30,9 @@ import gbcS2 from '../images/project-single/gbc-s2.jpg'
 import cprS1 from '../images/project-single/cpr-s1.jpg'
 import cprS2 from '../images/project-single/cpr-s2.jpg'
 
+import gmeS1 from '../images/project-single/gme-s1.jpg'
+import gmeS2 from '../images/project-single/gme-s2.jpg'
+
 import gcvBanner from '../images/banner/gcv-banner.jpg'
 import gccBanner from '../images/banner/gcc-banner.jpg'
 import gmeBanner from '../images/banner/gme-banner.jpg'
@@ -259,8 +262,8 @@ const Projects = [
         pImg: gme,
         coverImage: gmeBanner,
         ps1img: gmeM1,
-        psub1img1: psub1img1,
-        psub1img2: psub1img2,
+        psub1img1: gmeS1,
+        psub1img2: gmeS2,
         title: 'Giga Mall Extension',
         subTitle: 'Mixed-Use Development',
         
