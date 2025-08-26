@@ -49,7 +49,7 @@ const Footer = (props) =>{
                     <div className="col col-xl-3  col-lg-4 col-md-6 col-sm-12 col-12">
                         <div className="widget link-widget">
                             <div className="widget-title">
-                                <h3>Our Projects</h3>
+                                <h3 style={{marginBottom: '20px'}}>Our Projects</h3>
                             </div>
                             <ul>
                                 {Projects.slice(0, 5).map((project, index) => (
