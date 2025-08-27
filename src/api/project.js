@@ -105,7 +105,7 @@ const Projects = [
 
         // Why choose this project
         whyChoose: {
-            title: "Why Choose Gold Crest Views",
+            title: "Why Choose Goldcrest Views",
             description: "Unique advantages that make this project the premier choice for luxury living in Islamabad.",
             reasons: [
                 "Upgraded version of award-winning Dubai Goldcrest Views design",
@@ -164,8 +164,8 @@ const Projects = [
         subTitle: 'Premium Commercial Complex',
         
         description: [
-            "Gold Crest Commercial represents the next phase of Al-Ghurair Giga's commercial development strategy, featuring state-of-the-art office spaces and retail outlets designed for modern businesses. Located within the thriving Giga City ecosystem, this premium commercial complex offers cutting-edge infrastructure, high-speed elevators, central air conditioning, and smart building technology to meet contemporary business requirements.",
-            "The development provides flexible office layouts, conference facilities, retail spaces, and dedicated parking with excellent connectivity to major business districts. With its strategic location near Giga Mall and residential projects, Gold Crest Commercial creates a perfect work-life balance environment, attracting leading corporations and businesses seeking premium commercial real estate in Islamabad's fastest-growing commercial hub."
+            "Goldcrest Commercial represents the next phase of Al-Ghurair Giga's commercial development strategy, featuring state-of-the-art office spaces and retail outlets designed for modern businesses. Located within the thriving Giga City ecosystem, this premium commercial complex offers cutting-edge infrastructure, high-speed elevators, central air conditioning, and smart building technology to meet contemporary business requirements.",
+            "The development provides flexible office layouts, conference facilities, retail spaces, and dedicated parking with excellent connectivity to major business districts. With its strategic location near Giga Mall and residential projects, Goldcrest Commercial creates a perfect work-life balance environment, attracting leading corporations and businesses seeking premium commercial real estate in Islamabad's fastest-growing commercial hub."
         ],
 
         projectDetails: {
@@ -192,7 +192,7 @@ const Projects = [
             title: "Commercial Excellence Features",
             description: "State-of-the-art infrastructure designed for modern business operations and success.",
             features: [
-                "Prime location in Downtown Giga with high foot traffic",
+                "Prime location in Giga City with high foot traffic",
                 "Flexible commercial shops suitable for various business types",
                 "Dedicated medical clinic spaces with healthcare infrastructure",
                 "Modern HVAC systems and high-speed internet connectivity",
@@ -212,10 +212,10 @@ const Projects = [
         },
 
         whyChoose: {
-            title: "Why Choose Gold Crest Commercial",
-            description: "Strategic advantages that make this the premier commercial investment in Downtown Giga.",
+            title: "Why Choose Goldcrest Commercial",
+            description: "Strategic advantages that make this the premier commercial investment in Giga City.",
             reasons: [
-                "Only new commercial project in established Downtown Giga",
+                "Only new commercial project in established Giga City",
                 "Direct access to thousands of potential customers",
                 "Proven track record of Giga Group in commercial developments",
                 "Modern infrastructure for contemporary business operations"
@@ -552,7 +552,7 @@ const Projects = [
                 "Established community with over 2,000 delivered apartments",
                 "Professional management by experienced Al Ghurair Giga team",
                 "Excellent investment potential with strong appreciation history",
-                "Strategic location in Downtown Giga",
+                "Strategic location in Giga City",
                 "Access to world-class shopping and dining",
                 "Premium amenities and services"
             ]
@@ -564,7 +564,7 @@ const Projects = [
             highlights: [
                 "Luxury residences offered at affordable rates",
                 "High-quality finishes ensuring long-term value retention",
-                "Strong appreciation potential in established Downtown Giga",
+                "Strong appreciation potential in established Giga City",
                 "Professional property management for hassle-free ownership",
                 "Flexible payment options making luxury living accessible",
                 "Growing demand for premium residential properties",
@@ -576,7 +576,7 @@ const Projects = [
             title: "Prime Luxury Location",
             description: "Strategic positioning that maximizes luxury living benefits and accessibility.",
             advantages: [
-                "Situated in Downtown Giga beside GT Road",
+                "Situated in Giga City beside GT Road",
                 "Surrounded by over 2,000 delivered apartments",
                 "Walking distance access to Giga Mall",
                 "Excellent connectivity to business districts",

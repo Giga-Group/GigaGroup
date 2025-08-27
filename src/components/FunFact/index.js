@@ -5,7 +5,7 @@ const FunFact = (props) => {
 
     const funfact = [
         {
-            title: '69',
+            title: '60+',
             subTitle: 'Years Of Experience',
         },
         {

@@ -42,7 +42,7 @@ This guide will help you set up the centralized lead management system that coll
    - Select the function from dropdown
    - Click "Run"
    - Authorize permissions when prompted
-2. This will send daily lead summaries at 5 PM PKT to info@alghurairgiga.com
+2. This will send daily lead summaries at 5 PM PKT to info@gigagroup.com
 
 ### Step 6: Test the System
 1. Run the `testFunction()` in Google Apps Script to verify sheet creation
@@ -79,7 +79,7 @@ Subject: Daily Lead Report - Al Ghurair Giga (5 New Leads)
 1. Ahmad Khan | 9:30 AM
    Email: ahmad@email.com
    Contact: +92-300-123456
-   Project Interest: Gold Crest Views
+   Project Interest: Goldcrest Views
    Source: Registration
 ```
 

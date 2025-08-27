@@ -276,7 +276,7 @@ function testFunction() {
     name: 'Test User',
     email: 'test@example.com',
     contact: '+92-300-1234567',
-    project: 'Gold Crest Views',
+    project: 'Goldcrest Views',
     message: 'This is a test message',
     source: 'Test',
     status: 'Test Lead'

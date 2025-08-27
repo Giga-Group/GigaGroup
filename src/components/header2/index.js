@@ -147,7 +147,7 @@ export default class Header2 extends Component {
                                                                     <li><i className="fi flaticon-telephone"></i>+ 8 (123) 123 456
                                                                         789 <br />
                                                                         + 8 (123) 123 456 789</li>
-                                                                    <li><i className="fi flaticon-email"></i>info@alghurairgiga.com</li>
+                                                                    <li><i className="fi flaticon-email"></i>info@gigagroup.com</li>
                                                                 </ul>
                                                             </div>
                                                         </div>

@@ -23,7 +23,7 @@ const HeaderTopbar = () => {
                         <div className="contact-intro">
                             <ul>
                                 <li><i className="fi ti-location-pin"></i>28 Street, New York City, USA</li>
-                                <li><i className="fi flaticon-email"></i> info@alghurairgiga.com</li>
+                                <li><i className="fi flaticon-email"></i> info@gigagroup.com</li>
                             </ul>
                         </div>
                     </div>

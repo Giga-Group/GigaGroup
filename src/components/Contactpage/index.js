@@ -20,7 +20,7 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Address</h2>
-                                            <p>Downtown Giga, DHA Phase II Islamabad, Pakistan - 44000</p>
+                                            <p>Giga City, DHA Phase II Islamabad, Pakistan - 44000</p>
                                         </div>
                                     </div>
                                 </div> 
@@ -34,7 +34,7 @@ const Contactpage = () => {
                                         <div className="office-info-text">
                                             <h2>Email Us</h2>
                                             <p></p>
-                                            <p>info@alghurairgiga.com</p>
+                                            <p>info@gigagroup.com</p>
                                         </div>
                                     </div>
                                 </div> 
@@ -48,7 +48,7 @@ const Contactpage = () => {
                                         <div className="office-info-text">
                                             <h2>Call Now</h2>
                                             <p></p>
-                                            <p>+92 51 111 244 244</p>
+                                            <p>+92 (51) 111 786 123</p>
                                         </div>
                                     </div>
                                 </div> 
