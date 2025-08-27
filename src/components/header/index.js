@@ -24,7 +24,9 @@ const Header = (props) => {
     return (
         <header id="header">
             <div className={`wpo-site-header ${props.hclass}`}>
-                <nav className="navigation navbar navbar-expand-lg navbar-light">
+                <nav 
+                className="navigation navbar navbar-expand-lg navbar-light"
+                >
                     <div className="container-fluid">
                         <div className="row align-items-center">
                             <div className="col-lg-3 col-md-3 col-3 d-lg-none dl-block">
