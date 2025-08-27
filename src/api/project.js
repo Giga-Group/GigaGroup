@@ -1,9 +1,9 @@
 import gcv from '../images/projects/gcv.jpg'
 import gcc from '../images/projects/gcc.jpg'
 import gme from '../images/projects/gme.jpg'
-import pimg4 from '../images/projects/4.jpg'
-import pimg5 from '../images/projects/5.jpg'
-import pimg6 from '../images/projects/6.jpg'
+import gbcImage from '../images/projects/gbc-grid.jpg'
+import cprImage from '../images/projects/cpr-grid.jpg'
+import wtcImage from '../images/projects/wtc-grid.jpg'
 
 import gccM1 from '../images/project-single/gcc-m1.jpg'
 import gcvM1 from '../images/project-single/gcv-m1.jpg'
@@ -12,8 +12,6 @@ import gmeM1 from '../images/project-single/gme-m1.jpg'
 import cprM1 from '../images/project-single/cpr-m1.jpg'
 import wtcM1 from '../images/project-single/wtc-m1.jpg'
 
-import psub1img1 from '../images/project-single/gcc-s1.jpg'
-import psub1img2 from '../images/project-single/gcc-s2.jpg'
 
 import gcvS1 from '../images/project-single/gcv-s1.jpg'
 import gcvS2 from '../images/project-single/gcv-s2.jpg'
@@ -364,7 +362,7 @@ const Projects = [
 
     {
         Id: '4',
-        pImg: pimg4,
+        pImg: gbcImage,
         coverImage: gbcBanner,
         ps1img: gbcM1,
         psub1img1: gbcS1,
@@ -480,7 +478,7 @@ const Projects = [
 
     {
         Id: '5',
-        pImg: pimg5,
+        pImg: cprImage,
         coverImage: cprBanner,
         ps1img: cprM1,
         psub1img1: cprS1,
@@ -596,7 +594,7 @@ const Projects = [
 
     {
         Id: '6',
-        pImg: pimg6,
+        pImg: wtcImage,
         coverImage: wtcBanner,
         ps1img: wtcM1,
         psub1img1: wtcS1,
