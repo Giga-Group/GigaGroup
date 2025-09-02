@@ -1,0 +1,41 @@
+/* Mobile spacing for about images to push content down */
+@media (max-width: 991px) {
+    /* Add top padding to all wpo-about-img variants on mobile */
+    .wpo-about-area .wpo-about-img,
+    .wpo-about-area-s2 .wpo-about-img,
+    .wpo-about-area-s3 .wpo-about-img,
+    .wpo-about-area-s4 .wpo-about-img,
+    .wpo-about-area-s5 .wpo-about-img {
+        padding-top: 150px !important;
+        margin-top: 80px !important;
+    }
+    
+    /* Also add spacing to the parent about areas */
+    .wpo-about-area,
+    .wpo-about-area-s2,
+    .wpo-about-area-s3,
+    .wpo-about-area-s4,
+    .wpo-about-area-s5 {
+        padding-top: 100px !important;
+    }
+}
+
+/* Additional spacing for smaller mobile screens */
+@media (max-width: 575px) {
+    .wpo-about-area .wpo-about-img,
+    .wpo-about-area-s2 .wpo-about-img,
+    .wpo-about-area-s3 .wpo-about-img,
+    .wpo-about-area-s4 .wpo-about-img,
+    .wpo-about-area-s5 .wpo-about-img {
+        padding-top: 170px !important;
+        margin-top: 90px !important;
+    }
+    
+    .wpo-about-area,
+    .wpo-about-area-s2,
+    .wpo-about-area-s3,
+    .wpo-about-area-s4,
+    .wpo-about-area-s5 {
+        padding-top: 120px !important;
+    }
+}
