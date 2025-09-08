@@ -60,6 +60,7 @@ const Header = (props) => {
                                                 ))}
                                             </ul>
                                         </li>
+                                        <li><Link onClick={ClickHandler} to="/companies">Companies</Link></li>
                                         <li><Link onClick={ClickHandler} to="/celebrity-testimonials">Celebrity Testimonials</Link></li>
                                         <li><Link onClick={ClickHandler} to="/contact">Contact</Link></li>
                                     </ul>

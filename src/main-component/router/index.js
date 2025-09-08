@@ -32,6 +32,7 @@ import ErrorPage from '../ErrorPage'
 import LoginPage from '../LoginPage'
 import SignUpPage from '../SignUpPage'
 import ForgotPassword from '../ForgotPassword'
+import CompaniesPage from '../CompaniesPage'
 
 
 const AllRoute = () => {
@@ -63,6 +64,7 @@ const AllRoute = () => {
           <Route path='checkout' element={<CheckoutPage/>} />
           <Route path='order_received' element={<OrderRecived/>} />
           <Route path='contact' element={<ContactPage/>} />
+          <Route path='companies' element={<CompaniesPage/>} />
           <Route path='404' element={<ErrorPage/>} />
           <Route path='blog-single/:id' element={<BlogDetails/>} />
           <Route path='blog-single-left-sidebar/:id' element={<BlogDetailsLeftSiide/>} />
