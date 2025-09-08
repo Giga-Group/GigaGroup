@@ -151,6 +151,101 @@ Version:        1.0.0
 
 @import "page/_error-404";
 
+// Custom overlay styles for companies section (hover only)
+.wpo-project-item {
+  .wpo-project-img {
+    position: relative;
+    overflow: hidden;
+    
+    .wpo-project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(26, 34, 85, 0.9);
+      opacity: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 2;
+      
+      .wpo-project-overlay-content {
+        text-align: center;
+        color: #fff;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+        
+        p {
+          margin: 0;
+          font-size: 14px;
+          line-height: 1.6;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  
+  &:hover {
+    .wpo-project-overlay {
+      opacity: 1;
+      
+      .wpo-project-overlay-content {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// Specific styles for delivered projects section
+.delivered-projects-section {
+  .wpo-project-item {
+    .wpo-project-img {
+      .wpo-project-overlay {
+        padding: 30px 50px; // Increased padding from left and right
+        
+        .wpo-project-overlay-content {
+          h3 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          }
+          
+          p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 400;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+          }
+        }
+      }
+    }
+    
+    // White text for delivered projects bottom text
+    .wpo-project-text {
+      h2, span {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+// Specific styles for companies section - white text
+.wpo-project-area-s2:not(.delivered-projects-section) {
+  .wpo-project-item {
+    .wpo-project-text {
+      h2, span {
+        color: #fff !important;
+      }
+    }
+  }
+}
 
 
 
