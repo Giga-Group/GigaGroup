@@ -1,13 +1,13 @@
 // Import placeholder images - these should be replaced with actual delivered project images
-import gcv1Dubai from '../images/projects/delivered-projects/gcv1a.webp'
-import gcv2Dubai from '../images/projects/delivered-projects/goldcrestviews2.webp'
-import gceExecutive from '../images/projects/delivered-projects/goldcrest-executive-jlt.webp'
-import canyonViews from '../images/projects/delivered-projects/Canyon-Views-DHA-Islamabad.jpeg'
-import crescentBay from '../images/projects/delivered-projects/CrescentBay-DHA-Karachi.jpeg'
-import defenceResidency from '../images/projects/delivered-projects/Defence-Residency-DHA-Islamabad.jpeg'
-import gigaBoutique from '../images/projects/delivered-projects/GBM.webp'
-import elCielo from '../images/projects/delivered-projects/El-Cielo-I-and-II-Apartments.jpeg'
-import lignumTower from '../images/projects/delivered-projects/lignum-tower.webp'
+import gcv1Dubai from '../images/projects/delivered-projects/gold.jpeg'
+import gcv2Dubai from '../images/projects/delivered-projects/gold.jpeg'
+import gceExecutive from '../images/projects/delivered-projects/gold.jpeg'
+import canyonViews from '../images/projects/delivered-projects/gold.jpeg'
+import crescentBay from '../images/projects/delivered-projects/gold.jpeg'
+import defenceResidency from '../images/projects/delivered-projects/gold.jpeg'
+import gigaBoutique from '../images/projects/delivered-projects/gold.jpeg'
+import elCielo from '../images/projects/delivered-projects/gold.jpeg'
+import lignumTower from '../images/projects/delivered-projects/gold.jpeg'
 
 const DeliveredProjects = [
     {
