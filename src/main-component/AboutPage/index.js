@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
-import Navbar from '../../components/Navbar'
+// import Navbar from '../../components/Navbar' // Old navbar commented out
+import TransparentNavbar from '../../components/TransparentNavbar' // New transparent navbar
 import PageTitle from '../../components/pagetitle'
 import About from '../../components/about'
 import ProjectSection from '../../components/Projects';
@@ -18,7 +19,8 @@ import aboutImage from '../../images/about.jpg'
 const AboutPage =() => {
     return(
         <Fragment>
-            <Navbar Logo={Logo}/>
+            {/* <Navbar Logo={Logo}/> */} {/* Old navbar commented out */}
+            <TransparentNavbar Logo={Logo}/> {/* New transparent navbar */}
             <PageTitle 
                 pageTitle={'About Us'} 
                 pagesub={'About'}
