@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
-import Navbar from '../../components/Navbar'
+// import Navbar from '../../components/Navbar' // Old navbar commented out
+import TransparentNavbar from '../../components/TransparentNavbar' // New transparent navbar
 import PageTitle from '../../components/pagetitle'
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'
@@ -10,7 +11,8 @@ import testimonialBg from '../../images/banner/projects.jpg' // Using Giga Busin
 const TestimonialPage =() => {
     return(
         <Fragment>
-            <Navbar Logo={Logo}/>
+            {/* <Navbar Logo={Logo}/> */} {/* Old navbar commented out */}
+            <TransparentNavbar Logo={Logo}/> {/* New transparent navbar */}
             <PageTitle 
                 pageTitle={'Celebrity Testimonials'} 
                 pagesub={'Celebrity Testimonials'}

@@ -14,6 +14,18 @@ import hero3 from '../../images/slider/slide-3.jpg'
 
 class Hero2 extends Component {
     render() {
+        // Default props
+        const {
+            heroClass = '',
+            showContactForm = true,
+            title = 'Giga Group',
+            subtitle = 'From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.',
+            showButton = false,
+            buttonText = 'Discover More',
+            buttonLink = '/about',
+            videoUrl = 'https://www.youtube.com/embed/lxOWww4vfmY?autoplay=1&mute=1&loop=1&playlist=lxOWww4vfmY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3',
+            textPosition = 'center' // 'center' or 'top'
+        } = this.props;
 
         var settings = {
             dots: false,
@@ -26,9 +38,16 @@ class Hero2 extends Component {
             fade: true
         };
 
+        // Determine text class based on whether contact form is shown and text position
+        const textClass = showContactForm ? 'mobile-hidden-text' : `responsive-text responsive-text-${textPosition}`;
+        
+        // Debug logging to verify props
+        console.log('Hero2 showContactForm prop:', showContactForm);
+        console.log('Hero2 textPosition prop:', textPosition);
+
         return (
             <section>
-                <div className={`wpo-hero-slider wpo-hero-style-2 ${this.props.heroClass}`}>
+                <div className={`wpo-hero-slider wpo-hero-style-2 ${heroClass}`}>
                     <div className="hero-container">
                         <div className="hero-wrapper">
                             <Slider {...settings}>
@@ -36,9 +55,7 @@ class Hero2 extends Component {
                                     <div className="slide-inner video-slide" style={{height: '100vh', width: '100vw'}}>
                                         <div className="video-background">
                                             <iframe
-                                            // https://youtu.be/2J8bn2BLVCY
-                                                src="https://www.youtube.com/embed/lxOWww4vfmY?autoplay=1&mute=1&loop=1&playlist=lxOWww4vfmY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
-                                                // src="https://www.youtube.com/embed/l6EzZafb1Pk?autoplay=1&mute=1&loop=1&playlist=l6EzZafb1Pk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+                                                src={videoUrl}
                                                 title="YouTube video player"
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -48,16 +65,19 @@ class Hero2 extends Component {
                                         </div>
                                         <div className="container-fluid">
                                             <div className="slide-content">
-                                                <div className="slide-title">
-                                                    <h2 className="mobile-hidden-text">Giga Group</h2>
-                                                </div>
+                                                {/* <div className="slide-title">
+                                                    <h2 className={textClass}>{title}</h2>
+                                                </div> */}
                                                 <div className="slide-title-sub">
-                                                    <p className="mobile-hidden-text">From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.</p>
+                                                    
+                                                    <p className={textClass}>{subtitle}</p>
                                                 </div>
                                                 <div className="clearfix"></div>
-                                                {/* <div className="slide-btns">
-                                                    <Link to="/about" className="theme-btn">Discover More</Link>
-                                                </div> */}
+                                                {showButton && (
+                                                    <div className="slide-btns">
+                                                        <Link to={buttonLink} className="theme-btn">{buttonText}</Link>
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -99,8 +119,8 @@ class Hero2 extends Component {
                                     </div>
                                 </div> */}
                             </Slider>
-                            {/* Registration Form Overlay - positioned above video */}
-                            <RegistrationForm />
+                            {/* Conditionally render Registration Form Overlay */}
+                            {showContactForm && <RegistrationForm />}
                         </div>
                     </div>
                 </div>

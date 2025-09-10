@@ -87,7 +87,11 @@ const menus = [
         //     }
         // ]
     },
-
+{
+    id: 4,
+    title: 'Companies',
+    link: '/companies',
+},
     // {
     //     id: 7,
     //     title: 'Pages',
@@ -186,12 +190,12 @@ const menus = [
     //     ]
     // },
     {
-        id: 87,
+        id: 5,
         title: 'Celebrity Testimonials',
         link: '/celebrity-testimonials',
     },
     {
-        id: 88,
+        id: 6,
         title: 'Contact',
         link: '/contact',
     }

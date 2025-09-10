@@ -1,10 +1,10 @@
 // Import placeholder images - these should be replaced with actual company images
-import textileImg from '../images/projects/1.jpg'
-import goldJewelleryImg from '../images/projects/2.jpg'
-import realEstateImg from '../images/projects/3.jpg'
-import generalTradingImg from '../images/projects/4.jpg'
-import investmentsImg from '../images/projects/5.jpg'
-import constructionImg from '../images/projects/6.jpg'
+import textileImg from '../images/projects/gold.jpeg'
+import goldJewelleryImg from '../images/projects/gold.jpeg'
+import realEstateImg from '../images/projects/gold.jpeg'
+import generalTradingImg from '../images/projects/gold.jpeg'
+import investmentsImg from '../images/projects/gold.jpeg'
+import constructionImg from '../images/projects/gold.jpeg'
 
 const Companies = [
     {
