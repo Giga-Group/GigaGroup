@@ -77,9 +77,9 @@ const DeliveredProjects = [
     {
         Id: '10',
         pImg: wtc,
-        title: 'World Trade Center',
+        title: 'Giga Mall',
         subTitle: 'Islamabad',
-        description: 'Give your business a “Home” at a prestigious business location. Giga Group is now offering office space in the World Trade Center Islamabad. You can get your office space in very flexible layouts and an easy 18-month installment plan. The corporate floors are located on the top floors of the Giga Mall and offer all the amenities of a professional business hub you can expect, including CCTV security, covered car parking, central HVAC, dedicated elevators, lobbies, business clubs, and more!'
+        description: 'Giga Mall in Islamabad is a premier five-floor shopping destination by Giga Group, featuring over 200 local and international stores, dining, and entertainment. It offers modern amenities like spacious parking, Wi-Fi, banking services, prayer rooms, and accessibility features, serving both Islamabad and Rawalpindi.'
     }
 ]
 export default DeliveredProjects;
