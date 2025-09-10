@@ -22,7 +22,9 @@ const HomePage2 =() => {
             <Hero2 
                 showContactForm={false}
                 textPosition="top"
-                title="Centered Text"
+                title="Gig City"
+                showTitle={false} 
+                showSubtitle={false} 
                 videoUrl = 'https://www.youtube.com/embed/uI24t0e6sVU?autoplay=1&mute=1&loop=1&playlist=uI24t0e6sVU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
                 mobileVideoUrl = 'https://www.youtube.com/embed/uI24t0e6sVU?autoplay=1&mute=1&loop=1&playlist=uI24t0e6sVU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
             />
@@ -30,7 +32,8 @@ const HomePage2 =() => {
             <Hero2 
                 showContactForm={false}
                 textPosition="center"
-                title="Top Positioned Text"
+                title="Goldcrest Views"
+                subtitle="Giga City, Islamabad"
                 videoUrl = 'https://www.youtube.com/embed/trmn0svn7F0?autoplay=1&mute=1&loop=1&playlist=trmn0svn7F0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
                 mobileVideoUrl = 'https://www.youtube.com/embed/bDnmFZQ-xJU?autoplay=1&mute=1&loop=1&playlist=bDnmFZQ-xJU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
             />
