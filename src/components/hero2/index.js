@@ -24,6 +24,7 @@ class Hero2 extends Component {
             buttonText = 'Discover More',
             buttonLink = '/about',
             videoUrl = 'https://www.youtube.com/embed/lxOWww4vfmY?autoplay=1&mute=1&loop=1&playlist=lxOWww4vfmY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3',
+            mobileVideoUrl = 'https://www.youtube.com/embed/lxOWww4vfmY?autoplay=1&mute=1&loop=1&playlist=lxOWww4vfmY&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3',
             textPosition = 'center' // 'center' or 'top'
         } = this.props;
 
@@ -54,13 +55,26 @@ class Hero2 extends Component {
                                 <div className="hero-slide">
                                     <div className="slide-inner video-slide" style={{height: '100vh', width: '100vw'}}>
                                         <div className="video-background">
+                                            {/* Desktop Video */}
                                             <iframe
+                                                className="desktop-video"
                                                 src={videoUrl}
                                                 title="YouTube video player"
                                                 frameBorder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen
                                                 ></iframe>
+                                            
+                                            {/* Mobile Video */}
+                                            <iframe
+                                                className="mobile-video"
+                                                src={mobileVideoUrl}
+                                                title="YouTube video player"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                                ></iframe>
+                                            
                                             <div className="video-overlay"></div>
                                         </div>
                                         <div className="container-fluid">
