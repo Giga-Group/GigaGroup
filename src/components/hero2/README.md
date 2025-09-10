@@ -13,7 +13,8 @@ The Hero2 component has been made configurable to support different layouts and 
 | `showButton` | boolean | `false` | Whether to show the action button |
 | `buttonText` | string | `'Discover More'` | Text for the action button |
 | `buttonLink` | string | `'/about'` | Link for the action button |
-| `videoUrl` | string | YouTube embed URL | Background video URL |
+| `videoUrl` | string | YouTube embed URL | Background video URL for desktop devices (>768px) |
+| `mobileVideoUrl` | string | - | Video URL for mobile devices (≤768px) |
 | `textPosition` | string | `'center'` | Text positioning: `'center'` or `'top'` |
 
 ## Usage Examples
@@ -58,7 +59,24 @@ import Hero2 from '../components/hero2';
 />
 ```
 
-### 4. Custom Configuration
+### 4. Responsive Videos (Mobile & Desktop)
+```jsx
+import Hero2 from '../components/hero2';
+
+<Hero2 
+    heroClass="custom-hero"
+    showContactForm={false}
+    title="Your Dream Awaits"
+    subtitle="Premium real estate solutions tailored for you"
+    showButton={true}
+    buttonText="Get Started"
+    buttonLink="/contact"
+    videoUrl="https://www.youtube.com/embed/trmn0svn7F0?autoplay=1&mute=1&loop=1&playlist=trmn0svn7F0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+    mobileVideoUrl="https://www.youtube.com/embed/_VIxCfae3UM?autoplay=1&mute=1&loop=1&playlist=_VIxCfae3UM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+/>
+```
+
+### 5. Custom Configuration
 ```jsx
 import Hero2 from '../components/hero2';
 
@@ -75,6 +93,12 @@ import Hero2 from '../components/hero2';
 ```
 
 ## Responsive Behavior
+
+### Video Background
+- **Desktop (>768px)**: Shows `videoUrl` (desktop video)
+- **Mobile (≤768px)**: Shows `mobileVideoUrl` (mobile video)
+- **Automatic switching**: Videos change automatically based on screen size using CSS media queries
+- **No JavaScript**: Pure CSS solution for better performance
 
 ### With Contact Form (`showContactForm={true}`)
 - **Desktop/Tablet**: Text visible with overlay effect
