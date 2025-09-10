@@ -30,7 +30,7 @@ const HomePage2 =() => {
                 showContactForm={false}
                 textPosition="center"
                 title="Top Positioned Text"
-                videoUrl = 'https://www.youtube.com/embed/uI24t0e6sVU?autoplay=1&mute=1&loop=1&playlist=uI24t0e6sVU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
+                videoUrl = 'https://www.youtube.com/embed/trmn0svn7F0?autoplay=1&mute=1&loop=1&playlist=trmn0svn7F0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
             />
             <About2/>
             <ServiceSection sClass={'section-bg'}/>
