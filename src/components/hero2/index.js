@@ -20,6 +20,8 @@ class Hero2 extends Component {
             showContactForm = true,
             title = 'Giga Group',
             subtitle = 'From luxury residences to world-class commercial spaces. 70 years of delivering iconic developments across Pakistan and the UAE.',
+            showTitle = true,
+            showSubtitle = true,
             showButton = false,
             buttonText = 'Discover More',
             buttonLink = '/about',
@@ -45,6 +47,8 @@ class Hero2 extends Component {
         // Debug logging to verify props
         console.log('Hero2 showContactForm prop:', showContactForm);
         console.log('Hero2 textPosition prop:', textPosition);
+        console.log('Hero2 showTitle prop:', showTitle);
+        console.log('Hero2 showSubtitle prop:', showSubtitle);
 
         return (
             <section>
@@ -79,12 +83,17 @@ class Hero2 extends Component {
                                         </div>
                                         <div className="container-fluid">
                                             <div className="slide-content">
-                                                {/* <div className="slide-title">
-                                                    <h2 className={textClass}>{title}</h2>
-                                                </div> */}
-                                                <div className="slide-title-sub">
-                                                    
-                                                    <p className={textClass}>{subtitle}</p>
+                                                <div className={`content-wrapper ${textClass}`}>
+                                                    {showTitle && (
+                                                        <div className="slide-title">
+                                                            <h2>{title}</h2>
+                                                        </div>
+                                                    )}
+                                                    {showSubtitle && (
+                                                        <div className="slide-title-sub">
+                                                            <p>{subtitle}</p>
+                                                        </div>
+                                                    )}
                                                 </div>
                                                 <div className="clearfix"></div>
                                                 {showButton && (
