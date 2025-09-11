@@ -1,0 +1,165 @@
+/* Management Section Specific Styles */
+.management-bio {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Management Single Page Styles */
+.management-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Contact info styles removed as per request */
+
+.team-info-text h4 {
+    color: #0D0845;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Management Paragraph Styling */
+.management-paragraph {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.management-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.management-paragraph:first-child {
+    margin-top: 0;
+}
+
+/* Inline Social Media Icons */
+.social-media-inline {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-icon-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: #fff !important;
+}
+
+.social-icon-inline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.social-icon-inline.facebook {
+    background: #3b5998;
+}
+
+.social-icon-inline.facebook:hover {
+    background: #2d4373;
+}
+
+.social-icon-inline.linkedin {
+    background: #0077b5;
+}
+
+.social-icon-inline.linkedin:hover {
+    background: #005885;
+}
+
+.social-icon-inline.twitter {
+    background: #1da1f2;
+}
+
+.social-icon-inline.twitter:hover {
+    background: #0d8bd9;
+}
+
+.social-icon-inline.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon-inline.instagram:hover {
+    background: linear-gradient(45deg, #d4842a 0%, #d4562f 25%, #c41e37 50%, #b41d5a 75%, #a51572 100%);
+}
+
+.achievements-section {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.achievements-section h3 {
+    color: #0D0845;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+
+.achievement-item i {
+    color: #0D0845;
+    margin-right: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.achievement-item span {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Management page specific styling */
+.wpo-team-section .wpo-team-item .wpo-team-text h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.wpo-team-section .wpo-team-item .wpo-team-text span {
+    color: #0D0845;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .achievements-section {
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    .achievements-section h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .management-bio {
+        font-size: 13px;
+    }
+}

@@ -14,6 +14,9 @@ import ProjectPage from '../ProjectPage';
 import ProjectPageS2 from '../ProjectPageS2';
 import ProjectSinglePage from '../ProjectSinglePage';
 import TeamSinglePage from '../TeamSinglePage';
+import TeamPage from '../TeamPage';
+import ManagementPage from '../ManagementPage';
+import ManagementSinglePage from '../ManagementSinglePage';
 import BlogPage from '../BlogPage'
 import BlogPageLeft from '../BlogPageLeft'
 import BlogPageFullwidth from '../BlogPageFullwidth'
@@ -51,6 +54,8 @@ const AllRoute = () => {
           <Route path='project-single/:id' element={<ProjectSinglePage/>} />
           <Route path='service-single/:id' element={<ServiceSinglePage/>} />
           <Route path='team-single/:id' element={<TeamSinglePage/>} />
+          <Route path='management' element={<ManagementPage/>} />
+          <Route path='management-single/:id' element={<ManagementSinglePage/>} />
           <Route path='service' element={<ServicePage/>} />
           <Route path='service-s2' element={<ServicePageS2/>} />
           <Route path='projects' element={<ProjectPage/>} />
