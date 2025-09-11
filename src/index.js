@@ -6,6 +6,8 @@ import './css/font-awesome.min.css';
 import './css/themify-icons.css';
 import './css/flaticon.css';
 import './sass/style.scss';
+import './css/mobile-about-spacing.css';
+import './css/mobile-navbar-overlay.css';
 
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./store/index";

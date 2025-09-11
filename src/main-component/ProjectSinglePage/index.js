@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar'
+// import Navbar from '../../components/Navbar' // Old navbar commented out
+import TransparentNavbar from '../../components/TransparentNavbar' // New transparent navbar
 import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
 import { useParams } from 'react-router-dom'
@@ -17,7 +18,8 @@ const ProjectSinglePage = (props) => {
 
     return (
         <Fragment>
-            <Navbar Logo={Logo}/>
+            {/* <Navbar Logo={Logo}/> */} {/* Old navbar commented out */}
+            <TransparentNavbar Logo={Logo}/> {/* New transparent navbar */}
             <PageTitle 
                 pageTitle={projectDetails.title} 
                 pagesub={'Project'} 

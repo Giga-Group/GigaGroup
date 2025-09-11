@@ -1,0 +1,184 @@
+/* Mobile navbar overlay on hero section */
+
+@media (max-width: 991px) {
+    /* Make navbar overlay on top of hero with transparent background */
+    .fixed-navbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        background: transparent !important;
+        pointer-events: auto !important;
+    }
+    
+    /* Ensure header and site header are transparent */
+    .wpo-site-header {
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        background: rgba(255, 255, 255, 0.3) !important;
+        backdrop-filter: blur(6px) !important;
+        -webkit-backdrop-filter: blur(6px) !important;
+        position: relative !important;
+        z-index: 9999 !important;
+    }
+    
+    
+    .wpo-site-header .navigation {
+        background-color: transparent !important;
+        background: transparent !important;
+    }
+    
+    /* Style the mobile menu hamburger for visibility over video */
+    .wpo-site-header .mobail-menu {
+        position: relative !important;
+        z-index: 10000 !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu {
+        display: block !important;
+        position: relative !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu button {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
+        border: none !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu button:hover {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        transform: scale(1.05) !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu button span {
+        background-color: white !important;
+        width: 25px !important;
+        height: 3px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        margin-bottom: 4px !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu button span:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* Hide desktop navigation on mobile */
+    .wpo-site-header .navigation-holder {
+        display: none !important;
+    }
+    
+    /* Hide logo on mobile to give more space for video */
+    /* Show logo centered on mobile navbar */
+    .wpo-site-header .navbar-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 10001 !important;
+    }
+
+    /* Style the logo for mobile navbar - completely transparent */
+    .wpo-site-header .navbar-header .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .wpo-site-header .navbar-header .navbar-brand:hover {
+        background: transparent !important;
+        transform: scale(1.05) !important;
+    }
+
+    /* Optimize logo image for mobile - centered and transparent */
+    .wpo-site-header .navbar-header .navbar-brand img {
+        max-height: 60px !important;
+        width: auto !important;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4)) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Ensure mobile navigation layout */
+    .wpo-site-header .navigation {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        width: 100% !important;
+        padding: 10px 15px !important;
+        position: relative !important;
+    }
+
+    /* Position hamburger menu to the right */
+    .wpo-site-header .mobail-menu {
+        margin-left: auto !important;
+        z-index: 10002 !important;
+    }
+    
+    /* Ensure mobile menu drawer works properly */
+    .wpo-site-header .mobail-menu .mobileMenu {
+        position: fixed !important;
+        left: -300px !important;
+        top: 0 !important;
+        z-index: 9998 !important;
+        height: 100vh !important;
+        width: 300px !important;
+        background: #262b38 !important;
+        transition: all 0.3s ease 0s !important;
+        box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1) !important;
+        overflow-x: auto !important;
+        overflow-y: scroll !important;
+        display: block !important;
+    }
+    
+    .wpo-site-header .mobail-menu .mobileMenu.show {
+        left: 0 !important;
+    }
+    
+    /* Hero section should be below navbar */
+    .hero-section,
+    .wpo-hero-section,
+    .wpo-hero-section-2,
+    .hero-area,
+    .banner-section {
+        position: relative !important;
+        z-index: 1 !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Video container should be below navbar */
+    .video-container,
+    .hero-video,
+    .background-video {
+        position: relative !important;
+        z-index: 1 !important;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991px) {
+    .wpo-site-header .mobail-menu .mobileMenu {
+        left: -240px !important;
+        width: 240px !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu button {
+        padding: 10px !important;
+    }
+    
+    .wpo-site-header .mobail-menu .showmenu button span {
+        width: 20px !important;
+        height: 2px !important;
+    }
+}

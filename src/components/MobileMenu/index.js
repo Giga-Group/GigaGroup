@@ -43,30 +43,36 @@ const menus = [
         link: '/about',
     },
 
+    {
+        id: 3,
+        title: 'Management',
+        link: '/management',
+    },
+
 // {
-//     id: 3,
+//     id: 4,
 //         title: 'Services',
 //         link: '/service',
 //         submenu: [
 //             {
-//                 id: 31,
+//                 id: 41,
 //                 title: 'Service',
 //                 link: '/service'
 //             },
 //             {
-//                 id: 32,
+//                 id: 42,
 //                 title: 'Service style 2',
 //                 link: '/service-s2'
 //             },
 //             {
-//                 id: 33,
+//                 id: 43,
 //                 title: 'Service Single',
 //                 link: '/service-single/1'
 //             }
 //         ]
 //     },
 {
-    id: 4,
+    id: 5,
         title: 'Projects',
         link: '/projects',
         // submenu: [
@@ -87,7 +93,11 @@ const menus = [
         //     }
         // ]
     },
-
+{
+    id: 6,
+    title: 'Companies',
+    link: '/companies',
+},
     // {
     //     id: 7,
     //     title: 'Pages',
@@ -186,12 +196,12 @@ const menus = [
     //     ]
     // },
     {
-        id: 87,
+        id: 7,
         title: 'Celebrity Testimonials',
         link: '/celebrity-testimonials',
     },
     {
-        id: 88,
+        id: 8,
         title: 'Contact',
         link: '/contact',
     }

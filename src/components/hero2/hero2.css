@@ -1,3 +1,43 @@
+/* Responsive Video Display */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Desktop video - show by default, hide on mobile */
+.desktop-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Mobile video - hidden by default, show on mobile */
+.mobile-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+}
+
+/* Show mobile video on mobile devices */
+@media (max-width: 768px) {
+    .desktop-video {
+        display: none;
+    }
+    
+    .mobile-video {
+        display: block;
+    }
+}
+
 /* Mobile optimization: Hide text on mobile for better form visibility */
 @media (max-width: 768px) {
     .mobile-hidden-text {
@@ -11,5 +51,370 @@
         opacity: 0.7;
         font-size: 14px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Responsive text for when no contact form is present */
+.responsive-text {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+/* Center positioned text */
+.responsive-text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Top positioned text */
+.responsive-text-top {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ensure slide-content container is positioned for absolute children */
+.slide-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content wrapper for proper title and subtitle ordering */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.content-wrapper .slide-title {
+    order: 1;
+    margin-bottom: 20px;
+}
+
+.content-wrapper .slide-title-sub {
+    order: 2;
+}
+
+/* Desktop responsive text - both top and center are vertically centered */
+@media (min-width: 992px) {
+    .responsive-text {
+        opacity: 1;
+    }
+    
+    .responsive-text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .responsive-text-top {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .responsive-text h2 {
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 20;
+        display: block !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .responsive-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 600px;
+        position: relative;
+        z-index: 19;
+        display: block !important;
+        color: #fff !important;
+        margin: 0 !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+}
+
+/* Tablet responsive text - both top and center are vertically centered */
+@media (max-width: 991px) and (min-width: 769px) {
+    .responsive-text {
+        opacity: 0.9;
+    }
+    
+    .responsive-text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .responsive-text-top {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .responsive-text h2 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        position: relative;
+        z-index: 20;
+        display: block !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .responsive-text p {
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 500px;
+        position: relative;
+        z-index: 19;
+        display: block !important;
+        color: #fff !important;
+        margin: 0 !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+}
+
+/* Mobile responsive text - fully responsive and visible */
+/* Order fixes (title above subtitle) only apply on mobile screens */
+/* On mobile: top = positioned at top, center = centered vertically */
+@media (max-width: 768px) {
+    .responsive-text {
+        opacity: 1;
+        text-align: center;
+    }
+    
+    .responsive-text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .responsive-text-top {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Override main stylesheet conflicts */
+    .slide-title.responsive-text,
+    .slide-title-sub.responsive-text {
+        position: static !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .responsive-text h2 {
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
+        font-weight: 700 !important;
+        order: 1;
+        position: relative;
+        z-index: 20;
+        display: block !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .responsive-text p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        max-width: 100%;
+        padding: 0 10px !important;
+        order: 2;
+        position: relative;
+        z-index: 19;
+        display: block !important;
+        color: #fff !important;
+        margin: 0 !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+}
+
+/* Small mobile responsive text - order fixes apply here too */
+/* On small mobile: top = positioned at top, center = centered vertically */
+@media (max-width: 480px) {
+    .responsive-text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .responsive-text-top {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Override main stylesheet conflicts */
+    .slide-title.responsive-text,
+    .slide-title-sub.responsive-text {
+        position: static !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .responsive-text h2 {
+        font-size: 24px !important;
+        margin-bottom: 10px !important;
+        order: 1;
+        position: relative;
+        z-index: 20;
+        display: block !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .responsive-text p {
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+        padding: 0 5px !important;
+        order: 2;
+        position: relative;
+        z-index: 19;
+        display: block !important;
+        color: #fff !important;
+        margin: 0 !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+}
+
+/* Very small mobile responsive text - order fixes apply here too */
+/* On very small mobile: top = positioned at top, center = centered vertically */
+@media (max-width: 360px) {
+    .responsive-text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .responsive-text-top {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Override main stylesheet conflicts */
+    .slide-title.responsive-text,
+    .slide-title-sub.responsive-text {
+        position: static !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .responsive-text h2 {
+        font-size: 20px !important;
+        margin-bottom: 8px !important;
+        order: 1;
+        position: relative;
+        z-index: 20;
+        display: block !important;
+        color: #fff !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    .responsive-text p {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        padding: 0 !important;
+        order: 2;
+        position: relative;
+        z-index: 19;
+        display: block !important;
+        color: #fff !important;
+        margin: 0 !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
     }
 }
