@@ -83,9 +83,9 @@ const Management = [
     {
         Id: '3',
         tImg: directorImg,
-        name: 'Amir Najeeb Pardesi',
-        title: 'Director of Operations',
-        bio: 'Mr. Amir Najeeb Pardesi serves as the Director of Operations for Giga Group, overseeing day-to-day operations and ensuring the smooth execution of all projects. With extensive experience in project management and operations, he plays a crucial role in maintaining the high standards that Giga Group is known for.',
+        name: 'Amir Amin Pardesi',
+        title: 'CEO Giga Group Pakistan',
+        bio: 'Mr. Amir Amin Pardesi serves as the Director of Operations for Giga Group, overseeing day-to-day operations and ensuring the smooth execution of all projects. With extensive experience in project management and operations, he plays a crucial role in maintaining the high standards that Giga Group is known for.',
         experience: '15+ Years',
         email: 'amir.najeeb@gigagroup.com',
         phone: '+92 51 111 786 125',
@@ -104,7 +104,7 @@ const Management = [
             'Maintained 99% client satisfaction rate'
         ],
         paragraphs: [
-            'Mr. Amir Najeeb Pardesi brings over 15 years of operational excellence to Giga Group. As Director of Operations, he is responsible for ensuring that all projects are delivered on time, within budget, and to the highest quality standards.',
+            'Mr. Amir Amin Pardesi brings over 15 years of operational excellence to Giga Group. As Director of Operations, he is responsible for ensuring that all projects are delivered on time, within budget, and to the highest quality standards.',
             'His expertise in process optimization and team management has been instrumental in Giga Group\'s ability to consistently exceed client expectations. Amir\'s commitment to operational excellence and his ability to coordinate complex projects across multiple departments has made him an invaluable member of the management team.',
             'Under his leadership, Giga Group has achieved remarkable efficiency improvements and maintained its reputation for delivering world-class developments.'
         ]
