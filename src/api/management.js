@@ -7,7 +7,7 @@ const Management = [
         Id: '1',
         tImg: presidentImg,
         name: 'Haji Muhammad Amin Pardesi Giga',
-        title: 'President and Chairman Giga Group Pakistan',
+        title: 'President and Chairman Giga Group of Companies',
         bio: 'Haji Muhammad Amin Pardesi took over his family\'s textile business in 1982, which his father, Haji Abdul Rahim Giga, had established in 1956. He strategically focused on non-traditional and non-quota regions like Africa for trade in textiles, made-ups, and machinery. Under his leadership, Mian Akber Trading Corporation in Pakistan has won the Largest Exporter to Non-Quota Countries award for the past 17 years.',
         experience: '40+ Years',
         email: 'president@gigagroup.com',
@@ -44,7 +44,7 @@ const Management = [
         Id: '2',
         tImg: ceoImg,
         name: 'Najeeb Amin Pardesi Giga',
-        title: 'Vice-Chairman and CEO Giga Group Pakistan',
+        title: 'Vice-Chairman and CEO Giga Group',
         bio: 'Mr. Najeeb Amin Pardesi Giga has been the Vice Chairman and CEO of Giga Group since January 2016. He is the Chairman of World Trade Center (WTC) Pakistan & Member of \'WTC A\' New York, USA. He holds many executive and leadership positions in the member group companies. Najeeb Amin Pardesi is regarded as a Dynamic Visionary Shaping Pakistan\'s Real estate landscape.',
         experience: '8+ Years as CEO',
         email: 'ceo@gigagroup.com',
@@ -97,9 +97,12 @@ const Management = [
         },
         achievements: [],
         paragraphs: [
+            // 'Amir Amin Pardesi, the Vice Chairman and CEO of Giga Group Karachi, embodies visionary leadership and unwavering dedication to revolutionizing the real estate sector in Pakistan and the UAE. From humble beginnings to spearheading some of the most ambitious projects in the region, his journey is an inspiring tale of entrepreneurship, innovation, and the relentless pursuit of excellence.',
+            // 'Amir’s journey began in Dubai, where he completed his BBA in 1999, just as the city was emerging as a global real estate hub. Recognizing the immense potential in Dubai’s booming real estate market, he set forth on a journey that would leave a lasting impact on the industry.',
+            // 'The Giga Group capitalized on this growth and successfully delivered their first tower in Jumeirah Lake Towers (JLT) by 2004. This marked the beginning of a legacy of excellence that continues to define the Giga Group.',
+            // 'The entrepreneurial spirit of Amir Amin Pardesi is deeply influenced by his father, Haji Amin Pardesi, a visionary who aspired to create Asia’s largest mall in Pakistan. With this foundational ambition, Amir set out to redefine the real estate landscape in Pakistan while continuing the legacy of groundbreaking projects abroad.'
             'Amir Amin Pardesi, the Vice Chairman and CEO of Giga Group Karachi, embodies visionary leadership and unwavering dedication to revolutionizing the real estate sector in Pakistan and the UAE. From humble beginnings to spearheading some of the most ambitious projects in the region, his journey is an inspiring tale of entrepreneurship, innovation, and the relentless pursuit of excellence.',
-            'Amir’s journey began in Dubai, where he completed his BBA in 1999, just as the city was emerging as a global real estate hub. Recognizing the immense potential in Dubai’s booming real estate market, he set forth on a journey that would leave a lasting impact on the industry.',
-            'The Giga Group capitalized on this growth and successfully delivered their first tower in Jumeirah Lake Towers (JLT) by 2004. This marked the beginning of a legacy of excellence that continues to define the Giga Group.',
+            'Mr. Amir Amin’s journey began in Dubai, where he completed his BBA in 1999, just as the city was emerging as a global real estate hub. Recognizing the immense potential in Dubai’s booming real estate market, the Giga Group capitalized on this growth and successfully delivered their first tower in Jumeirah Lake Towers (JLT) by 2004.',
             'The entrepreneurial spirit of Amir Amin Pardesi is deeply influenced by his father, Haji Amin Pardesi, a visionary who aspired to create Asia’s largest mall in Pakistan. With this foundational ambition, Amir set out to redefine the real estate landscape in Pakistan while continuing the legacy of groundbreaking projects abroad.'
         ]
     }

@@ -53,7 +53,7 @@ const ProjectSinglePage = (props) => {
                                                 <li>Connectivity : <span>{projectDetails.projectDetails.connectivity}</span></li>
                                                 <li>Status : <span>{projectDetails.projectDetails.status}</span></li>
                                                 <li>Project Type : <span>{projectDetails.projectDetails.projectType}</span></li>
-                                                 <li>Category : <span>{projectDetails.projectDetails.category}</span></li>
+                                                <li>Category : <span>{projectDetails.projectDetails.category}</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -63,110 +63,128 @@ const ProjectSinglePage = (props) => {
                                     </div>
                                     
                                     {/* Design Philosophy Section */}
-                                    <div className="wpo-project-single-item">
-                                        <div className="wpo-project-single-title">
-                                            <h3>{projectDetails.designPhilosophy.title}</h3>
+                                    {projectDetails.sectionVisibility?.designPhilosophy && (
+                                        <div className="wpo-project-single-item">
+                                            <div className="wpo-project-single-title">
+                                                <h3>{projectDetails.designPhilosophy.title}</h3>
+                                            </div>
+                                            <p>{projectDetails.designPhilosophy.description}</p>
+                                            <ul>
+                                                {projectDetails.designPhilosophy.philosophy.map((item, index) => (
+                                                    <li key={index}>{item}</li>
+                                                ))}
+                                            </ul>
                                         </div>
-                                        <p>{projectDetails.designPhilosophy.description}</p>
-                                        <ul>
-                                            {projectDetails.designPhilosophy.philosophy.map((item, index) => (
-                                                <li key={index}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
+                                    )}
 
                                     {/* Project Features Section */}
-                                    <div className="wpo-project-single-item list-widget">
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <div className="wpo-project-single-title">
-                                                    <h3>{projectDetails.projectFeatures.title}</h3>
+                                    {projectDetails.sectionVisibility?.projectFeatures && (
+                                        <div className="wpo-project-single-item list-widget">
+                                            <div className="row">
+                                                <div className="col-lg-6">
+                                                    <div className="wpo-project-single-title">
+                                                        <h3>{projectDetails.projectFeatures.title}</h3>
+                                                    </div>
+                                                    <p>{projectDetails.projectFeatures.description}</p>
+                                                    <ul>
+                                                        {projectDetails.projectFeatures.features.map((feature, index) => (
+                                                            <li key={index}>{feature}</li>
+                                                        ))}
+                                                    </ul>
                                                 </div>
-                                                <p>{projectDetails.projectFeatures.description}</p>
-                                                <ul>
-                                                    {projectDetails.projectFeatures.features.map((feature, index) => (
-                                                        <li key={index}>{feature}</li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="wpo-project-single-item-quote">
-                                                    <p>"{projectDetails.testimonial.quote}"</p>
-                                                    <span>{projectDetails.testimonial.author} - <span>{projectDetails.testimonial.designation}</span></span>
+                                                <div className="col-lg-6">
+                                                    {projectDetails.sectionVisibility?.testimonial && (
+                                                        <div className="wpo-project-single-item-quote">
+                                                            <p>"{projectDetails.testimonial.quote}"</p>
+                                                            <span>{projectDetails.testimonial.author} - <span>{projectDetails.testimonial.designation}</span></span>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    )}
 
                                     {/* Project Gallery */}
-                                    <div className="wpo-project-single-gallery">
-                                        <div className="row mt-4">
-                                            <div className="col-md-6 col-sm-6 col-12">
-                                                <div className="wpo-p-details-img">
-                                                    <img src={projectDetails.psub1img1} alt={projectDetails.title}/>
+                                    {projectDetails.sectionVisibility?.projectGallery && (
+                                        <div className="wpo-project-single-gallery">
+                                            <div className="row mt-4">
+                                                <div className="col-md-6 col-sm-6 col-12">
+                                                    <div className="wpo-p-details-img">
+                                                        <img src={projectDetails.psub1img1} alt={projectDetails.title}/>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6 col-12">
-                                                <div className="wpo-p-details-img">
-                                                    <img src={projectDetails.psub1img2} alt={projectDetails.title}/>
+                                                <div className="col-md-6 col-sm-6 col-12">
+                                                    <div className="wpo-p-details-img">
+                                                        <img src={projectDetails.psub1img2} alt={projectDetails.title}/>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    )}
 
                                     {/* Project Amenities and Why Choose Sections */}
-                                    <div className="wpo-project-single-item list-widget">
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <div className="wpo-project-single-title">
-                                                    <h3>{projectDetails.projectAmenities.title}</h3>
-                                                </div>
-                                                <p>{projectDetails.projectAmenities.description}</p>
-                                                <ul>
-                                                    {projectDetails.projectAmenities.amenities.map((amenity, index) => (
-                                                        <li key={index}>{amenity}</li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                            <div className="col-lg-6 list-widget-s">
-                                                <div className="wpo-project-single-title">
-                                                    <h3>{projectDetails.whyChoose.title}</h3>
-                                                </div>
-                                                <p>{projectDetails.whyChoose.description}</p>
-                                                <ul>
-                                                    {projectDetails.whyChoose.reasons.map((reason, index) => (
-                                                        <li key={index}>{reason}</li>
-                                                    ))}
-                                                </ul>
+                                    {(projectDetails.sectionVisibility?.projectAmenities || projectDetails.sectionVisibility?.whyChoose) && (
+                                        <div className="wpo-project-single-item list-widget">
+                                            <div className="row">
+                                                {projectDetails.sectionVisibility?.projectAmenities && (
+                                                    <div className="col-lg-6">
+                                                        <div className="wpo-project-single-title">
+                                                            <h3>{projectDetails.projectAmenities.title}</h3>
+                                                        </div>
+                                                        <p>{projectDetails.projectAmenities.description}</p>
+                                                        <ul>
+                                                            {projectDetails.projectAmenities.amenities.map((amenity, index) => (
+                                                                <li key={index}>{amenity}</li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                                {projectDetails.sectionVisibility?.whyChoose && (
+                                                    <div className="col-lg-6 list-widget-s">
+                                                        <div className="wpo-project-single-title">
+                                                            <h3>{projectDetails.whyChoose.title}</h3>
+                                                        </div>
+                                                        <p>{projectDetails.whyChoose.description}</p>
+                                                        <ul>
+                                                            {projectDetails.whyChoose.reasons.map((reason, index) => (
+                                                                <li key={index}>{reason}</li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
-                                    </div>
+                                    )}
 
                                     {/* Investment Highlights Section */}
-                                    {/* <div className="wpo-project-single-item">
-                                        <div className="wpo-project-single-title">
-                                            <h3>{projectDetails.investmentHighlights.title}</h3>
+                                    {projectDetails.sectionVisibility?.investmentHighlights && (
+                                        <div className="wpo-project-single-item">
+                                            <div className="wpo-project-single-title">
+                                                <h3>{projectDetails.investmentHighlights.title}</h3>
+                                            </div>
+                                            <p>{projectDetails.investmentHighlights.description}</p>
+                                            <ul>
+                                                {projectDetails.investmentHighlights.highlights.map((highlight, index) => (
+                                                    <li key={index}>{highlight}</li>
+                                                ))}
+                                            </ul>
                                         </div>
-                                        <p>{projectDetails.investmentHighlights.description}</p>
-                                        <ul>
-                                            {projectDetails.investmentHighlights.highlights.map((highlight, index) => (
-                                                <li key={index}>{highlight}</li>
-                                            ))}
-                                        </ul>
-                                    </div> */}
+                                    )}
 
                                     {/* Location Advantages Section */}
-                                    {/* <div className="wpo-project-single-item">
-                                        <div className="wpo-project-single-title">
-                                            <h3>{projectDetails.locationAdvantages.title}</h3>
+                                    {projectDetails.sectionVisibility?.locationAdvantages && (
+                                        <div className="wpo-project-single-item">
+                                            <div className="wpo-project-single-title">
+                                                <h3>{projectDetails.locationAdvantages.title}</h3>
+                                            </div>
+                                            <p>{projectDetails.locationAdvantages.description}</p>
+                                            <ul>
+                                                {projectDetails.locationAdvantages.advantages.map((advantage, index) => (
+                                                    <li key={index}>{advantage}</li>
+                                                ))}
+                                            </ul>
                                         </div>
-                                        <p>{projectDetails.locationAdvantages.description}</p>
-                                        <ul>
-                                            {projectDetails.locationAdvantages.advantages.map((advantage, index) => (
-                                                <li key={index}>{advantage}</li>
-                                            ))}
-                                        </ul>
-                                    </div> */}
+                                    )}
 
                                     <RelatedProject/>
                                     <Discuss currentProject={projectDetails.title} />

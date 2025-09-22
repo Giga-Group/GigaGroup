@@ -38,6 +38,13 @@ import gbcBanner from '../images/banner/gbc-banner.jpg'
 import cprBanner from '../images/banner/cpr-banner.jpg'
 import wtcBanner from '../images/banner/wtc-banner.jpg'
 
+import gcbsImage from '../images/projects/gcbs-m1.jpeg'
+
+import gcbsBanner from '../images/banner/wtc-banner.jpg'
+import gcbsS1 from '../images/project-single/wtc-s1.jpg'
+import gcbsS2 from '../images/project-single/wtc-s2.jpg'
+import gcbsM1 from '../images/project-single/gcbs-m1.jpeg'
+
 const Projects = [
     {
         Id: '1',
@@ -148,6 +155,18 @@ const Projects = [
             author: "Behroze Sabzwari",
             designation: "Pakistani Actor",
             rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: true,
+            projectGallery: true
         }
     },
 
@@ -252,6 +271,18 @@ const Projects = [
             author: "Behroz Sabzwari",
             designation: "Pakistani Actor",
             rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: true,
+            projectGallery: true
         }
     },
 
@@ -353,10 +384,22 @@ const Projects = [
         },
 
         testimonial: {
-            quote: "The Goldcrest model apartments are so beautiful, it feels as if you are living in a first-world country. Become friends with Giga and let’s make Pakistan stronger.",
+            quote: "The Goldcrest model apartments are so beautiful, it feels as if you are living in a first-world country. Become friends with Giga and let's make Pakistan stronger.",
             author: "Ushna Shah",
             designation: "Prominent Actress",
             rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: true,
+            projectGallery: true
         }
     },
 
@@ -469,10 +512,22 @@ const Projects = [
         },
 
         testimonial: {
-            quote: "I paid a visit to the Goldcrest Apartments and honestly, I did not feel like I was visiting an apartment in Pakistan, because every small detail has been made so perfectly. I know I will be coming here and staying here myself. I wish everyone in this group the very best of luck. I cannot wait to come and stay here. Last but not least, become friends of Giga and let’s make Pakistan stronger.",
+            quote: "I paid a visit to the Goldcrest Apartments and honestly, I did not feel like I was visiting an apartment in Pakistan, because every small detail has been made so perfectly. I know I will be coming here and staying here myself. I wish everyone in this group the very best of luck. I cannot wait to come and stay here. Last but not least, become friends of Giga and let's make Pakistan stronger.",
             author: "Kubra Khan",
             designation: "Pakistani Actress",
             rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: true,
+            projectGallery: true
         }
     },
 
@@ -585,10 +640,22 @@ const Projects = [
         },
 
         testimonial: {
-            quote: "Today I visited the Giga Mall Goldcrest Apartments, and I must say these apartments are truly beautiful. I would like to invite you to visit Giga Mall as well. When you see the model apartment, you will realize how wonderfully it has been designed and built. Come, be friends with Giga, and let’s make Pakistan stronger together.",
+            quote: "Today I visited the Giga Mall Goldcrest Apartments, and I must say these apartments are truly beautiful. I would like to invite you to visit Giga Mall as well. When you see the model apartment, you will realize how wonderfully it has been designed and built. Come, be friends with Giga, and let's make Pakistan stronger together.",
             author: "Chef Gulzar",
             designation: "Celebrity Chef",
             rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: true,
+            projectGallery: true
         }
     },
 
@@ -705,6 +772,148 @@ const Projects = [
             author: "Faysal Quraishi",
             designation: "Pakistani Actor",
             rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: true,
+            projectGallery: true
+        }
+    },
+    {
+        Id: '7',
+        pImg: gcbsImage,
+        coverImage: gcbsBanner,
+        ps1img: gcbsM1,
+        psub1img1: gcbsS1,
+        psub1img2: gcbsS2,
+        title: 'Goldcrest Bay Sands – Karachi',
+        subTitle: 'Goldcrest Bay Sands – Karachi',
+        
+        description: [
+            "Welcome to Goldcrest Bay Sands, a landmark development by Giga Group, soon rising in the prestigious Crescent Bay, DHA Phase 8. With three 40-story towers offering panoramic views of the Arabian Sea, this project brings a new standard of tech-integrated, ultra-luxury seaside living to Karachi. Designed for the elite, it promises unmatched elegance, breathtaking surroundings, and world-class amenities, all in the city’s most coveted coastal zone.",
+            "Situated in the iconic Crescent Bay, DHA Phase 8, Karachi, Goldcrest Bay Sands offers a prestigious beachfront address with uninterrupted views of the Arabian Sea. Nestled within one of the city’s most sought-after coastal zones, the project provides seamless access to Clifton, HMR Waterfront, and other urban conveniences. As Crescent Bay becomes Karachi’s leading destination for upscale living, Goldcrest Bay Sands emerges as a defining symbol of coastal luxury, exclusivity, and architectural excellence.",
+            // "Goldcrest Bay Sands brings a new benchmark in high-end living to Karachi with three 40-story beachfront towers designed for elegance, comfort, and exclusivity. Featuring panoramic sea views, smart tech, refined interiors, and a grand entrance lobby, the project offers a complete lifestyle in Crescent Bay, DHA Phase 8. Developed by the trusted Giga Group, it continues a legacy of landmark projects like Goldcrest Views and Highlife. Positioned on the HMR Waterfront, Goldcrest Bay Sands promises a premium residential experience in one of Pakistan’s most prestigious coastal locations.",
+            // "Goldcrest Bay Sands offers a rare opportunity to own a residence in Crescent Bay, Karachi’s most prestigious coastal enclave. With its signature 40-story beachfront towers, the project combines breathtaking sea views, curated amenities, and beautifully designed interiors exclusively for residents. Developed by the globally trusted Giga Group, it caters to both luxury homeowners and long-term investors seeking a high-value, lifestyle-driven address in one of Pakistan’s most elite locations.",
+            // "Goldcrest Bay Sands offers a unique blend of beachfront tranquility, modern architecture, and a globally inspired lifestyle in the heart of Karachi’s most elite coastal district. From breathtaking sunrise views to serene sunset walks, it delivers an unmatched living experience along the Arabian Sea, making it the ultimate destination for those seeking refined seaside living."
+        ],
+        projectDetails: {
+            location: "Crescent Bay, DHA Karachi",  
+            returnPotential: "Premium Lifestyle Value",  
+            interiors: "Designer Luxury Finishings",  
+            parking: "Secure Covered Levels",  
+            amenities: "Elite Coastal Facilities",  
+            security: "24/7 Smart Surveillance",  
+            connectivity: "Clifton & HMR Access",  
+            status: "In Progress Towers",              
+            projectType: "Beachfront Residences",
+            category: "Seaside Luxury Living"
+        },
+        
+
+        // Design Philosophy for WTC
+        designPhilosophy: {
+            title: "Design Philosophy",
+            description: "Goldcrest Bay Sands embodies a design philosophy rooted in coastal elegance and global inspiration. The project integrates Dubai-style sophistication with Karachi’s vibrant seaside setting, offering panoramic sea views, refined interiors, and smart living solutions. Every element — from the towering façade to the detailed finishings — reflects luxury, sustainability, and comfort. By blending modern architecture with timeless coastal aesthetics, it creates an iconic lifestyle destination that redefines waterfront living in Pakistan.",
+            philosophy: []
+        },
+
+        projectFeatures: {
+            title: "Goldcrest Bay Sands Features",
+            description: "Ultra-luxury beachfront living with world-class design and modern lifestyle facilities.",
+            features: [
+                "Three iconic 40-story beachfront towers",
+                "Prestigious address in Crescent Bay DHA Phase 8",
+                "Panoramic views of the Arabian Sea",
+                "Designer interiors with smart home technology",
+                "Secure multi-level covered parking",
+                "Grand entrance lobbies with premium detailing",
+                "Dubai-inspired coastal architecture",
+                "Developed by the trusted Giga Group"
+            ]
+        },
+
+        projectAmenities: {
+            title: "Luxury Lifestyle Amenities",
+            description: "World-class facilities crafted for exclusive seaside living and leisure.",
+            amenities: [
+                "Luxury Gym & Fitness Club with sea views",
+                "Sauna, Spa, and Wellness Center",
+                "Exclusive Beauty Salon and Daycare",
+                "Business & Meeting Lounge facilities",
+                "Indoor Games and Kids Play Areas",
+                "Retail Outlets and Community Café",
+                "Secure Covered Parking Levels",
+                "24/7 Security and Concierge Services"
+            ]
+        },
+
+        whyChoose: {
+            title: "Why Choose Goldcrest Bay Sands",
+            description: "Unique advantages that make this the ultimate luxury coastal residence in Karachi.",
+            reasons: [
+                "Landmark beachfront project in DHA Phase 8",
+                "Prestigious Crescent Bay location with elite lifestyle",
+                "Uninterrupted panoramic views of the Arabian Sea",
+                "Ultra-luxury residences from 1 to 5 bedrooms",
+                "Smart tech-enabled interiors and modern design",
+                "Exclusive lifestyle amenities for residents",
+                "Trusted Giga Group legacy of excellence",
+                "High-value investment in Karachi’s coastal zone"
+            ]
+        },
+
+        investmentHighlights: {
+            title: "Prime Investment Highlights",
+            description: "High-return opportunities in Karachi’s most prestigious seaside address.",
+            highlights: [
+                "First ultra-luxury beachfront towers in Crescent Bay",
+                "High rental yields in premium coastal residences",
+                "Strong appreciation potential in elite location",
+                "Prestigious address enhancing long-term value",
+                "Flexible installment and payment options",
+                "Demand driven by Karachi’s luxury market growth",
+                "Lifestyle-driven investment with global appeal"
+            ]
+        },
+
+        locationAdvantages: {
+            title: "Exclusive Coastal Location",
+            description: "Prime positioning in Crescent Bay offering seamless coastal lifestyle access.",
+            advantages: [
+                "Beachfront address in DHA Phase 8, Karachi",
+                "Unmatched panoramic Arabian Sea views",
+                "Seamless access to Clifton and HMR Waterfront",
+                "Positioned in Karachi’s most elite coastal zone",
+                "Near retail, leisure, and lifestyle destinations",
+                "Strategic location for high-value residences",
+                "Emerging symbol of luxury coastal living"
+            ]
+        },
+
+        testimonial: {
+            quote: "Looking at the vision behind Goldcrest Bay Sands, it seems like one of the most promising luxury developments in Karachi. Bringing Dubai-style beachfront living to Crescent Bay is truly exciting, and I believe it has the potential to set a new benchmark for coastal lifestyle in Pakistan.",
+            author: "Fahad",
+            designation: "Software Engineer & Observer",
+            rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: false,
+            projectAmenities: false,
+            whyChoose: false,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: false,
+            projectGallery: false
         }
     }
 ]

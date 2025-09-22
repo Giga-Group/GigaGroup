@@ -26,44 +26,10 @@ const ManagementSinglePage = (props) => {
             <div className="team-pg-area section-padding">
                 <div className="container">
                     <div className="team-info-wrap">
-                        <div className="row">
+                        <div className="row justify-content-center">
                             <div className="col-lg-5">
-                                <div className="team-info-img">
+                                <div className="team-info-img text-center">
                                     <img src={managementDetails.tImg} alt="" />
-                                </div>
-                            </div>
-                            <div className="col-lg-7">
-                                <div className="team-info-text">
-                                    <h2>{managementDetails.name}</h2>
-                                    <h4>{managementDetails.title}</h4>
-                                    <p className="management-intro">{managementDetails.bio}</p>
-                                    {managementDetails.socialMedia && (
-                                        <div className="social-media-inline">
-                                            {Object.entries(managementDetails.socialMedia)
-                                                .filter(([platform, url]) => url && url !== null)
-                                                .map(([platform, url]) => {
-                                                    const platformIcons = {
-                                                        facebook: 'ti-facebook',
-                                                        linkedin: 'ti-linkedin',
-                                                        twitter: 'ti-twitter',
-                                                        instagram: 'ti-instagram'
-                                                    };
-                                                    return (
-                                                        <a
-                                                            key={platform}
-                                                            href={url}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className={`social-icon-inline ${platform}`}
-                                                            title={platform.charAt(0).toUpperCase() + platform.slice(1)}
-                                                            aria-label={`Visit ${platform} profile`}
-                                                        >
-                                                            <i className={platformIcons[platform]}></i>
-                                                        </a>
-                                                    );
-                                                })}
-                                        </div>
-                                    )}
                                 </div>
                             </div>
                         </div>
