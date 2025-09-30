@@ -149,7 +149,6 @@ const Projects = [
             ]
         },
 
-        // Testimonials
         testimonial: {
             quote: "Believe me, the units that were built 8–10 years ago, people bought them at a very low price — around 3.5 million rupees. Now, those same flats are worth nearly 17.5 million.",
             author: "Behroze Sabzwari",
@@ -165,7 +164,7 @@ const Projects = [
             whyChoose: true,
             investmentHighlights: false,
             locationAdvantages: false,
-            testimonial: true,
+            testimonial: false,
             projectGallery: true
         }
     },
@@ -281,7 +280,7 @@ const Projects = [
             whyChoose: true,
             investmentHighlights: false,
             locationAdvantages: false,
-            testimonial: true,
+            testimonial: false,
             projectGallery: true
         }
     },
@@ -398,7 +397,7 @@ const Projects = [
             whyChoose: true,
             investmentHighlights: false,
             locationAdvantages: false,
-            testimonial: true,
+            testimonial: false,
             projectGallery: true
         }
     },
@@ -526,7 +525,7 @@ const Projects = [
             whyChoose: true,
             investmentHighlights: false,
             locationAdvantages: false,
-            testimonial: true,
+            testimonial: false,
             projectGallery: true
         }
     },
@@ -654,7 +653,7 @@ const Projects = [
             whyChoose: true,
             investmentHighlights: false,
             locationAdvantages: false,
-            testimonial: true,
+            testimonial: false,
             projectGallery: true
         }
     },
@@ -782,7 +781,7 @@ const Projects = [
             whyChoose: true,
             investmentHighlights: false,
             locationAdvantages: false,
-            testimonial: true,
+            testimonial: false,
             projectGallery: true
         }
     },
