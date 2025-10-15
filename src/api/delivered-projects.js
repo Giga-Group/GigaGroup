@@ -1,5 +1,5 @@
 // Import placeholder images - these should be replaced with actual delivered project images
-// import gcv1Dubai from '../images/projects/delivered-projects/gold.jpeg'
+import gcv1Dubai from '../images/projects/delivered-projects/gc-views-1-dubai.jpg'
 import gcv2Dubai from '../images/projects/delivered-projects/gc-views-2-dubai.jpg'
 import gceExecutiveDubai from '../images/projects/delivered-projects/gcv-exective-dubai.jpg'
 import canyonViews from '../images/projects/delivered-projects/canyon-views.jpg'
@@ -13,13 +13,13 @@ import pearlRecidency from '../images/projects/delivered-projects/pearl-residenc
 import alNajeebiBazaar from '../images/projects/delivered-projects/al-najeebi-bazaar.jpg'
 
 const DeliveredProjects = [
-    // {
-    //     Id: '1',
-    //     pImg: gcv1Dubai,
-    //     title: 'Goldcrest Views 1, Dubai',
-    //     subTitle: 'Dubai',
-    //     description: 'Goldcrest Views 1 is a 40-storey residential tower in JLT Cluster V, developed by Al Ghurair Group. It offers 376 ready units, from studios to penthouses, with top-tier amenities like a rooftop pool, gym, sauna, and sports bar. Located near metro stations, Dubai Marina, and Palm Jumeirah, it promises a luxurious yet convenient lifestyle.',
-    // },
+    {
+        Id: '1',
+        pImg: gcv1Dubai,
+        title: 'Goldcrest Views 1, Dubai',
+        subTitle: 'Dubai',
+        description: 'Goldcrest Views 1 is a 40-storey residential tower in JLT Cluster V, developed by Al Ghurair Group. It offers 376 ready units, from studios to penthouses, with top-tier amenities like a rooftop pool, gym, sauna, and sports bar. Located near metro stations, Dubai Marina, and Palm Jumeirah, it promises a luxurious yet convenient lifestyle.',
+    },
     {
         Id: '2',
         pImg: gcv2Dubai,
