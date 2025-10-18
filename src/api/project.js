@@ -4,6 +4,7 @@ import gme from '../images/projects/gme.jpg'
 import gbcImage from '../images/projects/gbc-grid.jpg'
 import cprImage from '../images/projects/cpr-grid.jpg'
 import wtcImage from '../images/projects/wtc-grid.jpg'
+import gcHighLife from '../images/projects/gc-highlife-grid.jpg'
 
 import gccM1 from '../images/project-single/gcc-m1.jpg'
 import gcvM1 from '../images/project-single/gcv-m1.jpg'
@@ -11,6 +12,7 @@ import gbcM1 from '../images/project-single/gbc-m1.jpg'
 import gmeM1 from '../images/project-single/gme-m1.jpg'
 import cprM1 from '../images/project-single/cpr-m1.jpg'
 import wtcM1 from '../images/project-single/wtc-m1.jpg'
+import gcHighlifeM1 from '../images/project-single/gc-highlife-m1.jpg'
 
 
 import gcvS1 from '../images/project-single/gcv-s1.jpg'
@@ -37,6 +39,7 @@ import gmeBanner from '../images/banner/gme-banner.jpg'
 import gbcBanner from '../images/banner/gbc-banner.jpg'
 import cprBanner from '../images/banner/cpr-banner.jpg'
 import wtcBanner from '../images/banner/wtc-banner.jpg'
+import gcvHighLifeBanner from '../images/banner/gc-highlife-banner.jpg'
 
 import gcbsImage from '../images/projects/gcbs-m1.jpeg'
 
@@ -913,6 +916,133 @@ const Projects = [
             locationAdvantages: false,
             testimonial: false,
             projectGallery: false
+        }
+    },
+    {
+        Id: '8',
+        pImg: gcHighLife,
+        coverImage: gcvHighLifeBanner,
+        ps1img: gcHighlifeM1,
+        psub1img1: gcHighlifeM1,
+        psub1img2: gcHighlifeM1,
+        title: 'Goldcrest HighLife',
+        subTitle: 'Modern Residential Living',
+        
+        description: [
+            "Giga Group is proud to bring another farsighted residential project, Goldcrest Highlife. Centrally located in DHA 2 Islamabad, Goldcrest Highlife is a planned 3-tower residential development offering exceptional views of the verdant greens surrounding the locality. The project provides excellent features, fixtures, and lifestyle choices that were previously unheard of in Pakistan.",
+            "Each tower of Goldcrest Highlife is designed on modern lines with multiple levels of vehicle parking, state-of-the-art conveniences on the rooftop, and various residential layouts that suit everyone's unique budget and requirements. This development represents Giga Group's commitment to bringing world-class residential living to Islamabad's most prestigious address."
+        ],
+        
+        projectDetails: {
+            location: "DHA 2, Islamabad",  
+            returnPotential: "High Investment Returns",  
+            interiors: "Modern Premium Finishings",  
+            parking: "Multi-Level Parking",  
+            amenities: "State-of-the-Art Rooftop",  
+            security: "24/7 Smart Security",  
+            connectivity: "GT Road / Isb Highway",  
+            status: "In Progress",              
+            projectType: "3-Tower Residential",
+            category: "Residential Living"
+        },
+
+        designPhilosophy: {
+            title: "Design Philosophy",
+            description: "Goldcrest Highlife is designed on modern lines with a farsighted approach to residential living. Each tower features contemporary architectural design that maximizes views of the verdant surroundings while providing practical solutions like multiple levels of parking and rooftop conveniences. The project offers various residential layouts to accommodate different budgets and requirements, delivering features and lifestyle choices that set new standards in Pakistan's residential development landscape.",
+            philosophy: []
+        },
+
+        projectFeatures: {
+            title: "Goldcrest HighLife Features",
+            description: "Farsighted residential development with features and fixtures previously unheard of in Pakistan.",
+            features: [
+                "3-tower residential development with modern design",
+                "Exceptional views of verdant greens surrounding the locality",
+                "Multiple levels of dedicated vehicle parking",
+                "State-of-the-art conveniences on the rooftop",
+                "Various residential layouts for every budget",
+                "Centrally located in DHA 2 Islamabad",
+                "Modern architectural lines and premium finishings",
+                "Lifestyle choices previously unheard of in Pakistan"
+            ]
+        },
+
+        projectAmenities: {
+            title: "Premium Lifestyle Amenities",
+            description: "State-of-the-art conveniences and facilities for modern living.",
+            amenities: [
+                "Rooftop - State-of-the-art conveniences and facilities",
+                "Multi-Level Parking - Multiple levels of secure vehicle parking",
+                "Green Views - Exceptional views of verdant surroundings",
+                "Modern Design - Contemporary architectural lines throughout",
+                "Flexible Layouts - Various residential options for all budgets",
+                "Premium Finishes - High-quality fixtures and fittings",
+                "24/7 Security - Professional security and surveillance",
+                "Central Location - Prime address in DHA 2 Islamabad"
+            ]
+        },
+
+        whyChoose: {
+            title: "Why Choose Goldcrest HighLife",
+            description: "A farsighted residential project by the trusted Giga Group.",
+            reasons: [
+                "Centrally located in prestigious DHA 2 Islamabad",
+                "3-tower development with modern design",
+                "Features and fixtures previously unheard of in Pakistan",
+                "Exceptional views of verdant greens",
+                "Multiple levels of vehicle parking",
+                "State-of-the-art rooftop conveniences",
+                "Various layouts to suit every budget and requirement",
+                "Developed by trusted Giga Group"
+            ]
+        },
+
+        investmentHighlights: {
+            title: "Investment Highlights",
+            description: "Strong investment opportunity with excellent growth potential.",
+            highlights: [
+                "Prime location ensuring high appreciation",
+                "Strong rental yield potential",
+                "Flexible payment plans available",
+                "Quality construction by trusted developer",
+                "Growing demand in premium segment",
+                "Professional property management",
+                "Excellent capital appreciation prospects"
+            ]
+        },
+
+        locationAdvantages: {
+            title: "Location Advantages",
+            description: "Centrally located in DHA 2 Islamabad with exceptional surroundings.",
+            advantages: [
+                "Centrally located in prestigious DHA 2 Islamabad",
+                "Exceptional views of verdant greens",
+                "Prime residential neighborhood",
+                "Excellent connectivity to twin cities",
+                "Close to Giga Mall and commercial centers",
+                "Near educational institutions and healthcare",
+                "Access to GT Road and Islamabad Highway",
+                "Well-developed infrastructure in DHA 2"
+            ]
+        },
+
+        testimonial: {
+            quote: "Goldcrest Highlife is a farsighted residential project that brings features and lifestyle choices previously unheard of in Pakistan. The central location in DHA 2 and the views of verdant greens make it truly exceptional.",
+            author: "Residential Owner",
+            designation: "Property Investor",
+            rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: false,
+            projectGallery: true
         }
     }
 ]

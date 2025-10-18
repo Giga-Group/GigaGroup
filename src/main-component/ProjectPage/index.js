@@ -7,6 +7,7 @@ import Scrollbar from '../../components/scrollbar'
 import ProjectsS2 from '../../components/ProjectsS2'
 import Logo from '../../images/logo.svg'
 import projectsBg from '../../images/banner/projects.jpg' // Using Goldcrest Views as background
+import DeliveredProjectsSection from '../../components/DeliveredProjectsSection';
 
 const ProjectPage =() => {
     return(
@@ -19,6 +20,7 @@ const ProjectPage =() => {
                 backgroundImage={projectsBg}
             /> 
             <ProjectsS2/>
+            <DeliveredProjectsSection />
             <Footer ftClass={'wpo-site-footer-s2'}/>
             <Scrollbar/>
         </Fragment>
