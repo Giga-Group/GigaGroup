@@ -89,6 +89,44 @@
     text-align: center;
 }
 
+
+.l1-text {
+    font-family: 'AncientSans', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #fff;      
+
+}
+.l2-text {
+    font-family: 'AncientSans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;                                            
+}
+
+.l3-text {
+    font-family: 'AncientSans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;                                            
+}
+.l4-text {
+    font-family: 'High Summit', 'Brush Script MT', cursive;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;
+}
+.l5-text {
+    font-family: 'AncientSans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;                                            
+}
 /* Ensure slide-content container is positioned for absolute children */
 .slide-content {
     position: relative;
@@ -99,6 +137,30 @@
     align-items: center;
 }
 
+.l6-text {
+    font-family: 'High Summit', 'Brush Script MT', cursive;
+    font-size: 4.9rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;
+}
+
+.l7-text {
+    font-family: 'AncientSans', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #fff; 
+}
+.l8-text{
+    font-family: 'High Summit', 'Brush Script MT', cursive;
+    font-size: 4.9rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;
+
+}
+
 /* Content wrapper for proper title and subtitle ordering */
 .content-wrapper {
     display: flex;
@@ -107,6 +169,128 @@
     text-align: center;
     width: 100%;
     z-index: 10;
+}
+
+.content-wrapper-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    height: 100%;
+    padding: 4.5rem 0 3.5rem;
+    gap: 2.5rem;
+}
+
+.c-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    height: 100%;
+    padding: 4.5rem 0 3.5rem;
+    gap: 2.5rem;
+}
+/* .c-wrapper-2 {
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    height: 100%;
+    min-height: calc(100vh - 6rem);
+    padding: 2.25rem 0.5rem 2rem;
+    gap: 1.5rem;
+} */
+
+@media (max-width: 768px) {
+    .c-wrapper {
+        justify-content: flex-start;
+        align-items: stretch;
+        text-align: center;
+        height: auto;
+        padding: 1.5rem 0 1.5rem;
+        gap: 1.5rem;
+    }
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .slide-content > .c-wrapper,
+    .slide-content > .c-wrapper-2 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-wrapper-2 {
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        min-height: auto;
+        padding: 2.25rem 0.5rem 2rem;
+        gap: 1.5rem;
+    }
+    .l1-text {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+
+    .l2-text {
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+    }
+
+    .l3-text,
+    .l5-text {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .l4-text {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .l6-text {
+        font-size: 3.0rem;
+        font-weight: 400;
+    }
+
+    .l7-text {
+        font-size: 2.1rem;
+        font-weight: 400;
+    }
+    .l8-text {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 480px) {
+    .l1-text {
+        font-size: 1.5rem;
+    }
+
+    .l2-text {
+        font-size: 0.8rem;
+    }
+
+    .l3-text,
+    .l5-text {
+        font-size: 0.7rem;
+    }
+
+    .l4-text {
+        font-size: 1rem;
+    }
 }
 
 .content-wrapper .slide-title {
