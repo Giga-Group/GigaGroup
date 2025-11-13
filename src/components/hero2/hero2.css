@@ -160,7 +160,14 @@
     color: #fff;
 
 }
+.l9-text {
+    font-family: 'AncientSans', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #fff;      
 
+}
 /* Content wrapper for proper title and subtitle ordering */
 .content-wrapper {
     display: flex;
@@ -270,6 +277,10 @@
     }
     .l8-text {
         font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .l9-text {
+        font-size: 2.7rem;
         font-weight: 400;
     }
 }

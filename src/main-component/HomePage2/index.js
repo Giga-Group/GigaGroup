@@ -72,12 +72,12 @@ const HomePage2 = () => {
                 <div className="slide-content">
                     <div className={`c-wrapper-2`}>
                         <div>
-                            <h1 className="l1-text">Goldcrest Views</h1>
+                            <h1 className="l9-text">Goldcrest Views</h1>
                             {/* <p className='l2-text'>Giga City Islamabad</p> */}
                         </div>
                         <div>
                             {/* <p className='l3-text'>Developed by Giga Group</p> */}
-                            <p className="l4-text">Giga City Islamabad</p>
+                            <p className="l8-text">Giga City Islamabad</p>
                         </div>
                         <div>
                             {/* <p className="l4-text">Giga City Islamabad</p> */}
