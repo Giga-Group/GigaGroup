@@ -66,8 +66,8 @@ const HomePage2 = () => {
             </Hero2>
             {/* uI24t0e6sVU */}
             <Hero2
-                videoUrl='https://www.youtube.com/embed/trmn0svn7F0?autoplay=1&mute=1&loop=1&playlist=trmn0svn7F0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
-                mobileVideoUrl='https://www.youtube.com/embed/bDnmFZQ-xJU?autoplay=1&mute=1&loop=1&playlist=bDnmFZQ-xJU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3'
+                videoUrl="https://www.youtube.com/embed/OtcV-pML4Zo?autoplay=1&mute=1&loop=1&playlist=OtcV-pML4Zo&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+                mobileVideoUrl="https://www.youtube.com/embed/ws2mz5p3X8I?autoplay=1&mute=1&loop=1&playlist=ws2mz5p3X8I&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
             >
                 <div className="slide-content">
                     <div className={`c-wrapper-2`}>
