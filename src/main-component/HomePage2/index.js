@@ -12,6 +12,8 @@ import Footer from '../../components/footer';
 import Scrollbar from '../../components/scrollbar'
 import Logo from '../../images/logo.svg'
 import { Link } from 'react-router-dom';
+import DeliveredProjectsSection from '../../components/DeliveredProjectsSection';
+import CompanySection from '../../components/CompanySection';
 
 
 const HomePage2 = () => {
@@ -95,8 +97,10 @@ const HomePage2 = () => {
             <ServiceSection sClass={'section-bg'} />
             <ProjectSectionS2 />
             {/* <TeamSection/> */}
-            <VideoTestimonials />
             {/* <BlogSection/> */}
+            <DeliveredProjectsSection />
+            <CompanySection />
+            <VideoTestimonials />
             <Footer />
             <Scrollbar />
         </Fragment>

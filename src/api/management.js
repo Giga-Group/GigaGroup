@@ -1,6 +1,6 @@
-import presidentImg from '../images/management/amin.jpg'
-import ceoImg from '../images/management/najeeb.jpg'
-import directorImg from '../images/management/amir.jpg'
+import presidentImg from '../images/management/amin.png'
+import ceoImg from '../images/management/najeeb.png'
+import directorImg from '../images/management/amir.png'
 
 const Management = [
     {

@@ -3,7 +3,7 @@ import gcv1Dubai from '../images/projects/delivered-projects/gc-views-1-dubai.jp
 import gcv2Dubai from '../images/projects/delivered-projects/gc-views-2-dubai.jpg'
 import gceExecutiveDubai from '../images/projects/delivered-projects/gcv-exective-dubai.jpg'
 import canyonViews from '../images/projects/delivered-projects/canyon-views.jpg'
-import crescentBay from '../images/projects/delivered-projects/cresent-bay.jpg'
+import crescentBay from '../images/projects/delivered-projects/cresent-bay-land-reclamation.jpg'
 import defenceResidency from '../images/projects/delivered-projects/defence-resedency.jpg'
 import gigaBoutique from '../images/projects/delivered-projects/giga-boutique-mall.jpg'
 import elCielo from '../images/projects/delivered-projects/elcielo-1-and-2.jpg'
@@ -11,6 +11,7 @@ import lignumTower from '../images/projects/delivered-projects/lignum-tower.jpg'
 import wtc from '../images/projects/delivered-projects/gm-wtc.jpg'
 import pearlRecidency from '../images/projects/delivered-projects/pearl-residency.jpg'
 import alNajeebiBazaar from '../images/projects/delivered-projects/al-najeebi-bazaar.jpg'
+import gcSouqLahore from '../images/projects/delivered-projects/gc-souq-lahore.jpg'
 
 const DeliveredProjects = [
     {
@@ -96,6 +97,13 @@ const DeliveredProjects = [
         title: 'Al Najeebi Bazaar, Karimabad Karachi',
         subTitle: 'Karimabad Karachi',
         description: 'Al Najeebi Bazaar Karimabad is located at Shahra-e-Pakistan, Main Karimabad, Karachi. The 1511 square yards project features 475 shops (100,000 sq ft) and is fully completed and operational.'
+    },
+    {
+        Id: '13',
+        pImg: gcSouqLahore,
+        title: 'Goldcrest Souq, Lahore',
+        subTitle: 'Lahore',
+        description: 'Goldcrest Souq in Sector DD, Phase IV of DHA Lahore is a modern commercial tower featuring shops and offices. Once complete, it will include 4 basements and a ground plus 13-floor structure. The project is currently in its initial development phase and construction has started.'
     }
 ]
 export default DeliveredProjects;

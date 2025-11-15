@@ -1,0 +1,200 @@
+openapi: 3.0.3
+info:
+  title: Al Ghurair Giga Lead Management API
+  description: |
+    API for submitting lead forms from the Al Ghurair Giga website.
+    This API receives form submissions and stores them in Google Sheets with automated daily email reports.
+    
+    ## Features
+    - Lead form submission (Registration, Contact, Project Single)
+    - Automatic data storage in Google Sheets
+    - Daily email summaries at 5 PM PKT
+    - Email and phone number validation
+    - Source tracking for lead analytics
+  version: 1.0.0
+  contact:
+    name: Giga Group Development Team
+    email: gigagroup.dev@gmail.com
+  license:
+    name: Proprietary
+
+servers:
+  - url: https://script.google.com/macros/s/{scriptId}/exec
+    description: Google Apps Script Web App
+    variables:
+      scriptId:
+        description: Your Google Apps Script deployment ID
+        default: YOUR_SCRIPT_ID_HERE
+
+tags:
+  - name: Leads
+    description: Lead management operations
+
+paths:
+  /:
+    post:
+      tags:
+        - Leads
+      summary: Submit a new lead
+      description: |
+        Submit a lead form from the website. The lead will be stored in Google Sheets
+        and included in the daily email summary if submitted during business hours.
+        
+        **Required Fields:** name, email, contact
+        **Optional Fields:** project, message, source
+      operationId: submitLead
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeadSubmission'
+            examples:
+              registrationForm:
+                summary: Registration Form Submission
+                value:
+                  timestamp: "2024-01-15T10:30:00.000Z"
+                  name: "Ahmad Khan"
+                  email: "ahmad@example.com"
+                  contact: "+92-300-1234567"
+                  project: "Goldcrest Views"
+                  message: "I'm interested in learning more about this project"
+                  source: "Registration"
+                  status: "New Lead"
+              contactForm:
+                summary: Contact Form Submission
+                value:
+                  timestamp: "2024-01-15T11:00:00.000Z"
+                  name: "Sara Ali"
+                  email: "sara@example.com"
+                  contact: "+92-321-9876543"
+                  project: "Not specified"
+                  message: "Please contact me regarding investment opportunities"
+                  source: "Contact"
+                  status: "New Lead"
+              projectInquiry:
+                summary: Project Single Page Inquiry
+                value:
+                  timestamp: "2024-01-15T12:00:00.000Z"
+                  name: "Mohammad Hassan"
+                  email: "hassan@example.com"
+                  contact: "+92-333-5557777"
+                  project: "Giga City"
+                  message: "I want to schedule a site visit"
+                  source: "Project Single"
+                  status: "New Lead"
+      responses:
+        '200':
+          description: Lead submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessResponse'
+              example:
+                success: true
+        '400':
+          description: Bad request - validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                success: false
+                error: "Name, email, and contact are required fields"
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                success: false
+                error: "Error processing form submission: [error details]"
+
+components:
+  schemas:
+    LeadSubmission:
+      type: object
+      required:
+        - name
+        - email
+        - contact
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: ISO 8601 timestamp of the submission
+          example: "2024-01-15T10:30:00.000Z"
+        name:
+          type: string
+          description: Full name of the lead
+          minLength: 1
+          maxLength: 100
+          example: "Ahmad Khan"
+        email:
+          type: string
+          format: email
+          description: Email address (will be converted to lowercase)
+          example: "ahmad@example.com"
+        contact:
+          type: string
+          description: Phone number (Pakistani format supported)
+          pattern: "^(\+92|92|0)?[0-9]{10}$"
+          example: "+92-300-1234567"
+        project:
+          type: string
+          description: Project interest (optional, defaults to 'Not specified')
+          example: "Goldcrest Views"
+          default: "Not specified"
+        message:
+          type: string
+          description: Additional message from the lead (optional, defaults to 'No message')
+          example: "I'm interested in learning more about this project"
+          default: "No message"
+        source:
+          type: string
+          description: Source page where the form was submitted
+          enum:
+            - Registration
+            - Contact
+            - Project Single
+            - Unknown
+          example: "Registration"
+          default: "Unknown"
+        status:
+          type: string
+          description: Lead status (automatically set to 'New Lead')
+          example: "New Lead"
+          default: "New Lead"
+    
+    SuccessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+          description: Indicates if the operation was successful
+    
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: string
+          description: Error message describing what went wrong
+          example: "Name, email, and contact are required fields"
+
+  examples:
+    RegistrationFormExample:
+      value:
+        timestamp: "2024-01-15T10:30:00.000Z"
+        name: "Ahmad Khan"
+        email: "ahmad@example.com"
+        contact: "+92-300-1234567"
+        project: "Goldcrest Views"
+        message: "I'm interested in learning more about this project"
+        source: "Registration"
+        status: "New Lead"
+

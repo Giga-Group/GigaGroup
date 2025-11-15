@@ -5,6 +5,7 @@ import realEstateImg from '../images/projects/companies/real-estate.jpg'
 import generalTradingImg from '../images/projects/companies/genral-trading.jpg'
 import investmentsImg from '../images/projects/companies/investments.jpg'
 import constructionImg from '../images/projects/companies/construction.jpg'
+import goldRefineryImg from '../images/projects/companies/gold-refinery.jpg'
 
 const Companies = [
     {
@@ -17,8 +18,8 @@ const Companies = [
     {
         Id: '2',
         pImg: goldJewelleryImg,
-        title: 'Gold & Jewellery Trading',
-        subTitle: 'Precious Metals & Jewelry',
+        title: 'Bullion Trading',
+        subTitle: 'Refined Gold and Jewelry',
         description: 'Premium gold and jewelry trading company offering exquisite collections of gold, silver, and precious stone jewelry. We maintain the highest standards in quality and craftsmanship.',
     },
     {
@@ -48,7 +49,14 @@ const Companies = [
         title: 'Investments',
         subTitle: 'Strategic Investments',
         description: 'Strategic investment company focused on identifying and nurturing high-growth opportunities across various sectors including real estate, technology, and emerging markets.',
-    }
+    },
+    {
+        Id: '7',
+        pImg: goldRefineryImg,
+        title: 'Gold Refinery',
+        subTitle: 'Al Ghurair Giga Gold Refinery UAE',
+        description: 'Premium gold and jewelry trading company offering exquisite collections of gold, silver, and precious stone jewelry. We maintain the highest standards in quality and craftsmanship.',
+    },
 ]
 
 export default Companies;

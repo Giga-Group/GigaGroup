@@ -14,7 +14,7 @@ const CompaniesPage = () => {
         <div>
             {/* <Navbar /> */} {/* Old navbar commented out */}
             <TransparentNavbar Logo={Logo} /> {/* New transparent navbar */}
-            <PageTitle pageTitle={'Our Companies'} pagesub={'Companies'} backgroundImage={companiesBg}/>
+            <PageTitle pageTitle={'Our History'} pagesub={'Companies'} backgroundImage={companiesBg}/>
             <CompanySection />
             <Footer />
             <Scrollbar />

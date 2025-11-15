@@ -7,7 +7,7 @@ const CompanySection = () => {
     return (
         <div className="wpo-project-area-s2 section-padding">
             <div className="container">
-                <SectionTitle subTitle={'Our Business Portfolio'} MainTitle={'Our Companies'}/>
+                <SectionTitle subTitle={'Our Business Portfolio'} MainTitle={'Our History'}/>
                 <div className="row align-items-center">
                     <div className="wpo-project-wrap">
                         <div className="sortable-gallery">
