@@ -1,0 +1,248 @@
+/* Construction Update Section Styles */
+.wpo-construction-updates-gallery {
+    margin-top: 30px;
+}
+
+.wpo-construction-update-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wpo-construction-update-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wpo-construction-update-img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* 4:3 aspect ratio */
+}
+
+.wpo-construction-update-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wpo-construction-update-item:hover .wpo-construction-update-img img {
+    transform: scale(1.1);
+}
+
+.wpo-construction-update-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wpo-construction-update-item:hover .wpo-construction-update-overlay {
+    opacity: 1;
+}
+
+.wpo-construction-update-overlay i {
+    color: #fff;
+    font-size: 40px;
+}
+
+.wpo-construction-update-text {
+    padding: 20px;
+}
+
+.wpo-construction-update-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.wpo-construction-update-text .update-date {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.wpo-construction-update-text p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Image Modal Styles */
+.wpo-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wpo-image-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpo-image-modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.wpo-image-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.wpo-image-modal-close:hover {
+    color: #ff6b6b;
+}
+
+.wpo-image-modal-prev,
+.wpo-image-modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.wpo-image-modal-prev {
+    left: -60px;
+}
+
+.wpo-image-modal-next {
+    right: -60px;
+}
+
+.wpo-image-modal-prev:hover,
+.wpo-image-modal-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.wpo-image-modal-caption {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.wpo-image-modal-caption h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.wpo-image-modal-caption span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .wpo-image-modal-prev {
+        left: 10px;
+    }
+    
+    .wpo-image-modal-next {
+        right: 10px;
+    }
+    
+    .wpo-image-modal-caption {
+        bottom: -40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wpo-construction-update-item.mobile-view {
+        cursor: default;
+    }
+    
+    .wpo-construction-update-item.mobile-view:hover {
+        transform: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .wpo-construction-update-item.mobile-view:hover .wpo-construction-update-img img {
+        transform: none;
+    }
+    
+    .wpo-construction-update-img {
+        padding-top: 75%; /* Keep aspect ratio on mobile */
+    }
+    
+    .wpo-construction-update-text {
+        padding: 15px;
+    }
+    
+    .wpo-construction-update-text h4 {
+        font-size: 16px;
+    }
+    
+    .wpo-construction-update-text .update-date {
+        font-size: 12px;
+    }
+    
+    .wpo-construction-update-text p {
+        font-size: 13px;
+    }
+    
+    .wpo-image-modal {
+        display: none !important;
+    }
+}
+

@@ -50,6 +50,12 @@ import gcbsS1 from '../images/project-single/wtc-s1.jpg'
 import gcbsS2 from '../images/project-single/wtc-s2.jpg'
 import gcbsM1 from '../images/project-single/gcbs-m1.jpeg'
 
+// Construction Update Images
+import gcvUpdate1 from '../images/construction-updates/gcv-1.jpg'
+import gcvUpdate2 from '../images/construction-updates/gcv-2.jpg'
+import gmeUpdate1 from '../images/construction-updates/gme-1.jpg'
+import gmeUpdate2 from '../images/construction-updates/gme-2.jpg'
+
 const Projects = [
     {
         Id: '1',
@@ -161,6 +167,24 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Stay updated with the latest progress on Goldcrest Views. Our construction team is working diligently to deliver this landmark project.",
+            updates: [
+                {
+                    image: gcvUpdate1,
+                    title: "Construction Progress Update 1",
+                    date: "Latest Update"
+                },
+                {
+                    image: gcvUpdate2,
+                    title: "Construction Progress Update 2",
+                    date: "Latest Update"
+                }
+            ]
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -170,7 +194,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: true
+            projectGallery: true,
+            constructionUpdates: true
         }
     },
 
@@ -394,6 +419,24 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Follow the progress of Giga Mall Extension as we build Pakistan's first vertical commercial market and mixed-use development.",
+            updates: [
+                {
+                    image: gmeUpdate1,
+                    title: "Construction Progress Update 1",
+                    date: "Latest Update"
+                },
+                {
+                    image: gmeUpdate2,
+                    title: "Construction Progress Update 2",
+                    date: "Latest Update"
+                }
+            ]
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -403,7 +446,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: true
+            projectGallery: true,
+            constructionUpdates: true
         }
     },
 

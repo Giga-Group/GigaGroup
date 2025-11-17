@@ -9,6 +9,7 @@ import RelatedProject from './related';
 import Discuss from './discuss';
 import Logo from '../../images/logo.svg'
 import Footer from '../../components/footer';
+import ConstructionUpdateSection from '../../components/ConstructionUpdateSection';
 
 
 const ProjectSinglePage = (props) => {
@@ -184,6 +185,11 @@ const ProjectSinglePage = (props) => {
                                                 ))}
                                             </ul>
                                         </div>
+                                    )}
+
+                                    {/* Construction Updates Section */}
+                                    {projectDetails.sectionVisibility?.constructionUpdates && (
+                                        <ConstructionUpdateSection constructionUpdates={projectDetails.constructionUpdates} />
                                     )}
 
                                     <RelatedProject/>
