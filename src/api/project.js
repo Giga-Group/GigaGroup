@@ -174,12 +174,12 @@ const Projects = [
             updates: [
                 {
                     image: gcvUpdate1,
-                    title: "Construction Progress Update 1",
+                    title: "Construction Progress Goldcrest Views 1",
                     date: "Latest Update"
                 },
                 {
                     image: gcvUpdate2,
-                    title: "Construction Progress Update 2",
+                    title: "Construction Progress Goldcrest Views 2",
                     date: "Latest Update"
                 }
             ]
@@ -426,12 +426,12 @@ const Projects = [
             updates: [
                 {
                     image: gmeUpdate1,
-                    title: "Construction Progress Update 1",
+                    title: "Construction Progress Updates",
                     date: "Latest Update"
                 },
                 {
                     image: gmeUpdate2,
-                    title: "Construction Progress Update 2",
+                    title: "Construction Progress Updates",
                     date: "Latest Update"
                 }
             ]
