@@ -31,13 +31,13 @@ const About2 = (props) => {
                         <div className="wpo-about-text">
                             <div className="wpo-about-title">
                                 <span>About Giga Group</span>
-                                <h2>Building Dreams, Shaping Communities Since 1956</h2>
+                                <h2>Delivering Excellence Since 1956</h2>
                             </div>
-                            <p>Giga Group is a trusted name in real estate development with over 60 years of excellence. Founded by Haji Abdul Rahim Giga in 1956, what started as one bold step has evolved into a giant enterprise that continues to grow and branch out across the globe.</p>
+                            <p>Giga Group is a trusted business conglomerate with 7 decades of excellence. The group has a diversified portfolio of industries, including real estate development, textiles, gold refining, and bullion trade, reflecting its broad and integrated vision for sustainable growth. Founded by Haji Abdul Rahim Giga in 1956, what started as one bold step has evolved into a giant enterprise that continues to grow and branch out across the globe. Our vision in the Real Estate sector is inspired by the remarkable transformation of Dubai under the visionary leadership of His Highness Sheikh Mohammed bin Rashid Al Maktoum and His Highness Sheikh Mohamed Bin Zayed Al Nahyan. His commitment to innovation, excellence, and world-class development has set global benchmarks in urban planning, governance, and quality of life.</p>
                             <ul className="ab-list">
-                                <li>Over 60+ years of business excellence and premium quality development</li>
+                                <li>Over 70 years of business excellence and premium quality development</li>
                                 <li>5,000+ employees worldwide delivering world-class projects</li>
-                                <li>10M+ sq ft of commercial & residential space with 99.99% customer satisfaction</li>
+                                <li>18M+ sq ft of commercial & residential space with 99.99% customer satisfaction</li>
                                 <li>Iconic projects like Goldcrest Views and Giga Mall redefining urban living</li>
                             </ul>
                             <div className="btns">
