@@ -18,7 +18,7 @@ const About2 = (props) => {
                             <div className="wpo-about-img-left">
                                 <img src={abimg} alt=""/>
                                     <div className="wpo-about-img-text">
-                                        <h2>60+</h2>
+                                        <h2>70+</h2>
                                         <p>Years of Excellence</p>
                                     </div>
                             </div>

@@ -22,7 +22,7 @@ const About = (props) => {
                                 <span>About Giga Group</span>
                                 <h2>The Pinnacle Of Modern Living & Architectural Excellence</h2>
                             </div>
-                        <h5>Over 60+ years of excellence helping investors and families achieve their dream homes and business goals in Pakistan's most prestigious developments</h5>
+                        <h5>Over 70+ years of excellence helping investors and families achieve their dream homes and business goals in Pakistan's most prestigious developments</h5>
                         <p>Giga Group stands as a testament to visionary leadership and unwavering commitment to quality. Founded by Haji Abdul Rahim Giga in 1956, our journey began with one bold step that has blossomed into a giant enterprise spanning across the globe. Today, we're proud to deliver world-class residential and commercial projects with 99.99% customer satisfaction, 5,000+ employees worldwide, and over 10 million square feet of premium real estate.</p>
                             <div className="btns">
                                 <Link to="/about" onClick={ClickHandler} className="theme-btn">Discover More</Link>

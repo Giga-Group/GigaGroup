@@ -21,7 +21,7 @@ const Footer = (props) =>{
                             <div className="logo widget-title">
                                 <Link onClick={ClickHandler} className="logo" to="/"><img src={Logo} alt=""/></Link>
                             </div>
-                            <p>Giga Group is a leading real estate developer with 60+ years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
+                            <p>Giga Group is a leading real estate developer with 70+ years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/GigaGroupPakistan/" target="_blank" rel="noopener noreferrer">
