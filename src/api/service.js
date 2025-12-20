@@ -80,7 +80,7 @@ const Services = [
         description:'We don\'t just build structures; we create complete communities with integrated amenities, retail, entertainment, and lifestyle solutions.',
         des2:'Complete communities with integrated amenities and lifestyle solutions.',
         des3:'Our approach goes beyond construction to create vibrant, sustainable communities. We integrate retail, entertainment, healthcare, and lifestyle amenities to ensure our developments serve every need of modern living.',
-        icon:'fi flaticon-furniture',
+        icon:'fi flaticon-furniture', 
         ssImg1:sSingleimg1,
         ssImg2:sSingleimg2,
         sinst:ins5,
