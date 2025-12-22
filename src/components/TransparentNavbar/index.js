@@ -43,7 +43,7 @@ const TransparentNavbar = ({ Logo }) => {
     ];
 
     return (
-        <div className="transparent-navbar">
+        <div className="transparent-navbar">. 
             {/* Logo */}
             <div className="navbar-logo">
                 <Link onClick={handleLinkClick} to="/">
