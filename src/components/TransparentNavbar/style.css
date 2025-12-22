@@ -4,8 +4,9 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
-    background: transparent;
+    z-index: 99999;
+    background: transparent !important;
+    background-color: transparent !important;
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
@@ -215,6 +216,18 @@
 @media (max-width: 768px) {
     .transparent-navbar {
         padding: 15px 20px;
+        position: fixed;
+        background: transparent !important;
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        z-index: 99999 !important;
+    }
+    
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .navbar-logo img {
@@ -243,6 +256,18 @@
 @media (max-width: 480px) {
     .transparent-navbar {
         padding: 10px 15px;
+        position: fixed;
+        background: transparent !important;
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        z-index: 99999 !important;
+    }
+    
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .navbar-logo img {
@@ -271,4 +296,15 @@
 /* Smooth scrolling for body when menu is open */
 body.menu-open {
     overflow: hidden;
+}
+
+/* Ensure hero section stays below navbar on mobile */
+@media (max-width: 768px) {
+    .wpo-hero-slider,
+    .wpo-hero-style-2,
+    .static-hero,
+    section {
+        position: relative;
+        z-index: 1 !important;
+    }
 }
