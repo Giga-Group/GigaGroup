@@ -696,20 +696,20 @@ wpo-hero-style-2
 	}
 
 	@include media-query(767px) {
-		height: 60vh;
-		min-height: 500px;
+		height: 100vh;
+		min-height: 100vh;
 	}
 	@include media-query(540px) {
-		height: 55vh;
-		min-height: 450px;
+		height: 100vh;
+		min-height: 100vh;
 	}
 	@include media-query(480px) {
-		height: 50vh;
-		min-height: 400px;
+		height: 100vh;
+		min-height: 100vh;
 	}
 	@include media-query(360px) {
-		height: 45vh;
-		min-height: 350px;
+		height: 100vh;
+		min-height: 100vh;
 	}
 
 	.slide-inner{
