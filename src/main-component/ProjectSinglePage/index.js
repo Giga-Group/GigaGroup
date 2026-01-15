@@ -46,7 +46,7 @@ const ProjectSinglePage = (props) => {
                                             <div className="wpo-project-single-content-des-right">
                                                 <ul>
                                                 <li>Location : <span>{projectDetails.projectDetails.location}</span></li>
-                                                <li>Retrun : <span>{projectDetails.projectDetails.returnPotential}</span></li>
+                                                <li>Return : <span>{projectDetails.projectDetails.returnPotential}</span></li>
                                                 <li>Interiors : <span>{projectDetails.projectDetails.interiors}</span></li>
                                                 <li>Parking : <span>{projectDetails.projectDetails.parking}</span></li>
                                                 <li>Amenities : <span>{projectDetails.projectDetails.amenities}</span></li>

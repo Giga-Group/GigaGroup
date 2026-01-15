@@ -171,6 +171,7 @@ const Projects = [
         constructionUpdates: {
             title: "Construction Updates",
             description: "Stay updated with the latest progress on Goldcrest Views. Our construction team is working diligently to deliver this landmark project.",
+            youtubeVideo: "https://youtube.com/shorts/0kSWxoOXMrU?feature=share",
             updates: [
                 {
                     image: gcvUpdate1,
@@ -302,6 +303,14 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Stay updated with the latest progress on Goldcrest Commercial. Our construction team is working diligently to deliver this premium commercial complex.",
+            youtubeVideo: "https://www.youtube.com/watch?v=qL0ePogoqek",
+            updates: []
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -311,7 +320,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: true
+            projectGallery: true,
+            constructionUpdates: false
         }
     },
 
@@ -423,6 +433,7 @@ const Projects = [
         constructionUpdates: {
             title: "Construction Updates",
             description: "Follow the progress of Giga Mall Extension as we build Pakistan's first vertical commercial market and mixed-use development.",
+            youtubeVideo: "https://youtube.com/shorts/iGDvEVETQKI?feature=share",
             updates: [
                 {
                     image: gmeUpdate1,
@@ -566,6 +577,14 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Stay updated with the latest progress on Giga Business Complex. Our construction team is working diligently to deliver this premier corporate destination.",
+            youtubeVideo: "https://www.youtube.com/watch?v=CfKFqEQwrQA",
+            updates: []
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -575,7 +594,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: true
+            projectGallery: true,
+            constructionUpdates: false
         }
     },
 
@@ -694,6 +714,14 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Stay updated with the latest progress on Central Palace Residence. Our construction team is working diligently to deliver this ultra-luxury residential project.",
+            youtubeVideo: "https://youtube.com/shorts/jQ9bSuhvzAw?feature=share",
+            updates: []
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -703,7 +731,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: true
+            projectGallery: true,
+            constructionUpdates: true
         }
     },
 
@@ -1079,6 +1108,14 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Stay updated with the latest progress on Goldcrest HighLife I. Our construction team is working diligently to deliver this farsighted residential project.",
+            youtubeVideo: "https://www.youtube.com/watch?v=eh0mOtjAwao",
+            updates: []
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -1088,7 +1125,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: false
+            projectGallery: false,
+            constructionUpdates: false
         }
     },
     {
@@ -1206,6 +1244,14 @@ const Projects = [
             rating: 5
         },
 
+        // Construction Updates
+        constructionUpdates: {
+            title: "Construction Updates",
+            description: "Stay updated with the latest progress on Goldcrest HighLife II & III. Our construction team is working diligently to deliver this farsighted residential project.",
+            youtubeVideo: "https://www.youtube.com/watch?v=eh0mOtjAwao",
+            updates: []
+        },
+
         // Section Visibility Configuration
         sectionVisibility: {
             designPhilosophy: true,
@@ -1215,7 +1261,8 @@ const Projects = [
             investmentHighlights: false,
             locationAdvantages: false,
             testimonial: false,
-            projectGallery: false
+            projectGallery: false,
+            constructionUpdates: false
         }
     }
 ]
