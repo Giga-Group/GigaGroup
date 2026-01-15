@@ -17,7 +17,7 @@ import gcHighlife1M1 from '../images/project-single/gc-highlife-1-m1.jpeg'
 import gcHighlife23M1 from '../images/project-single/gc-highlife-2-3-m1.jpeg'
 
 
-import gcvS1 from '../images/project-single/gcv-s1.jpg'
+import gcvS1 from '../images/project-single/gcv-s1.jpg' 
 import gcvS2 from '../images/project-single/gcv-s2.jpg'
 
 import gccS1 from '../images/project-single/gcc-s1.jpg'
