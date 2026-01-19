@@ -269,7 +269,7 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                                         e.stopPropagation();
                                         navigateImage('prev');
                                     }}
-                                >
+                                > 
                                     &#10094;
                                 </button>
                                 <button 
