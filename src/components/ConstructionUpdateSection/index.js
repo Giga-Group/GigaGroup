@@ -126,8 +126,19 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
         const baseUrl = `https://www.youtube.com/embed/${videoId}`;
         const params = new URLSearchParams();
         params.append('mute', '1'); // Always mute the video
+        // Hide all UI elements for clean video experience
+        params.append('controls', '0'); // Hide video controls
+        params.append('modestbranding', '1'); // Reduce YouTube branding
+        params.append('rel', '0'); // Don't show related videos
+        params.append('iv_load_policy', '3'); // Hide annotations
+        params.append('disablekb', '1'); // Disable keyboard controls
+        params.append('fs', '0'); // Disable fullscreen button
+        params.append('playsinline', '1'); // Play inline on mobile
+        params.append('showinfo', '0'); // Hide video info
         if (autoplay) {
             params.append('autoplay', '1');
+            params.append('loop', '1'); // Enable looping
+            params.append('playlist', videoId); // Required for loop to work
         }
         return `${baseUrl}?${params.toString()}`;
     };

@@ -98,6 +98,16 @@
     border-radius: 8px;
 }
 
+/* Hide YouTube loading indicators and overlays for clean video experience */
+.wpo-construction-update-video-wrapper {
+    overflow: hidden;
+}
+
+/* Ensure clean video display without any overlays */
+.wpo-construction-update-video-wrapper iframe {
+    opacity: 1;
+}
+
 .wpo-construction-update-item {
     position: relative;
     cursor: pointer;
