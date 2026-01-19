@@ -162,9 +162,10 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                             title="Construction Update Video"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
                             className="wpo-construction-update-video-iframe"
                         ></iframe>
+                        {/* Transparent overlay to block all clicks and interactions */}
+                        <div className="wpo-construction-update-video-overlay"></div>
                     </div>
                 </div>
             )}
