@@ -73,14 +73,17 @@ export const validateEmail = (email) => {
 };
 
 /**
- * Validate Pakistani phone number
+ * Validate phone number (international format)
  * @param {string} phone - Phone number to validate
- * @returns {boolean} - True if phone is valid
+ * @returns {boolean} - True if phone is valid (contains only numbers and valid phone characters)
  */
 export const validatePhone = (phone) => {
-    // Pakistani phone number patterns
-    const phoneRegex = /^(\+92|92|0)?[0-9]{10}$/;
-    return phoneRegex.test(phone.replace(/[\s-]/g, ''));
+    // Remove common formatting characters (spaces, hyphens, parentheses)
+    const cleaned = phone.replace(/[\s\-()]/g, '');
+    // Check if it contains only digits and optional leading +
+    // Must have at least 7 digits (minimum for a valid phone number)
+    const phoneRegex = /^\+?[0-9]{7,15}$/;
+    return phoneRegex.test(cleaned);
 };
 
 /**
@@ -116,7 +119,7 @@ export const processFormSubmission = async (formData, onSuccess, onError) => {
 
         // Validate phone
         if (config.enableValidation && !validatePhone(formData.contact)) {
-            throw new Error('Please enter a valid Pakistani phone number');
+            throw new Error('Please enter a valid phone number (numbers only)');
         }
 
         // Submit data
