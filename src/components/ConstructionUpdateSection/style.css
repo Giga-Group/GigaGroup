@@ -27,7 +27,37 @@
     opacity: 1;
     color: #333;
 }
+/* Bottom text overlay for Goldcrest Views */
+.wpo-construction-update-bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
+}
 
+/* For mobile view in carousel */
+.wpo-construction-update-carousel-item .wpo-construction-update-bottom-text {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Ensure the bottom text appears above the hover overlay */
+.wpo-construction-update-bottom-text {
+    z-index: 3;
+}
+
+.wpo-construction-update-overlay {
+    z-index: 2;
+}
 .wpo-construction-update-carousel .slick-prev,
 .wpo-construction-update-carousel .slick-next {
     z-index: 1;

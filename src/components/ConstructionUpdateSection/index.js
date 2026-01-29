@@ -13,21 +13,21 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
     // Function to extract YouTube video ID from URL
     const getYouTubeVideoId = (url) => {
         if (!url) return null;
-        
+
         // Handle various YouTube URL formats including Shorts
         const patterns = [
             /(?:youtube\.com\/shorts\/)([^&\n?#\/]+)/, // YouTube Shorts
             /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
             /youtube\.com\/watch\?.*v=([^&\n?#]+)/
         ];
-        
+
         for (const pattern of patterns) {
             const match = url.match(pattern);
             if (match && match[1]) {
                 return match[1];
             }
         }
-        
+
         return null;
     };
 
@@ -40,17 +40,17 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                 setShouldAutoplay(true);
             }
         };
-        
+
         checkMobile();
         window.addEventListener('resize', checkMobile);
-        
+
         return () => window.removeEventListener('resize', checkMobile);
     }, [constructionUpdates?.youtubeVideo]);
 
     // Intersection Observer for autoplay when video comes into view (fallback)
     useEffect(() => {
         const youtubeVideoId = constructionUpdates?.youtubeVideo ? getYouTubeVideoId(constructionUpdates.youtubeVideo) : null;
-        
+
         if (!youtubeVideoId || !videoRef.current || shouldAutoplay) return;
 
         const observer = new IntersectionObserver(
@@ -78,15 +78,15 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
 
     const youtubeVideoId = constructionUpdates?.youtubeVideo ? getYouTubeVideoId(constructionUpdates.youtubeVideo) : null;
     const isShortsVideo = constructionUpdates?.youtubeVideo?.includes('/shorts/') || false;
-    
+
     // Check if this is Central Palace Residence (mobile-only section)
     const isCentralPalaceResidence = constructionUpdates?.description?.includes('Central Palace Residence') || false;
-    
+
     // Allow rendering if there's a video or updates
     if (!constructionUpdates || (!youtubeVideoId && (!constructionUpdates.updates || constructionUpdates.updates.length === 0))) {
         return null;
     }
-    
+
     // Hide entire section on desktop/web view for Central Palace Residence, show only on mobile
     if (isCentralPalaceResidence && !isMobile) {
         return null;
@@ -104,22 +104,22 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
 
     const navigateImage = (direction) => {
         if (!selectedImage) return;
-        
+
         const currentIndex = selectedImage.index;
         let newIndex;
-        
+
         if (direction === 'next') {
             newIndex = (currentIndex + 1) % constructionUpdates.updates.length;
         } else {
             newIndex = (currentIndex - 1 + constructionUpdates.updates.length) % constructionUpdates.updates.length;
         }
-        
+
         setSelectedImage({
             image: constructionUpdates.updates[newIndex].image,
             index: newIndex
         });
     };
-    
+
     // Build YouTube embed URL with autoplay parameters
     const getYouTubeEmbedUrl = (videoId, autoplay) => {
         if (!videoId) return '';
@@ -151,7 +151,7 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
             {constructionUpdates.description && (
                 <p>{constructionUpdates.description}</p>
             )}
-            
+
             {/* YouTube Video Section - Only show on mobile */}
             {youtubeVideoId && isMobile && (
                 <div className="wpo-construction-update-video wpo-construction-update-video-mobile" ref={videoRef}>
@@ -169,7 +169,7 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                     </div>
                 </div>
             )}
-            
+
             {constructionUpdates.updates && constructionUpdates.updates.length > 0 && (
                 <div className="wpo-construction-updates-gallery">
                     {isMobile ? (
@@ -189,8 +189,8 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                                 <div key={index} className="wpo-construction-update-carousel-item">
                                     <div className="wpo-construction-update-item mobile-view">
                                         <div className="wpo-construction-update-img">
-                                            <img 
-                                                src={update.image} 
+                                            <img
+                                                src={update.image}
                                                 alt={update.title || `Construction Update ${index + 1}`}
                                             />
                                         </div>
@@ -213,28 +213,38 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                         // Grid layout for desktop/web view
                         <div className="row">
                             {constructionUpdates.updates.map((update, index) => (
-                                <div 
-                                    key={index} 
+                                <div
+                                    key={index}
                                     className="col-lg-6 col-md-6 col-sm-6 col-12 mb-4"
                                 >
-                                    <div 
+                                    <div
                                         className="wpo-construction-update-item"
                                         onClick={() => openModal(update.image, index)}
                                     >
                                         <div className="wpo-construction-update-img">
-                                            <img 
-                                                src={update.image} 
+                                            <img
+                                                src={update.image}
                                                 alt={update.title || `Construction Update ${index + 1}`}
                                             />
+
+                                            {/* Bottom text overlay */}
+                                          {/* Bottom text overlay ONLY for Goldcrest Views */}
+{update.title && update.title.includes('Goldcrest Views') && update.date && (
+    <div className="wpo-construction-update-bottom-text">
+        Construction Update : {update.date}
+    </div>
+)}
+
                                             <div className="wpo-construction-update-overlay">
                                                 <i className="ti-zoom-in"></i>
                                             </div>
                                         </div>
+
                                         {update.title && (
                                             <div className="wpo-construction-update-text">
                                                 <h4>{update.title}</h4>
                                                 {update.date && (
-                                                    <span className="update-date">{update.date}</span>
+                                                    <span className="update-date">{update.update}</span>
                                                 )}
                                                 {update.description && (
                                                     <p>{update.description}</p>
@@ -251,30 +261,30 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
 
             {/* Image Modal - Only on Desktop */}
             {selectedImage && !isMobile && (
-                <div 
-                    className="wpo-image-modal" 
+                <div
+                    className="wpo-image-modal"
                     onClick={closeModal}
                 >
                     <div className="wpo-image-modal-content" onClick={(e) => e.stopPropagation()}>
                         <span className="wpo-image-modal-close" onClick={closeModal}>&times;</span>
-                        <img 
-                            src={selectedImage.image} 
+                        <img
+                            src={selectedImage.image}
                             alt="Construction Update"
                             className="wpo-image-modal-img"
                         />
                         {constructionUpdates.updates.length > 1 && (
                             <>
-                                <button 
-                                    className="wpo-image-modal-prev" 
+                                <button
+                                    className="wpo-image-modal-prev"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         navigateImage('prev');
                                     }}
-                                > 
+                                >
                                     &#10094;
                                 </button>
-                                <button 
-                                    className="wpo-image-modal-next" 
+                                <button
+                                    className="wpo-image-modal-next"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         navigateImage('next');

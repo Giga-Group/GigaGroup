@@ -8,7 +8,7 @@ import gcHighLife1 from '../images/projects/gc-highlife-grid-1.jpg'
 import gcHighLife23 from '../images/projects/gc-highlife-grid-2-3.jpg'
 
 import gccM1 from '../images/project-single/gcc-m1.jpg'
-import gcvM1 from '../images/project-single/gcv-m1.jpg'
+import gcvM1 from '../images/project-single/gcv-m1.1.jpg'
 import gbcM1 from '../images/project-single/gbc-m1.jpg'
 import gmeM1 from '../images/project-single/gme-m1.jpg'
 import cprM1 from '../images/project-single/cpr-m1.jpg'
@@ -51,10 +51,11 @@ import gcbsS2 from '../images/project-single/wtc-s2.jpg'
 import gcbsM1 from '../images/project-single/gcbs-m1.jpeg'
 
 // Construction Update Images
-import gcvUpdate1 from '../images/construction-updates/gcv-1.jpg'
-import gcvUpdate2 from '../images/construction-updates/gcv-2.jpg'
+import gcvUpdate1 from '../images/construction-updates/gcv-1.1.jpg'
+import gcvUpdate2 from '../images/construction-updates/gcv-2.2.jpg'
 import gmeUpdate1 from '../images/construction-updates/gme-1.jpg'
 import gmeUpdate2 from '../images/construction-updates/gme-2.jpg'
+import { Update } from '@material-ui/icons'
 
 const Projects = [
     {
@@ -176,12 +177,14 @@ const Projects = [
                 {
                     image: gcvUpdate1,
                     title: "Construction Progress Goldcrest Views 1",
-                    date: "Latest Update"
+                    date: "Jan, 2026",
+                    update: "Latest Update"
                 },
                 {
                     image: gcvUpdate2,
                     title: "Construction Progress Goldcrest Views 2",
-                    date: "Latest Update"
+                    date: "Jan, 2026",
+                    update: "Latest Update"
                 }
             ]
         },
@@ -438,12 +441,14 @@ const Projects = [
                 {
                     image: gmeUpdate1,
                     title: "Construction Progress Updates",
-                    date: "Latest Update"
+                           date: "Latest Update",
+                    update: "Latest Update"
                 },
                 {
                     image: gmeUpdate2,
                     title: "Construction Progress Updates",
-                    date: "Latest Update"
+                       date: "Latest Update",
+                    update: "Latest Update"
                 }
             ]
         },
