@@ -8,7 +8,7 @@ import Projects from '../../api/project'
 import RelatedProject from './related';
 import Discuss from './discuss';
 import Logo from '../../images/logo.svg'
-import Footer from '../../components/footer';
+import Footer from '../../components/footer'; 
 import ConstructionUpdateSection from '../../components/ConstructionUpdateSection';
 
 
