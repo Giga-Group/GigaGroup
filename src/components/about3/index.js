@@ -40,7 +40,7 @@ const About3 = (props) => {
                                 <li>We work with some of the most successful businesses.</li>
                             </ul>
                             <div className="btns">
-                                <Link to="/about" onClick={ClickHandler} className="theme-btn">Discover More</Link>
+                                <Link to="/about-us" onClick={ClickHandler} className="theme-btn">Discover More</Link>
                                 <ul>
                                     <li className="video-holder">
                                         <VideoModal />

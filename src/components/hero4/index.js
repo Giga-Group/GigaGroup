@@ -45,7 +45,7 @@ class Hero4 extends Component {
                                             </div>
                                             <div className="clearfix"></div>
                                             <div className="slide-btns">
-                                                <Link to="/about" className="theme-btn">Learn More</Link>
+                                                <Link to="/about-us" className="theme-btn">Learn More</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@ class Hero4 extends Component {
                                             </div>
                                             <div className="clearfix"></div>
                                             <div className="slide-btns">
-                                                <Link to="/about" className="theme-btn">Learn More</Link>
+                                                <Link to="/about-us" className="theme-btn">Learn More</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ class Hero4 extends Component {
                                             </div>
                                             <div className="clearfix"></div>
                                             <div className="slide-btns">
-                                                <Link to="/about" className="theme-btn">Learn More</Link>
+                                                <Link to="/about-us" className="theme-btn">Learn More</Link>
                                             </div>
                                         </div>
                                     </div>

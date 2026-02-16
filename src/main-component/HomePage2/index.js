@@ -38,7 +38,7 @@ const HomePage2 = () => {
                     </div>
                     {/* <div className="clearfix"></div> */}
                     {/* <div className="slide-btns">
-                        <Link to='/about' className="theme-btn">Discover More</Link>
+                        <Link to='/about-us' className="theme-btn">Discover More</Link>
                     </div> */}
                 </div>
             </Hero2>
@@ -62,7 +62,7 @@ const HomePage2 = () => {
                     </div>
                     {/* <div className="clearfix"></div> */}
                     {/* <div className="slide-btns">
-                        <Link to='/about' className="theme-btn">Discover More</Link>
+                        <Link to='/about-us' className="theme-btn">Discover More</Link>
                     </div> */}
                 </div>
             </Hero2>
@@ -89,7 +89,7 @@ const HomePage2 = () => {
                     </div>
                     {/* <div className="clearfix"></div> */}
                     {/* <div className="slide-btns">
-                        <Link to='/about' className="theme-btn">Discover More</Link>
+                        <Link to='/about-us' className="theme-btn">Discover More</Link>
                     </div> */}
                 </div>
             </Hero2>

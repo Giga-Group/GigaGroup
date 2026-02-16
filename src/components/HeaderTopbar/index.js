@@ -10,7 +10,7 @@ const HeaderTopbar = () => {
                     <div className="col col-md-5 col-sm-12 col-12">
                         <div className="contact-info">
                             <ul>
-                                <li><Link to="/about.html">About Us</Link></li>
+                                <li><Link to="/about-us">About Us</Link></li>
                                 <li><Link to="/faq.html">FAQ Us</Link></li>
                                 <li><Link to="/"><i className="ti-facebook"></i></Link></li>
                                 <li><Link to="/"><i className="ti-twitter-alt"></i></Link></li>

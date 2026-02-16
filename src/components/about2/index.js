@@ -41,7 +41,7 @@ const About2 = (props) => {
                                 <li>Iconic projects like Goldcrest Views and Giga Mall redefining urban living</li>
                             </ul>
                             <div className="btns">
-                                <Link to="/about" onClick={ClickHandler} className="theme-btn">Discover More</Link>
+                                <Link to="/about-us" onClick={ClickHandler} className="theme-btn">Discover More</Link>
                                 <ul>
                                     <li className="video-holder">
                                         <VideoModal />

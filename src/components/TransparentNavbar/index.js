@@ -34,12 +34,12 @@ const TransparentNavbar = ({ Logo }) => {
 
     const menuItems = [
         { id: 1, title: 'Home', link: '/' },
-        { id: 2, title: 'About', link: '/about' },
+        { id: 2, title: 'About', link: '/about-us' },
         // { id: 3, title: 'Management', link: '/management' },
         { id: 4, title: 'Projects', link: '/projects' },
         { id: 5, title: 'Companies', link: '/companies' },
         { id: 6, title: 'Celebrity Testimonials', link: '/celebrity-testimonials' },
-        { id: 7, title: 'Contact', link: '/contact' }
+        { id: 7, title: 'Contact', link: '/contact-us' }
     ];
 
     return (

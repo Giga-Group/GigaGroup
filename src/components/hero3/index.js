@@ -61,7 +61,7 @@ class Hero3 extends Component {
                                             Design</h2>
                                         </div>
                                         <div className="slide-btns">
-                                            <Link to="/about">Learn More</Link>
+                                            <Link to="/about-us">Learn More</Link>
                                         </div>
                                     </div>
                                 </div>

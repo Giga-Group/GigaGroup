@@ -40,7 +40,7 @@ const menus = [
     {
         id: 2,
         title: 'About',
-        link: '/about',
+        link: '/about-us',
     },
 
     // {
@@ -203,7 +203,7 @@ const menus = [
     {
         id: 8,
         title: 'Contact',
-        link: '/contact',
+        link: '/contact-us',
     }
     
     

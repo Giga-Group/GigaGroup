@@ -50,7 +50,7 @@ const About4 = (props) => {
                             <h5>Over 25 years Liarch helping investors building their drea & business goals go to the perfection</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac enim aliquam feugiat ullamcorper. Id risus mattis neque, ullamcorper. Sed sit commodo vestibulum cras in cras. Nec proin scelerisque quis nisl vitae, egestas non. Fringilla auctor.</p>
                             <div className="btns">
-                                <Link to="/about" onClick={ClickHandler} className="theme-btn">Discover More</Link>
+                                <Link to="/about-us" onClick={ClickHandler} className="theme-btn">Discover More</Link>
                                 <ul>
                                     <li className="video-holder">
                                         <VideoModal />

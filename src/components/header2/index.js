@@ -59,7 +59,7 @@ export default class Header2 extends Component {
                                                     <li><Link onClick={ClickHandler} to="/home5">Home Style 5</Link></li>
                                                 </ul>
                                             </li>
-                                            <li><Link onClick={ClickHandler} to="/about">About</Link></li>
+                                            <li><Link onClick={ClickHandler} to="/about-us">About</Link></li>
                                             <li className="menu-item-has-children">
                                                 <Link to="/service">Service</Link>
                                                 <ul className="sub-menu">
@@ -110,7 +110,7 @@ export default class Header2 extends Component {
                                                     <li><Link onClick={ClickHandler} to="/register">Register</Link></li>
                                                 </ul>
                                             </li>
-                                            <li><Link onClick={ClickHandler} to="contact">Contact</Link></li>
+                                            <li><Link onClick={ClickHandler} to="/contact-us">Contact</Link></li>
                                         </ul>
 
                                     </div>

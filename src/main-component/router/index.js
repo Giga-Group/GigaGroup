@@ -50,7 +50,7 @@ const AllRoute = () => {
           {/* <Route path='home3' element={<Homepage3/>} /> */}
           {/* <Route path='home4' element={<Homepage4/>} /> */}
           {/* <Route path='home5' element={<Homepage5/>} /> */}
-          <Route path='about' element={<AboutPage/>} />
+          <Route path='about-us' element={<AboutPage/>} />
           <Route path='project-single/:id' element={<ProjectSinglePage/>} />
           <Route path='service-single/:id' element={<ServiceSinglePage/>} />
           <Route path='team-single/:id' element={<TeamSinglePage/>} />
@@ -68,7 +68,7 @@ const AllRoute = () => {
           <Route path='cart' element={<CartPage/>} />
           <Route path='checkout' element={<CheckoutPage/>} />
           <Route path='order_received' element={<OrderRecived/>} />
-          <Route path='contact' element={<ContactPage/>} />
+          <Route path='contact-us' element={<ContactPage/>} />
           <Route path='companies' element={<CompaniesPage/>} />
           <Route path='404' element={<ErrorPage/>} />
           <Route path='blog-single/:id' element={<BlogDetails/>} />
@@ -80,6 +80,7 @@ const AllRoute = () => {
           <Route path='login' element={<LoginPage/>} />
           <Route path='register' element={<SignUpPage/>} />
           <Route path='forgot-password' element={<ForgotPassword/>} />
+          <Route path="*" element={<ErrorPage/>} />
         </Routes>
       </BrowserRouter>
     </div>

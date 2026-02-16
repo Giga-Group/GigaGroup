@@ -12,7 +12,7 @@ The Hero2 component has been made configurable to support different layouts and 
 | `subtitle` | string | `'From luxury residences...'` | Subtitle/description text |
 | `showButton` | boolean | `false` | Whether to show the action button |
 | `buttonText` | string | `'Discover More'` | Text for the action button |
-| `buttonLink` | string | `'/about'` | Link for the action button |
+| `buttonLink` | string | `'/about-us'` | Link for the action button |
 | `videoUrl` | string | YouTube embed URL | Background video URL for desktop devices (>768px) |
 | `mobileVideoUrl` | string | - | Video URL for mobile devices (≤768px) |
 | `textPosition` | string | `'center'` | Text positioning: `'center'` or `'top'` |
@@ -55,7 +55,7 @@ import Hero2 from '../components/hero2';
     subtitle="This text appears at the top of the screen"
     showButton={true}
     buttonText="Get Started"
-    buttonLink="/contact"
+    buttonLink="/contact-us"
 />
 ```
 
@@ -70,7 +70,7 @@ import Hero2 from '../components/hero2';
     subtitle="Premium real estate solutions tailored for you"
     showButton={true}
     buttonText="Get Started"
-    buttonLink="/contact"
+    buttonLink="/contact-us"
     videoUrl="https://www.youtube.com/embed/trmn0svn7F0?autoplay=1&mute=1&loop=1&playlist=trmn0svn7F0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
     mobileVideoUrl="https://www.youtube.com/embed/_VIxCfae3UM?autoplay=1&mute=1&loop=1&playlist=_VIxCfae3UM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
 />
@@ -87,7 +87,7 @@ import Hero2 from '../components/hero2';
     subtitle="Premium real estate solutions tailored for you"
     showButton={true}
     buttonText="Get Started"
-    buttonLink="/contact"
+    buttonLink="/contact-us"
     videoUrl="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1&loop=1"
 />
 ```

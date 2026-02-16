@@ -81,7 +81,7 @@ class Hero2 extends Component {
                                                 </div>
                                                 <div className="clearfix"></div>
                                                 <div className="slide-btns">
-                                                    <Link to="/about" className="theme-btn">Discover More</Link>
+                                                    <Link to="/about-us" className="theme-btn">Discover More</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@ class Hero2 extends Component {
                                                 </div>
                                                 <div className="clearfix"></div>
                                                 <div className="slide-btns">
-                                                    <Link to="/about" className="theme-btn">Discover More</Link>
+                                                    <Link to="/about-us" className="theme-btn">Discover More</Link>
                                                 </div>
                                             </div>
                                         </div>

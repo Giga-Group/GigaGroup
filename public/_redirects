@@ -1,0 +1,3 @@
+# Return 404 for old career page URLs (removed from site)
+/careers  /404  404
+/career   /404  404
