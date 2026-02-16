@@ -5,9 +5,7 @@ import PageTitle from '../../components/pagetitle'
 import About from '../../components/about'
 import ProjectSection from '../../components/Projects';
 import ServiceSection from '../../components/Services';
-import Pricing from '../../components/Pricing'
 import FunFact from '../../components/FunFact'
-import TeamSection from '../../components/TeamSection';
 import VideoTestimonials from '../../components/VideoTestimonials';
 import Footer from '../../components/footer'
 import Scrollbar from '../../components/scrollbar'

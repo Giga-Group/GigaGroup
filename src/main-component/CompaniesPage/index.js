@@ -5,7 +5,6 @@ import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
 import Footer from '../../components/footer';
 import CompanySection from '../../components/CompanySection';
-import DeliveredProjectsSection from '../../components/DeliveredProjectsSection';
 import Logo from '../../images/logo.svg'
 import companiesBg from '../../images/banner/companies-banner.jpeg'
 

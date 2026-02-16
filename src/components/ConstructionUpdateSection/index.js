@@ -16,7 +16,7 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
 
         // Handle various YouTube URL formats including Shorts
         const patterns = [
-            /(?:youtube\.com\/shorts\/)([^&\n?#\/]+)/, // YouTube Shorts
+            /(?:youtube\.com\/shorts\/)([^&\n?#/]+)/, // YouTube Shorts
             /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
             /youtube\.com\/watch\?.*v=([^&\n?#]+)/
         ];
@@ -50,8 +50,9 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
     // Intersection Observer for autoplay when video comes into view (fallback)
     useEffect(() => {
         const youtubeVideoId = constructionUpdates?.youtubeVideo ? getYouTubeVideoId(constructionUpdates.youtubeVideo) : null;
+        const videoEl = videoRef.current;
 
-        if (!youtubeVideoId || !videoRef.current || shouldAutoplay) return;
+        if (!youtubeVideoId || !videoEl || shouldAutoplay) return;
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -67,11 +68,11 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
             }
         );
 
-        observer.observe(videoRef.current);
+        observer.observe(videoEl);
 
         return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
+            if (videoEl) {
+                observer.unobserve(videoEl);
             }
         };
     }, [constructionUpdates?.youtubeVideo, shouldAutoplay]);

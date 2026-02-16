@@ -39,17 +39,17 @@ const Shop = ({ products, addToCartProduct }) => {
                     <div className="pagination-wrapper pagination-wrapper-center">
                         <ul className="pg-pagination">
                             <li>
-                                <a href="#" aria-label="Previous">
+                                <button type="button" aria-label="Previous" className="pg-pagination-link">
                                     <i className="ti-angle-left"></i>
-                                </a>
+                                </button>
                             </li>
-                            <li className="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            <li className="active"><button type="button" className="pg-pagination-link">1</button></li>
+                            <li><button type="button" className="pg-pagination-link">2</button></li>
+                            <li><button type="button" className="pg-pagination-link">3</button></li>
                             <li>
-                                <a href="#" aria-label="Next">
+                                <button type="button" aria-label="Next" className="pg-pagination-link">
                                     <i className="ti-angle-right"></i>
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>

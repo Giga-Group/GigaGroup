@@ -27,10 +27,6 @@ const CheckWrap = (props) => {
         validator.showMessages();
     };
 
-    const rememberHandler = () => {
-        setValue({...value, remember: !value.remember});
-    };
-
     const [validator] = React.useState(new SimpleReactValidator({
         className: 'errorMessage'
     }));

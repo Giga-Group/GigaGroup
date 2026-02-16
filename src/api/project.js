@@ -43,19 +43,11 @@ import cprBanner from '../images/banner/cpr-banner.jpg'
 import wtcBanner from '../images/banner/wtc-banner.jpg'
 import gcvHighLifeBanner from '../images/banner/gc-highlife-banner.jpg'
 
-import gcbsImage from '../images/projects/gcbs-m1.jpeg'
-
-import gcbsBanner from '../images/banner/wtc-banner.jpg'
-import gcbsS1 from '../images/project-single/wtc-s1.jpg'
-import gcbsS2 from '../images/project-single/wtc-s2.jpg'
-import gcbsM1 from '../images/project-single/gcbs-m1.jpeg'
-
 // Construction Update Images
 import gcvUpdate1 from '../images/construction-updates/gcv-1.1.jpg'
 import gcvUpdate2 from '../images/construction-updates/gcv-2.2.jpg'
 import gmeUpdate1 from '../images/construction-updates/gme-1.jpg'
 import gmeUpdate2 from '../images/construction-updates/gme-2.jpg'
-import { Update } from '@material-ui/icons'
 
 const Projects = [
     {

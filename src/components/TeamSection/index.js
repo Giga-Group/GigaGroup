@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Teams from '../../api/team'
 import Management from '../../api/management'
 import SectionTitle from '../SectionTitle'
 

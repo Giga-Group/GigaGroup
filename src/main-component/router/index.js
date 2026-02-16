@@ -1,11 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 
-import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2'
-import Homepage3 from '../HomePage3'
-import Homepage4 from '../HomePage4'
-import Homepage5 from '../HomePage5'
 import AboutPage from '../AboutPage'
 import ServicePage from '../ServicePage';
 import ServicePageS2 from '../ServicePageS2';
@@ -14,7 +10,6 @@ import ProjectPage from '../ProjectPage';
 import ProjectPageS2 from '../ProjectPageS2';
 import ProjectSinglePage from '../ProjectSinglePage';
 import TeamSinglePage from '../TeamSinglePage';
-import TeamPage from '../TeamPage';
 import ManagementPage from '../ManagementPage';
 import ManagementSinglePage from '../ManagementSinglePage';
 import BlogPage from '../BlogPage'

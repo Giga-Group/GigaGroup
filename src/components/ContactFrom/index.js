@@ -29,7 +29,7 @@ class ContactForm extends Component {
     subimtHandler = (e) => {
         e.preventDefault();
 
-        const { name, email, contact, message, project, error } = this.state;
+        const { name, email, contact, error } = this.state;
 
         if (name === '') {
             error.name = "Please enter your name";

@@ -41,7 +41,7 @@ export const submitFormData = async (formData) => {
         console.log('Submitting form data to:', config.googleScriptUrl);
 
         // Submit to Google Sheets via Apps Script
-        const response = await fetch(config.googleScriptUrl, {
+        await fetch(config.googleScriptUrl, {
             method: 'POST',
             mode: 'no-cors', // Required for Google Apps Script
             headers: {

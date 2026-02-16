@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom'
 import Management from '../../api/management'
 import Footer from '../../components/footer'
 import Logo from '../../images/logo.svg'
-import SocialMediaLinks from '../../components/SocialMediaLinks'
 import '../../components/ManagementSection/ManagementSection.css'
 import companiesBg from '../../images/banner/companies-banner.jpeg'
 
@@ -14,10 +13,6 @@ const ManagementSinglePage = (props) => {
     const { id } = useParams()
 
     const managementDetails = Management.find(item => item.Id === id)
-
-    const SubmitHandler = (e) => {
-        e.preventDefault()
-    }
 
     return (
         <Fragment>

@@ -1,17 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Services from '../../api/service'
 import SectionTitle from '../SectionTitle'
 
-
-
-
 const ServiceSection = (props) => {
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
-
-
     return (
         <div className={`wpo-service-area section-padding ${props.sClass}`}>
             <div className="container">

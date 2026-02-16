@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Link } from 'react-router-dom'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import RegistrationForm from '../RegistrationForm';
 import './hero2.css';
-
-import hero1 from '../../images/slider/slide-1.jpg'
-import hero2 from '../../images/slider/slide-2.jpg'
-import hero3 from '../../images/slider/slide-3.jpg'
 
 
 
