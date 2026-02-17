@@ -22,7 +22,7 @@ const HomePage2 = () => {
                 <div className="slide-content">
                     <div className={`c-wrapper`}>
                         <div>
-                            <h1 className="l4-text">GIGA GROUP ISLAMABAD (PRIVATE) LIMITED</h1>
+                            <h1 className="l7-text">GIGA GROUP ISLAMABAD (PRIVATE) LIMITED</h1>
                             <p className='l2-text'>DELIVERING EXCELLENCE SINCE 1956</p>
                         </div>
                         <div>
