@@ -21,7 +21,7 @@ const Footer = (props) =>{
                             <div className="logo widget-title">
                                 <Link onClick={ClickHandler} className="logo" to="/"><img src={Logo} alt=""/></Link>
                             </div>
-                            <p>Giga Group is a leading real estate developer with 70+ years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
+                            <p>Giga Group Islamabad (Private) Limited is a leading real estate developer with 70+ years of excellence. Creating iconic developments from luxury residences to world-class commercial spaces across Pakistan and the UAE.</p>
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/GigaGroupPakistan/" target="_blank" rel="noopener noreferrer">
@@ -103,7 +103,7 @@ const Footer = (props) =>{
                 <div className="row">
                     <div className="col col-xs-12">
                         <ul>
-                            <li>&copy; 2025 Giga Group. All Rights Reserved.</li>
+                            <li>@2025 Giga Group Islamabad (Private) Limited. All Rights Reserved.</li>
                             <li><Link onClick={ClickHandler} to="/">Terms of use |</Link> <Link onClick={ClickHandler} to="/">Privacy Environmental Policy</Link></li>
                         </ul>
                     </div>
