@@ -20,7 +20,7 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Address</h2>
-                                            <p>Giga City, DHA Phase II Islamabad, Pakistan - 44000</p>
+                                            <p>Downtown Giga Defence Housing Authority, Phase II G.T Road, Islamabad</p>
                                         </div>
                                     </div>
                                 </div> 

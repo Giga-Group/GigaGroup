@@ -74,8 +74,8 @@ const Footer = (props) =>{
                             </div>
                             <div className="contact-ft">
                                 <ul>
-                                    <li><i className="fi flaticon-location"></i>Giga City, Defence Housing Authority <br/> 
-                                    Phase II Islamabad, Pakistan-44000</li>
+                                    <li><i className="fi flaticon-location"></i>Downtown Giga Defence Housing Authority, <br/> 
+                                    Phase II G.T Road, Islamabad</li>
                                     <li><i className="fi flaticon-telephone"></i>+92 (51) 111 786 123</li>
                                     <li><i className="fi flaticon-email"></i>info@gigagroup.com</li>
                                 </ul>

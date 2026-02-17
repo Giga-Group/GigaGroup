@@ -12,7 +12,7 @@ const config = {
   // Company Information (defaults provided)
   companyName: process.env.REACT_APP_COMPANY_NAME || 'Giga Group',
   companyPhone: process.env.REACT_APP_COMPANY_PHONE || '+92 (51) 111 786 123',
-  companyAddress: process.env.REACT_APP_COMPANY_ADDRESS || 'Giga City, DHA Phase II Islamabad, Pakistan-44000',
+  companyAddress: process.env.REACT_APP_COMPANY_ADDRESS || 'Downtown Giga Defence Housing Authority, Phase II G.T Road, Islamabad',
   
   // API Configuration (defaults provided)
   apiTimeout: parseInt(process.env.REACT_APP_API_TIMEOUT) || 10000,

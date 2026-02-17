@@ -346,7 +346,7 @@ For typical usage, these limits are more than sufficient.
 For API support or questions, contact:
 - **Email:** gigagroup.dev@gmail.com
 - **Company:** Giga Group
-- **Address:** Giga City, DHA Phase II Islamabad, Pakistan-44000
+- **Address:** Downtown Giga Defence Housing Authority, Phase II G.T Road, Islamabad
 
 ---
 
