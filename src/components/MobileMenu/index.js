@@ -43,11 +43,11 @@ const menus = [
         link: '/about-us',
     },
 
-    // {
-    //     id: 3,
-    //     title: 'Management',
-    //     link: '/management',
-    // },
+    {
+        id: 3,
+        title: 'Management',
+        link: '/management',
+    },
 
 // {
 //     id: 4,
