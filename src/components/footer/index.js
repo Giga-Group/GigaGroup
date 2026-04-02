@@ -17,7 +17,7 @@ const Footer = (props) =>{
             <div className="container">
                 <div className="row">
                     <div className="col col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div className="widget about-widget">
+                        <div className="widget about-widget">   
                             <div className="logo widget-title">
                                 <Link onClick={ClickHandler} className="logo" to="/"><img src={Logo} alt=""/></Link>
                             </div>
