@@ -11,9 +11,9 @@ import Scrollbar from '../../components/scrollbar'
 import Logo from '../../images/logo.svg'
 import DeliveredProjectsSection from '../../components/DeliveredProjectsSection';
 import CompanySection from '../../components/CompanySection';
-import certificateOne from '../../images/winnings/winner-black-horizontal.png';
-import certificateTwo from '../../images/winnings/winner-black-horizontal (1).png';
-import certificateThree from '../../images/winnings/winner-black-horizontal (2).png';
+import certificateOne from '../../images/winnings/winner-black-horizontal-transparent.png';
+import certificateTwo from '../../images/winnings/winner-black-horizontal (1)-transparent.png';
+import certificateThree from '../../images/winnings/winner-black-horizontal (2)-transparent.png';
 
 
 const HomePage2 = () => {

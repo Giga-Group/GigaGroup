@@ -273,9 +273,25 @@
         padding: 2.25rem 0.5rem 2rem;
         gap: 1.5rem;
     }
+    .hero2-certificates {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        column-gap: 14px;
+        row-gap: 14px;
+        width: 100%;
+        max-width: 420px;
+        justify-items: center;
+        align-items: start;
+    }
+
     .hero2-certificate-item {
-        width: 140px;
-        padding: 7px;
+        width: 180px;
+    }
+
+    .hero2-certificate-item:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: 180px;
     }
     .l1-text {
         font-size: 2.8rem;
@@ -318,6 +334,21 @@
 }
 
 @media (max-width: 480px) {
+    .hero2-certificates {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+        max-width: 320px;
+        column-gap: 16px;
+        row-gap: 20px;
+    }
+
+    .hero2-certificate-item {
+        width: 145px;
+    }
+
+    .hero2-certificate-item:nth-child(3) {
+        width: 145px;
+    }
+
     .l1-text {
         font-size: 1.5rem;
     }
