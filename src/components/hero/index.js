@@ -1,8 +1,17 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import himg from '../../images/slider/s1.jpg'
+import certificateOne from '../../images/winnings/winner-black-horizontal.png'
+import certificateTwo from '../../images/winnings/winner-black-horizontal (1).png'
+import certificateThree from '../../images/winnings/winner-black-horizontal (2).png'
 
 const Hero =() => {
+    const certificates = [
+        { src: certificateOne, alt: 'Giga Group certificate 1' },
+        { src: certificateTwo, alt: 'Giga Group certificate 2' },
+        { src: certificateThree, alt: 'Giga Group certificate 3' },
+    ];
+
     return (
         <section className="static-hero">
             <div className="hero-container">
@@ -16,6 +25,13 @@ const Hero =() => {
                                     </div>
                                     <div data-swiper-parallax="300" className="slide-title">
                                         <h2>Creating Your Future With <span>Affection</span></h2>
+                                    </div>
+                                    <div className="hero-certificates" data-swiper-parallax="500">
+                                        {certificates.map((certificate) => (
+                                            <div className="hero-certificate-item" key={certificate.src}>
+                                                <img src={certificate.src} alt={certificate.alt} />
+                                            </div>
+                                        ))}
                                     </div>
                                     <div data-swiper-parallax="400" className="slide-btn">
                                         <Link className="theme-btn" to="/project">Discover Project</Link>

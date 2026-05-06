@@ -11,9 +11,18 @@ import Scrollbar from '../../components/scrollbar'
 import Logo from '../../images/logo.svg'
 import DeliveredProjectsSection from '../../components/DeliveredProjectsSection';
 import CompanySection from '../../components/CompanySection';
+import certificateOne from '../../images/winnings/winner-black-horizontal.png';
+import certificateTwo from '../../images/winnings/winner-black-horizontal (1).png';
+import certificateThree from '../../images/winnings/winner-black-horizontal (2).png';
 
 
 const HomePage2 = () => {
+    const certificates = [
+        { src: certificateOne, alt: 'Giga Group certificate 1' },
+        { src: certificateTwo, alt: 'Giga Group certificate 2' },
+        { src: certificateThree, alt: 'Giga Group certificate 3' },
+    ];
+
     return (
         <Fragment>
             {/* <Navbar Logo={Logo}/> */} {/* Old navbar commented out */}
@@ -28,6 +37,13 @@ const HomePage2 = () => {
                         <div>
                             <p className='l3-text'>BUILDING TRUST, SHAPING INNOVATION, AND CRAFTING A FUTURE THAT STANDS TEST OF TIME</p>
                             <p className="l8-text">Vision, Giga Group</p>
+                        </div>
+                        <div className="hero2-certificates">
+                            {certificates.map((certificate) => (
+                                <div className="hero2-certificate-item" key={certificate.src}>
+                                    <img src={certificate.src} alt={certificate.alt} />
+                                </div>
+                            ))}
                         </div>
                         {/* <div>
                             <p className='l5-text'>FROM LUXURY RESIDENCES TO WORLD-CLASS COMMERCIAL SPACES. 70 YEARS OF DELIVERING ICONIC DEVELOPMENTS ACROSS PAKISTAN AND THE UAE</p>

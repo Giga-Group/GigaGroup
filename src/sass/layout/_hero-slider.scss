@@ -648,6 +648,46 @@
 		}
 	}
 
+	.hero-certificates{
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		margin: 18px 0 24px;
+		flex-wrap: wrap;
+		position: relative;
+		z-index: 5;
+
+		@media(max-width:991px){
+			justify-content: center;
+		}
+
+		.hero-certificate-item{
+			width: 145px;
+			border-radius: 12px;
+			background: $white;
+			padding: 8px;
+			box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+			border: 1px solid #e5e5e5;
+
+			@include media-query(1199px) {
+				width: 125px;
+			}
+
+			@include media-query(575px) {
+				width: 100px;
+				padding: 6px;
+			}
+
+			img{
+				width: 100%;
+				height: auto;
+				display: block;
+				object-fit: cover;
+				border-radius: 8px;
+			}
+		}
+	}
+
 
 	.static-hero-right{
 		position: absolute;
