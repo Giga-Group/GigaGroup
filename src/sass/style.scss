@@ -201,6 +201,13 @@ Version:        1.0.0
 
 // Specific styles for delivered projects section
 .delivered-projects-section {
+  .delivered-project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
   .wpo-project-item {
     .wpo-project-img {
       .wpo-project-overlay {

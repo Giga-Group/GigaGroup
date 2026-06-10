@@ -1,8 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import DeliveredProjects from '../../api/delivered-projects'
 import SectionTitle from '../SectionTitle';
 
 const DeliveredProjectsSection = () => {
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
+
+    const renderProjectCard = (project) => (
+        <div className="wpo-project-item">
+            <div className="wpo-project-img">
+                <img src={project.pImg} alt={project.title} />
+                <div className="left-border"></div>
+                <div className="right-border"></div>
+                <div className="wpo-project-overlay">
+                    <div className="wpo-project-overlay-content">
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 
     return (
         <div className="wpo-project-area-s2 section-padding delivered-projects-section">
@@ -16,23 +37,17 @@ const DeliveredProjectsSection = () => {
                                     <div className="project-grids gallery-container clearfix">
                                         {DeliveredProjects.map((project, pot) => (
                                             <div className="grid" key={pot}>
-                                                <div className="wpo-project-item">
-                                                    <div className="wpo-project-img">
-                                                        <img src={project.pImg} alt={project.title} />
-                                                        <div className="left-border"></div>
-                                                        <div className="right-border"></div>
-                                                        <div className="wpo-project-overlay">
-                                                            <div className="wpo-project-overlay-content">
-                                                                <h3>{project.title}</h3>
-                                                                <p>{project.description}</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {/* <div className="wpo-project-text">
-                                                        <h2>{project.title}</h2>
-                                                        <span>{project.subTitle}</span>
-                                                    </div> */}
-                                                </div>
+                                                {project.pageLink ? (
+                                                    <Link
+                                                        to={project.pageLink}
+                                                        onClick={handleClick}
+                                                        className="delivered-project-link"
+                                                    >
+                                                        {renderProjectCard(project)}
+                                                    </Link>
+                                                ) : (
+                                                    renderProjectCard(project)
+                                                )}
                                             </div>
                                         ))}
                                     </div>

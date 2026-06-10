@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 
 const PageTitle = (props) => {
     const backgroundStyle = props.backgroundImage ? {
-        backgroundImage: `url(${props.backgroundImage})`,
+        backgroundImage: `url("${props.backgroundImage}")`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center top',
+        backgroundPosition: props.backgroundPosition || (props.fullHeight ? 'center bottom' : 'center top'),
         backgroundRepeat: 'no-repeat'
     } : {};
 
     return(
-        <section className="wpo-page-title" style={backgroundStyle}>
+        <section className={`wpo-page-title${props.fullHeight ? ' wpo-page-title-full' : ''}`} style={backgroundStyle}>
             <div className="container">
                 <div className="row">
                     <div className="col col-xs-12">

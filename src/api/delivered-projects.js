@@ -62,6 +62,7 @@ const DeliveredProjects = [
         title: 'Giga Boutique Mall, Islamabad',
         subTitle: 'Islamabad',
         description: 'Giga Boutique Mall, Islamabad\'s newest, hippest mall! Giga West brings you the first water park of its kind in any mall in the Twin Cities. Located right next to Giga Mall in DHA, it features water slides and entertainment for all ages. Combining modern architecture with a variety of shopping and leisure options, it\'s a landmark development.',
+        pageLink: '/giga-boutique-mall',
     },
     {
         Id: '8',
