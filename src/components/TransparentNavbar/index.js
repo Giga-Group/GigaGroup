@@ -39,7 +39,8 @@ const TransparentNavbar = ({ Logo }) => {
         { id: 4, title: 'Projects', link: '/projects' },
         { id: 5, title: 'Companies', link: '/companies' },
         { id: 6, title: 'Celebrity Testimonials', link: '/celebrity-testimonials' },
-        { id: 7, title: 'Contact', link: '/contact-us' }
+        { id: 7, title: 'Blog', link: '/blog' },
+        { id: 8, title: 'Contact', link: '/contact-us' }
     ];
 
     return (

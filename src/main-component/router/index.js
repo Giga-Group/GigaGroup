@@ -13,11 +13,7 @@ import TeamSinglePage from '../TeamSinglePage';
 import ManagementPage from '../ManagementPage';
 import ManagementSinglePage from '../ManagementSinglePage';
 import BlogPage from '../BlogPage'
-import BlogPageLeft from '../BlogPageLeft'
-import BlogPageFullwidth from '../BlogPageFullwidth'
-import BlogDetails from '../BlogDetails'
-import BlogDetailsFull from '../BlogDetailsFull'
-import BlogDetailsLeftSiide from '../BlogDetailsLeftSiide'
+import BlogPostPage from '../BlogPostPage'
 import PricingPage from '../PricingPage'
 import TestimonialPage from '../TestimonialPage'
 import ContactPage from '../ContactPage'
@@ -67,13 +63,9 @@ const AllRoute = () => {
           <Route path='contact-us' element={<ContactPage/>} />
           <Route path='companies' element={<CompaniesPage/>} />
           <Route path='giga-boutique-mall' element={<GigaBoutiqueMallPage/>} />
-          <Route path='404' element={<ErrorPage/>} />
-          <Route path='blog-single/:id' element={<BlogDetails/>} />
-          <Route path='blog-single-left-sidebar/:id' element={<BlogDetailsLeftSiide/>} />
-          <Route path='blog-single-fullwidth/:id' element={<BlogDetailsFull/>} />
+          <Route path='blog/:slug' element={<BlogPostPage/>} />
           <Route path='blog' element={<BlogPage/>} />
-          <Route path='blog-left-sidebar' element={<BlogPageLeft/>} />
-          <Route path='blog-fullwidth' element={<BlogPageFullwidth/>} />
+          <Route path='404' element={<ErrorPage/>} />
           <Route path='login' element={<LoginPage/>} />
           <Route path='register' element={<SignUpPage/>} />
           <Route path='forgot-password' element={<ForgotPassword/>} />

@@ -28,9 +28,9 @@ const BlogSection = (props) => {
                                     <div className="wpo-blog-content">
                                         <ul>
                                             <li>{blog.create_at}</li>
-                                            <li>By <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>{blog.author}</Link></li>
+                                            <li>By <Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>{blog.author}</Link></li>
                                         </ul>
-                                        <h2><Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>{blog.title}</Link></h2>
+                                        <h2><Link onClick={ClickHandler} to={`/blog/${blog.slug}`}>{blog.title}</Link></h2>
                                         <p>{blog.description}</p>
                                     </div>
                                 </div>

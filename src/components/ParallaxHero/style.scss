@@ -1,0 +1,109 @@
+.parallax-hero {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+
+    @media (max-width: 767px) {
+        min-height: 320px;
+    }
+
+    &--full {
+        min-height: 100vh;
+    }
+
+    &__bg {
+        position: absolute;
+        top: -20%;
+        left: 0;
+        width: 100%;
+        height: 140%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        will-change: transform;
+        z-index: -2;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(26, 34, 85, 0.55);
+        z-index: -1;
+    }
+
+    &__content {
+        text-align: center;
+        color: #fff;
+        padding: 120px 15px 60px;
+
+        h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin: 0 0 16px;
+            color: #fff;
+
+            @media (max-width: 767px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        margin: 0 0 20px;
+        color: #fff;
+        opacity: 0.9;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+
+    &__breadcrumb {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        li {
+            color: #fff;
+            font-size: 18px;
+            position: relative;
+            padding-right: 20px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                background: #fff;
+                border-radius: 50%;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #ff5e14;
+                }
+            }
+        }
+    }
+}
