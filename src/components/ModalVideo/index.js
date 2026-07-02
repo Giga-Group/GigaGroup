@@ -19,7 +19,7 @@ class VideoModal extends React.Component {
   render () {
     return (
       <div>
-        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='tJqbRpXPHUw' onClose={() => this.setState({isOpen: false})} />
+        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='5Ge8hkOQ6pA' onClose={() => this.setState({isOpen: false})} />
           <div className="video-btn">
               <ul>
                   <li>
