@@ -19,11 +19,11 @@ class VideoModal extends React.Component {
   render () {
     return (
       <div>
-        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='3h-wdHz3m0s' onClose={() => this.setState({isOpen: false})} />
+        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='tJqbRpXPHUw' onClose={() => this.setState({isOpen: false})} />
           <div className="video-btn">
               <ul>
                   <li>
-                    <button className="wrap" onClick={this.openModal}><i className="fi flaticon-play" aria-hidden="true"></i></button> 
+                    <button type="button" className="wrap" onClick={this.openModal} aria-label="Watch our video"><i className="fi flaticon-play" aria-hidden="true"></i></button> 
                   </li>
               </ul>
           </div>
