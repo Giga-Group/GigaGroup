@@ -35,6 +35,10 @@ import cprS2 from '../images/project-single/cpr-s2.jpg'
 import gmeS1 from '../images/project-single/gme-s1.jpg'
 import gmeS2 from '../images/project-single/gme-s2.jpg'
 
+import gcvBreezeBanner from '../images/project-single/goldcrest-bareeze.jpeg'
+import gcb01 from '../images/project-single/gcbo1.jpeg'
+import gcb02 from '../images/project-single/gcbo2.jpeg'
+
 import gcvBanner from '../images/banner/gcv-banner.jpg'
 import gccBanner from '../images/banner/gcc-banner.jpg'
 import gmeBanner from '../images/banner/gme-banner.jpg'
@@ -1261,7 +1265,151 @@ const Projects = [
             projectGallery: false,
             constructionUpdates: false
         }
-    }
+    },
+    {
+        Id: '10',
+        pImg: gcvBreezeBanner,
+        coverImage: gcvBreezeBanner,
+        ps1img: gcvBreezeBanner,
+        psub1img1: gcb01,
+        psub1img2: gcb02,
+        title: 'Goldcrest Breeze Overseas',
+        subTitle: 'Luxury Residential Complex',
+        
+        // Main description paragraphs (existing)
+        description: [
+            "Goldcrest Breeze Overseas is a landmark luxury residential project by Al-Ghurair Giga, featuring seven magnificent 40-storey towers that redefine Islamabad's skyline. Located in the prime heart of Giga City adjacent to Giga Mall, this Dubai-inspired development offers studios, 1-4 bedroom apartments, penthouses, and duplexes with smart-home technology, rooftop pools, and world-class amenities.",
+            "With flexible 5-year payment plans and dedicated rental management services for overseas investors, Goldcrest Views combines luxury living with smart investment opportunities. The project features central HVAC, high-speed elevators, podium gardens, daycare facilities, and gourmet services, creating a self-sustained premium community with excellent connectivity to twin cities."
+        ],
+
+        // Project details sidebar information
+        projectDetails: {
+            location: "Giga City, Islamabad",
+            returnPotential: "High Returns",  
+            interiors: "Stylish Modern Finishings",  
+            parking: "Covered Spaces",  
+            amenities: "World-Class Facilities",  
+            security: "24/7 Surveillance",  
+            connectivity: "GT Road / Isb Highway",  
+            status: "In Progress",              
+            projectType: "Luxury Residential",
+            category: "Residential, Investment"
+        },
+
+        // Design Philosophy - NEW SECTION
+        designPhilosophy: {
+            title: "Design Philosophy",
+            description: "Our architectural vision combines Dubai-inspired luxury with Islamabad's natural beauty, creating a harmonious blend of modern sophistication and timeless elegance. We integrate cutting-edge technology with sustainable design principles, ensuring every element serves both aesthetic and functional purposes while maintaining environmental responsibility and community harmony.",
+            philosophy: []
+        },
+
+        // Project features and design philosophy
+        projectFeatures: {
+            title: "Premium Amenities & Features",
+            description: "World-class facilities designed to enhance your lifestyle and provide exceptional comfort and convenience.",
+            features: [
+                "Rooftop infinity pools with panoramic city and Margalla Hills views",
+                "Smart home automation systems in every residential unit",
+                "24/7 concierge services and advanced security systems",
+                "Landscaped podium gardens and dedicated children's play areas"
+            ]
+        },
+
+        // Project amenities
+        projectAmenities: {
+            title: "World-Class Amenities",
+            description: "Comprehensive facilities that create a self-sustained premium community.",
+            amenities: [
+                "Swimming Pool - Temperature-controlled pool for exercise and relaxation",
+                "Private Security - 24/7 protection with trained staff and surveillance",
+                "Parking Space - Dedicated on-site parking zones with direct building access",
+                "Podium Level - Elevated deck for open-air lounging and social gatherings"
+            ]
+        },
+
+        // Why choose this project
+        whyChoose: {
+            title: "Why Choose Goldcrest Views",
+            description: "Unique advantages that make this project the premier choice for luxury living in Islamabad.",
+            reasons: [
+                "Upgraded version of award-winning Dubai Goldcrest Views design",
+                "Only project in Pakistan with seven 40-storey residential towers",
+                "Integrated with Giga Mall for unmatched convenience",
+                "Advanced smart home technology and sustainable practices"
+            ]
+        },
+
+        // Investment highlights
+        investmentHighlights: {
+            title: "Investment Opportunities",
+            description: "Smart investment options with excellent returns and professional management.",
+            highlights: [
+                "Flexible 5-year payment plans with minimal down payment options",
+                "Professional rental management services for overseas investors",
+                "High capital appreciation potential in DHA's prime location",
+                "Guaranteed rental yields through property management services",
+                "Ready for possession with complete infrastructure",
+                "Strong demand in Islamabad's fastest-growing residential area"
+            ]
+        },
+
+        // Location advantages
+        locationAdvantages: {
+            title: "Prime Location Benefits",
+            description: "Strategic positioning that offers unparalleled access to all essential facilities.",
+            advantages: [
+                "Located in Giga City, Islamabad's most exclusive neighborhood",
+                "Direct access to Giga Mall's 200+ brands and facilities",
+                "Excellent connectivity to twin cities and major highways",
+                "Proximity to top educational institutions and healthcare facilities",
+                "Just 30 minutes from Islamabad International Airport",
+                "Stunning views of Margalla Hills and city skyline",
+                "Access to business districts and diplomatic enclave"
+            ]
+        },
+
+        testimonial: {
+            quote: "Believe me, the units that were built 8–10 years ago, people bought them at a very low price — around 3.5 million rupees. Now, those same flats are worth nearly 17.5 million.",
+            author: "Behroze Sabzwari",
+            designation: "Pakistani Actor",
+            rating: 5
+        },
+
+        // Construction Updates
+        // constructionUpdates: {
+        //     title: "Construction Updates",
+        //     description: "Stay updated with the latest progress on Goldcrest Views. Our construction team is working diligently to deliver this landmark project.",
+        //     youtubeVideo: "https://youtube.com/shorts/0kSWxoOXMrU?feature=share",
+        //     updates: [
+        //         {
+        //             image: gcvUpdate1,
+        //             title: "Construction Progress Goldcrest Views 1",
+        //             date: "Jan, 2026",
+        //             update: "Latest Update"
+        //         },
+        //         {
+        //             image: gcvUpdate2,
+        //             title: "Construction Progress Goldcrest Views 2",
+        //             date: "Jan, 2026",
+        //             update: "Latest Update"
+        //         }
+        //     ]
+        // },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: false,
+            projectGallery: true,
+            constructionUpdates: true
+        }
+    },
+
 ]
 
 export default Projects;

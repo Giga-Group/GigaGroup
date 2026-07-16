@@ -248,6 +248,17 @@ Version:        1.0.0
 // Specific styles for companies section - white text
 .wpo-project-area-s2:not(.delivered-projects-section) {
   .wpo-project-item {
+    .wpo-project-img {
+      aspect-ratio: 795 / 800;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
     .wpo-project-text {
       h2, span {
         color: #fff !important;
