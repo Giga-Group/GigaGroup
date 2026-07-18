@@ -1278,8 +1278,8 @@ const Projects = [
         
         // Main description paragraphs (existing)
         description: [
-            "Goldcrest Breeze Overseas is a landmark luxury residential project by Al-Ghurair Giga, featuring seven magnificent 40-storey towers that redefine Islamabad's skyline. Located in the prime heart of Giga City adjacent to Giga Mall, this Dubai-inspired development offers studios, 1-4 bedroom apartments, penthouses, and duplexes with smart-home technology, rooftop pools, and world-class amenities.",
-            "With flexible 5-year payment plans and dedicated rental management services for overseas investors, Goldcrest Views combines luxury living with smart investment opportunities. The project features central HVAC, high-speed elevators, podium gardens, daycare facilities, and gourmet services, creating a self-sustained premium community with excellent connectivity to twin cities."
+            "Goldcrest Breeze Overseas is a landmark luxury residential project by Al-Ghurair Giga, featuring seven magnificent 30-storey towers that redefine Islamabad's skyline. Located in the prime heart of Giga City adjacent to Giga Mall, this Dubai-inspired development offers studios, 1-4 bedroom apartments, penthouses, and duplexes with smart-home technology, rooftop pools, and world-class amenities.",
+            "With flexible 5-year payment plans and dedicated rental management services for overseas investors, Goldcrest Breeze Overseas combines luxury living with smart investment opportunities. The project features central HVAC, high-speed elevators, podium gardens, daycare facilities, and gourmet services, creating a self-sustained premium community with excellent connectivity to twin cities."
         ],
 
         // Project details sidebar information
@@ -1329,11 +1329,11 @@ const Projects = [
 
         // Why choose this project
         whyChoose: {
-            title: "Why Choose Goldcrest Views",
+            title: "Why Choose Goldcrest Breeze Overseas",
             description: "Unique advantages that make this project the premier choice for luxury living in Islamabad.",
             reasons: [
                 "Upgraded version of award-winning Dubai Goldcrest Views design",
-                "Only project in Pakistan with seven 40-storey residential towers",
+                "Only project in Pakistan with seven 30-storey residential towers",
                 "Integrated with Giga Mall for unmatched convenience",
                 "Advanced smart home technology and sustainable practices"
             ]
