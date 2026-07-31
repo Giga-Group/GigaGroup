@@ -48,10 +48,14 @@ import wtcBanner from '../images/banner/wtc-banner.jpg'
 import gcvHighLifeBanner from '../images/banner/gc-highlife-banner.jpg'
 
 // Construction Update Images
-import gcvUpdate1 from '../images/construction-updates/gcv-1.1.jpg'
-import gcvUpdate2 from '../images/construction-updates/gcv-2.2.jpg'
-import gmeUpdate1 from '../images/construction-updates/gme-1.jpg'
-import gmeUpdate2 from '../images/construction-updates/gme-2.jpg'
+import gcvUpdate1 from '../images/projects/gcv1.jpg'
+import gcvUpdate2 from '../images/projects/gcv2.jpg'
+import gccUpdate1 from '../images/projects/gcc1.jpg'
+import gccUpdate2 from '../images/projects/gcc2.jpg'
+import gmeUpdate1 from '../images/projects/e1.jpg'
+import gmeUpdate2 from '../images/projects/e2.jpg'
+import cprUpdate1 from '../images/projects/cpr1.jpg'
+import cprUpdate2 from '../images/projects/cpr2.jpg'
 
 const Projects = [
     {
@@ -173,13 +177,13 @@ const Projects = [
                 {
                     image: gcvUpdate1,
                     title: "Construction Progress Goldcrest Views 1",
-                    date: "Jan, 2026",
+                    date: "Jul, 2026",
                     update: "Latest Update"
                 },
                 {
                     image: gcvUpdate2,
                     title: "Construction Progress Goldcrest Views 2",
-                    date: "Jan, 2026",
+                    date: "Jul, 2026",
                     update: "Latest Update"
                 }
             ]
@@ -307,7 +311,20 @@ const Projects = [
             title: "Construction Updates",
             description: "Stay updated with the latest progress on Goldcrest Commercial. Our construction team is working diligently to deliver this premium commercial complex.",
             youtubeVideo: "https://www.youtube.com/watch?v=qL0ePogoqek",
-            updates: []
+            updates: [
+                {
+                    image: gccUpdate1,
+                    title: "Construction Progress Goldcrest Commercial 1",
+                    date: "Jul, 2026",
+                    update: "Latest Update"
+                },
+                {
+                    image: gccUpdate2,
+                    title: "Construction Progress Goldcrest Commercial 2",
+                    date: "Jul, 2026",
+                    update: "Latest Update"
+                }
+            ]
         },
 
         // Section Visibility Configuration
@@ -320,7 +337,7 @@ const Projects = [
             locationAdvantages: false,
             testimonial: false,
             projectGallery: true,
-            constructionUpdates: false
+            constructionUpdates: true
         }
     },
 
@@ -436,14 +453,14 @@ const Projects = [
             updates: [
                 {
                     image: gmeUpdate1,
-                    title: "Construction Progress Updates",
-                           date: "Latest Update",
+                    title: "Construction Progress Giga Mall Extension 1",
+                    date: "Jul, 2026",
                     update: "Latest Update"
                 },
                 {
                     image: gmeUpdate2,
-                    title: "Construction Progress Updates",
-                       date: "Latest Update",
+                    title: "Construction Progress Giga Mall Extension 2",
+                    date: "Jul, 2026",
                     update: "Latest Update"
                 }
             ]
@@ -720,7 +737,20 @@ const Projects = [
             title: "Construction Updates",
             description: "Stay updated with the latest progress on Central Palace Residence. Our construction team is working diligently to deliver this ultra-luxury residential project.",
             youtubeVideo: "https://youtube.com/shorts/jQ9bSuhvzAw?feature=share",
-            updates: []
+            updates: [
+                {
+                    image: cprUpdate1,
+                    title: "Construction Progress Central Palace Residence 1",
+                    date: "Jul, 2026",
+                    update: "Latest Update"
+                },
+                {
+                    image: cprUpdate2,
+                    title: "Construction Progress Central Palace Residence 2",
+                    date: "Jul, 2026",
+                    update: "Latest Update"
+                }
+            ]
         },
 
         // Section Visibility Configuration

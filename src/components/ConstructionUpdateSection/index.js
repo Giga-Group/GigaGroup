@@ -80,16 +80,8 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
     const youtubeVideoId = constructionUpdates?.youtubeVideo ? getYouTubeVideoId(constructionUpdates.youtubeVideo) : null;
     const isShortsVideo = constructionUpdates?.youtubeVideo?.includes('/shorts/') || false;
 
-    // Check if this is Central Palace Residence (mobile-only section)
-    const isCentralPalaceResidence = constructionUpdates?.description?.includes('Central Palace Residence') || false;
-
     // Allow rendering if there's a video or updates
     if (!constructionUpdates || (!youtubeVideoId && (!constructionUpdates.updates || constructionUpdates.updates.length === 0))) {
-        return null;
-    }
-
-    // Hide entire section on desktop/web view for Central Palace Residence, show only on mobile
-    if (isCentralPalaceResidence && !isMobile) {
         return null;
     }
 
@@ -229,13 +221,11 @@ const ConstructionUpdateSection = ({ constructionUpdates }) => {
                                             />
 
                                             {/* Bottom text overlay */}
-                                          {/* Bottom text overlay ONLY for Goldcrest Views */}
-{update.title && update.title.includes('Goldcrest Views') && update.date && (
-    <div className="wpo-construction-update-bottom-text">
-        Construction Update : {update.date}
-    </div>
-)}
-
+                                            {update.title && (update.title.includes('Goldcrest Views') || update.title.includes('Goldcrest Commercial') || update.title.includes('Giga Mall Extension') || update.title.includes('Central Palace Residence')) && update.date && (
+                                                <div className="wpo-construction-update-bottom-text">
+                                                    Construction Update : {update.date}
+                                                </div>
+                                            )}
                                             <div className="wpo-construction-update-overlay">
                                                 <i className="ti-zoom-in"></i>
                                             </div>
