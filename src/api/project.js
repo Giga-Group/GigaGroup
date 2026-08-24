@@ -1305,7 +1305,7 @@ const Projects = [
         psub1img1: gcb01,
         psub1img2: gcb02,
         logo: gcbLogo,
-        title: 'Goldcrest Breeze Overseas',
+        title: 'Goldcrest Breeze Overseas',  
         subTitle: 'Luxury Residential Complex',
         
         // Main description paragraphs (existing)
