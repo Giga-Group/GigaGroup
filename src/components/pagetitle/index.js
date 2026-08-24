@@ -15,6 +15,11 @@ const PageTitle = (props) => {
                 <div className="row">
                     <div className="col col-xs-12">
                         <div className="wpo-breadcumb-wrap">
+                            {props.logo && (
+                                <div className="wpo-page-title-logo">
+                                    <img src={props.logo} alt={props.pageTitle} />
+                                </div>
+                            )}
                             <h2>{props.pageTitle}</h2>
                             <ol className="wpo-breadcumb-wrap">
                                 <li><Link to="/">Home</Link></li>

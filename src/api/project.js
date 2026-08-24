@@ -15,7 +15,7 @@ import cprM1 from '../images/project-single/cpr-m1.jpg'
 import wtcM1 from '../images/project-single/wtc-m1.jpg'
 import gcHighlife1M1 from '../images/project-single/gc-highlife-1-m1.jpeg'
 import gcHighlife23M1 from '../images/project-single/gc-highlife-2-3-m1.jpeg'
-
+import GCBLogo1 from '../images/project logo/GCBLogo1.png'
 
 import gcvS1 from '../images/project-single/gcv-s1.jpg' 
 import gcvS2 from '../images/project-single/gcv-s2.jpg'
@@ -38,6 +38,7 @@ import gmeS2 from '../images/project-single/gme-s2.jpg'
 import gcvBreezeBanner from '../images/project-single/goldcrest-bareeze.jpeg'
 import gcb01 from '../images/project-single/gcbo1.jpeg'
 import gcb02 from '../images/project-single/gcbo2.jpeg'
+import gcbLogo from '../images/project logo/GCBLogo1.png'
 
 import gcvBanner from '../images/banner/gcv-banner.jpg'
 import gccBanner from '../images/banner/gcc-banner.jpg'
@@ -1303,6 +1304,7 @@ const Projects = [
         ps1img: gcvBreezeBanner,
         psub1img1: gcb01,
         psub1img2: gcb02,
+        logo: gcbLogo,
         title: 'Goldcrest Breeze Overseas',
         subTitle: 'Luxury Residential Complex',
         

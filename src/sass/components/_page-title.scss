@@ -26,6 +26,43 @@
 	.wpo-breadcumb-wrap {
 		text-align: center;
 
+		.wpo-page-title-logo {
+			display: inline-block;
+			position: relative;
+			margin-bottom: 18px;
+			line-height: 0;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 90%;
+				height: 80%;
+				transform: translate(-50%, -50%);
+				background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.12) 52%, transparent 74%);
+				filter: blur(18px);
+				z-index: 0;
+				pointer-events: none;
+			}
+
+			img {
+				position: relative;
+				z-index: 1;
+				display: block;
+				max-height: 180px;
+				width: auto;
+				max-width: min(280px, 70vw);
+				object-fit: contain;
+				mix-blend-mode: lighten;
+
+				@media(max-width: 767px) {
+					max-height: 120px;
+					max-width: min(180px, 55vw);
+				}
+			}
+		}
+
 		h2{
 			font-size: 60px;
 			color: #fff;

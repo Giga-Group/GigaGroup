@@ -25,6 +25,7 @@ const ProjectSinglePage = (props) => {
                 pageTitle={projectDetails.title} 
                 pagesub={'Project'} 
                 backgroundImage={projectDetails.coverImage}
+                logo={projectDetails.logo}
             />
             <div className="wpo-project-single-area section-padding">
                 <div className="container">
@@ -34,6 +35,7 @@ const ProjectSinglePage = (props) => {
                                 <div className="wpo-project-single-item">
                                     <div className="row align-items-center">
                                         <div className="col-lg-7">
+                                         
                                             <div className="wpo-project-single-title">
                                                 <h3>{projectDetails.title}</h3>
                                                 <h4>{projectDetails.subTitle}</h4>

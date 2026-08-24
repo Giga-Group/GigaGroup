@@ -3,6 +3,17 @@
 ======================================================*/
 .wpo-project-single-area{
     .wpo-project-single-wrap{
+        .wpo-project-single-logo{
+            margin-bottom: 18px;
+
+            img{
+                max-height: 140px;
+                width: auto;
+                max-width: 220px;
+                object-fit: contain;
+                background: #000;
+            }
+        }
         .wpo-project-single-title{
             h3{
                 font-weight: 500;
