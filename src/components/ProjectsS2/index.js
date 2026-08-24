@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Projects from '../../api/project'
 import SectionTitle from '../SectionTitle';
 
 const ProjectSectionS2 = () => {
+
+    useEffect(() => {
+        console.log('Projects rendered on /projects:', JSON.stringify(Projects, null, 2));
+    }, []);
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);

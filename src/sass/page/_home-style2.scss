@@ -247,9 +247,12 @@
 .wpo-project-area-s3{
    .project-grids{
         margin: 0 -7.5px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
         .grid{
             width: 33.33%;
-            float: left;
+            float: none;
             padding: 0 7.5px 15px;
 
 			@include media-query(1500px) {

@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import TransparentNavbar from '../../components/TransparentNavbar' // New transparent navbar
 import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import Projects from '../../api/project'
 import RelatedProject from './related';
 import Discuss from './discuss';
@@ -15,7 +15,11 @@ import ConstructionUpdateSection from '../../components/ConstructionUpdateSectio
 const ProjectSinglePage = (props) => {
     const { id } = useParams()
 
-    const projectDetails = Projects.find(item => item.Id === id)
+    const projectDetails = Projects.find(item => String(item.Id) === String(id))
+
+    if (!projectDetails) {
+        return <Navigate to="/404" replace />
+    }
 
     return (
         <Fragment>
