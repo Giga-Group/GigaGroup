@@ -767,9 +767,135 @@ const Projects = [
             constructionUpdates: true
         }
     },
-
     {
         Id: '6',
+        pImg: wtcImage,
+        coverImage: wtcBanner,
+        ps1img: wtcM1,
+        psub1img1: wtcS1,
+        psub1img2: wtcS2,
+        title: 'Giga Mall WTC',
+        subTitle: 'World Trade Center',
+        
+        description: [
+            "Giga Mall WTC represents a prestigious World Trade Center development, establishing Islamabad as a major international business destination. This landmark project combines luxury retail spaces, premium office towers, international conference facilities, and five-star hospitality services under one integrated complex. The development features state-of-the-art infrastructure, advanced technology systems, and world-class amenities designed to attract global businesses and international trade organizations.",
+            "With its iconic architecture and strategic location within the Giga City ecosystem, Giga Mall WTC serves as a gateway for international commerce and diplomatic activities. The complex includes exhibition halls, convention centers, luxury hotels, fine dining restaurants, and extensive parking facilities, positioning itself as Pakistan's premier destination for international business conferences, trade exhibitions, and corporate headquarters seeking global connectivity and prestige."
+        ],
+
+        projectDetails: {
+            location: "Giga City, Islamabad",
+            returnPotential: "High Returns",  
+            interiors: "Stylish Modern Finishings",  
+            parking: "Covered Spaces",  
+            amenities: "World-Class Facilities",  
+            security: "24/7 Surveillance",  
+            connectivity: "GT Road / Isb Highway",  
+            status: "In Progress",              
+            projectType: "Corporate Offices",
+            category: "International Business"
+        },
+
+        // Design Philosophy for WTC
+        designPhilosophy: {
+            title: "Design Philosophy",
+            description: "Our corporate design meets international standards with iconic architecture, multifunctional spaces, and seamless Giga Mall integration. Combining professional aesthetics, advanced technology, sustainability, and community connectivity, it supports diverse global business needs while enhancing Pakistan’s presence on the international stage.",
+            philosophy: []
+        },
+
+        projectFeatures: {
+            title: "World Trade Center Features",
+            description: "International standard facilities designed for global business and trade activities.",
+            features: [
+                "World Trade Center facilities for international business",
+                "Strategic location above Giga Mall for business convenience",
+                "Professional CCTV security and international business environment",
+                "Dedicated elevators and covered parking facilities",
+                "Exclusive business clubs and networking facilities",
+                "International conference and exhibition facilities",
+                "Luxury hotel and fine dining restaurants",
+                "Advanced technology and communication systems"
+            ]
+        },
+
+        projectAmenities: {
+            title: "International Business Amenities",
+            description: "World-class facilities that support international business operations.",
+            amenities: [
+                "Conference Centers - International standard meeting facilities",
+                "Exhibition Halls - Large spaces for trade shows and events",
+                "Office Towers - Premium office spaces for international corporations",
+                "Luxury Hotels - Five-star accommodation for business travelers",
+                "Fine Dining - International cuisine and business dining options",
+                "Business Support - Administrative and technical assistance",
+                "Security Systems - International standard security and surveillance",
+                "Parking Facilities - Extensive parking for visitors and tenants"
+            ]
+        },
+
+        whyChoose: {
+            title: "Why Choose Giga Mall WTC",
+            description: "Unique advantages that make this Pakistan's premier international business destination.",
+            reasons: [
+                "Pakistan's premier World Trade Center with international recognition",
+                "Unique location above successful Giga Mall",
+                "Proven track record since 2016 with successful operations",
+                "Professional management with extensive international experience",
+                "Comprehensive facilities for global business and trade activities",
+                "Strategic location for international commerce",
+                "Access to diplomatic and government institutions",
+                "Growing international business presence"
+            ]
+        },
+
+        investmentHighlights: {
+            title: "International Investment Benefits",
+            description: "Excellent investment opportunities with international business appeal.",
+            highlights: [
+                "Established World Trade Center with proven track record since 2016",
+                "Flexible 18-month installment plans for international business presence",
+                "Strong rental yields from international corporations",
+                "Strategic location above Giga Mall enhancing office value",
+                "Growing international business presence creating demand",
+                "Professional management ensuring quality international tenants",
+                "High appreciation potential in limited WTC developments"
+            ]
+        },
+
+        locationAdvantages: {
+            title: "Strategic International Location",
+            description: "Prime positioning that maximizes international business opportunities.",
+            advantages: [
+                "As Pakistan's premier World Trade Center above Giga Mall",
+                "Unmatched convenience for international business operations",
+                "Easy access to Islamabad International Airport",
+                "Proximity to diplomatic enclave and government institutions",
+                "Access to comprehensive business support services",
+                "Strategic location within Giga City ecosystem",
+                "Growing international business district"
+            ]
+        },
+
+        testimonial: {
+            quote: "When I came here and saw the mall, I was amazed — it is truly on an international level. Then I visited the model house of Goldcrest, and I was stunned after seeing that as well. InshaAllah, when you all come and see it for yourselves, you will realize that world-class work is indeed being done here in Pakistan, and I am really glad that Giga Group is working in such a remarkable way.",
+            author: "Faysal Quraishi",
+            designation: "Pakistani Actor",
+            rating: 5
+        },
+
+        // Section Visibility Configuration
+        sectionVisibility: {
+            designPhilosophy: true,
+            projectFeatures: true,
+            projectAmenities: true,
+            whyChoose: true,
+            investmentHighlights: false,
+            locationAdvantages: false,
+            testimonial: false,
+            projectGallery: true
+        }
+    },
+    {
+        Id: '11',
         pImg: wtcImage,
         coverImage: wtcBanner,
         ps1img: wtcM1,
