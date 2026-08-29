@@ -1,86 +1,88 @@
 /**
- * Google Apps Script for Al Ghurair Giga Lead Management
- * This script receives form submissions and stores them in Google Sheets
- * 
- * SETUP INSTRUCTIONS:
- * 1. Go to script.google.com
- * 2. Create a new project
- * 3. Replace Code.gs content with this code
- * 4. Create a Google Sheet for storing leads
- * 5. Update SHEET_ID below with your Google Sheet ID
- * 6. Deploy as web app with "Anyone" access
- * 7. Copy the web app URL to formSubmission.js
+ * Google Apps Script for Giga Group Lead Management
+ * Receives form submissions and stores them in the "Giga Group Leads" spreadsheet.
+ *
+ * SETUP (do this in script.google.com, not only in this repo):
+ * 1. Create a new Apps Script project (or open the existing one)
+ * 2. Paste this entire file into Code.gs
+ * 3. Save
+ * 4. Run testFunction once and authorize Sheets + Gmail
+ * 5. Deploy → New deployment → Web app
+ *    - Execute as: Me
+ *    - Who has access: Anyone
+ * 6. Copy the Web App URL into .env as REACT_APP_GOOGLE_SCRIPT_URL
+ * 7. After any future code change: Deploy → Manage deployments → pencil → New version
  */
 
-// Replace with your Google Sheet ID
-const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID_HERE';
-const SHEET_NAME = 'Leads'; // Name of the sheet tab
+const SHEET_ID = '1AJrvfW3nolHzknDdcanjAYTNAhUxoavlrEQzMM2gspM';
+const SHEET_NAME = 'Leads';
+const TIMEZONE = 'Asia/Karachi';
+
+const HEADERS = [
+  'Date',
+  'Time',
+  'Name',
+  'Email',
+  'Contact',
+  'Project',
+  'Message',
+  'Source',
+  'Status',
+  'Notes',
+  'Follow-up Date'
+];
 
 /**
  * Handle POST requests from the website forms
  */
 function doPost(e) {
   try {
-    // Parse the incoming data
     const data = JSON.parse(e.postData.contents);
-    
-    // Add lead to Google Sheet
     addLeadToSheet(data);
-    
-    // Send daily summary email if it's end of day
     checkAndSendDailySummary();
-    
+
     return ContentService
-      .createTextOutput(JSON.stringify({success: true}))
+      .createTextOutput(JSON.stringify({ success: true }))
       .setMimeType(ContentService.MimeType.JSON);
-      
   } catch (error) {
     console.error('Error processing form submission:', error);
     return ContentService
-      .createTextOutput(JSON.stringify({success: false, error: error.toString()}))
+      .createTextOutput(JSON.stringify({ success: false, error: error.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
 /**
  * Add lead data to Google Sheet
+ * Column order: Date, Time, then all other fields
  */
 function addLeadToSheet(data) {
   try {
-    const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
-    
-    // If sheet doesn't exist, create it with headers
+    let sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+
     if (!sheet) {
-      createLeadsSheet();
-      return addLeadToSheet(data); // Retry after creating sheet
+      sheet = createLeadsSheet();
     }
-    
-    // Format timestamp for Pakistani timezone
-    const pakistanTime = new Date(data.timestamp).toLocaleString('en-PK', {
-      timeZone: 'Asia/Karachi',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-    
-    // Add row with lead data
+
+    const submittedAt = data.timestamp ? new Date(data.timestamp) : new Date();
+    const leadDate = Utilities.formatDate(submittedAt, TIMEZONE, 'dd/MM/yyyy');
+    const leadTime = Utilities.formatDate(submittedAt, TIMEZONE, 'hh:mm a');
+
     sheet.appendRow([
-      pakistanTime,           // Column A: Timestamp
-      data.name,              // Column B: Name
-      data.email,             // Column C: Email
-      data.contact,           // Column D: Contact
-      data.project,           // Column E: Project
-      data.message,           // Column F: Message
-      data.source,            // Column G: Source
-      data.status || 'New',   // Column H: Status
-      '',                     // Column I: Notes (empty initially)
-      ''                      // Column J: Follow-up Date (empty initially)
+      leadDate,                         // A: Date
+      leadTime,                         // B: Time
+      data.name,                        // C: Name
+      data.email,                       // D: Email
+      data.contact,                     // E: Contact
+      data.project,                     // F: Project
+      data.message,                     // G: Message
+      data.source,                      // H: Source
+      data.status || 'New Lead',        // I: Status
+      '',                               // J: Notes
+      ''                                // K: Follow-up Date
     ]);
-    
+
     console.log('Lead added successfully:', data.name);
-    
   } catch (error) {
     console.error('Error adding lead to sheet:', error);
     throw error;
@@ -88,53 +90,34 @@ function addLeadToSheet(data) {
 }
 
 /**
- * Create the leads sheet with proper headers
+ * Create the Leads tab with Date and Time as the first columns
  */
 function createLeadsSheet() {
-  try {
-    const spreadsheet = SpreadsheetApp.openById(SHEET_ID);
-    const sheet = spreadsheet.insertSheet(SHEET_NAME);
-    
-    // Add headers
-    const headers = [
-      'Timestamp',
-      'Name',
-      'Email',
-      'Contact',
-      'Project',
-      'Message',
-      'Source',
-      'Status',
-      'Notes',
-      'Follow-up Date'
-    ];
-    
-    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
-    
-    // Format headers
-    const headerRange = sheet.getRange(1, 1, 1, headers.length);
-    headerRange.setFontWeight('bold');
-    headerRange.setBackground('#4285f4');
-    headerRange.setFontColor('white');
-    
-    // Set column widths
-    sheet.setColumnWidth(1, 120); // Timestamp
-    sheet.setColumnWidth(2, 150); // Name
-    sheet.setColumnWidth(3, 200); // Email
-    sheet.setColumnWidth(4, 120); // Contact
-    sheet.setColumnWidth(5, 150); // Project
-    sheet.setColumnWidth(6, 200); // Message
-    sheet.setColumnWidth(7, 100); // Source
-    sheet.setColumnWidth(8, 80);  // Status
-    sheet.setColumnWidth(9, 200); // Notes
-    sheet.setColumnWidth(10, 120); // Follow-up Date
-    
-    console.log('Leads sheet created successfully');
-    
-  } catch (error) {
-    console.error('Error creating leads sheet:', error);
-    throw error;
-  }
+  const spreadsheet = SpreadsheetApp.openById(SHEET_ID);
+  const sheet = spreadsheet.insertSheet(SHEET_NAME);
+
+  sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
+
+  const headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
+  headerRange.setFontWeight('bold');
+  headerRange.setBackground('#4285f4');
+  headerRange.setFontColor('white');
+  sheet.setFrozenRows(1);
+
+  sheet.setColumnWidth(1, 110);  // Date
+  sheet.setColumnWidth(2, 100);  // Time
+  sheet.setColumnWidth(3, 160);  // Name
+  sheet.setColumnWidth(4, 220);  // Email
+  sheet.setColumnWidth(5, 140);  // Contact
+  sheet.setColumnWidth(6, 180);  // Project
+  sheet.setColumnWidth(7, 220);  // Message
+  sheet.setColumnWidth(8, 130);  // Source
+  sheet.setColumnWidth(9, 100);  // Status
+  sheet.setColumnWidth(10, 200); // Notes
+  sheet.setColumnWidth(11, 130); // Follow-up Date
+
+  console.log('Leads sheet created successfully');
+  return sheet;
 }
 
 /**
@@ -144,37 +127,27 @@ function sendDailyLeadSummary() {
   try {
     const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
     const today = new Date();
-    const todayString = Utilities.formatDate(today, 'Asia/Karachi', 'yyyy-MM-dd');
-    
-    // Get all data
+    const todayString = Utilities.formatDate(today, TIMEZONE, 'dd/MM/yyyy');
+
     const data = sheet.getDataRange().getValues();
-    const headers = data[0];
     const rows = data.slice(1);
-    
-    // Filter today's leads
-    const todaysLeads = rows.filter(row => {
-      const rowDate = new Date(row[0]);
-      const rowDateString = Utilities.formatDate(rowDate, 'Asia/Karachi', 'yyyy-MM-dd');
-      return rowDateString === todayString;
-    });
-    
+
+    const todaysLeads = rows.filter(row => String(row[0]) === todayString);
+
     if (todaysLeads.length === 0) {
       console.log('No leads today, skipping email');
       return;
     }
-    
-    // Generate email content
+
     const emailBody = generateDailyEmailBody(todaysLeads, today);
-    
-    // Send email
+
     MailApp.sendEmail({
       to: 'gigagroup.dev@gmail.com',
-      subject: `Daily Lead Report - Al Ghurair Giga (${todaysLeads.length} New Leads)`,
+      subject: `Daily Lead Report - Giga Group (${todaysLeads.length} New Leads)`,
       htmlBody: emailBody
     });
-    
+
     console.log(`Daily summary sent: ${todaysLeads.length} leads`);
-    
   } catch (error) {
     console.error('Error sending daily summary:', error);
   }
@@ -184,58 +157,53 @@ function sendDailyLeadSummary() {
  * Generate HTML email body for daily summary
  */
 function generateDailyEmailBody(leads, date) {
-  const dateString = Utilities.formatDate(date, 'Asia/Karachi', 'MMMM d, yyyy');
-  
+  const dateString = Utilities.formatDate(date, TIMEZONE, 'MMMM d, yyyy');
+
   let emailBody = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background: #4285f4; color: white; padding: 20px; text-align: center;">
-        <h1>Daily Lead Report - Al Ghurair Giga</h1>
+        <h1>Daily Lead Report - Giga Group</h1>
         <p>${dateString}</p>
       </div>
       
       <div style="padding: 20px; background: #f9f9f9;">
-        <h2>📈 Daily Summary</h2>
+        <h2>Daily Summary</h2>
         <ul>
           <li><strong>Total Leads Today:</strong> ${leads.length}</li>
-          <li><strong>Registration Forms:</strong> ${leads.filter(l => l[6] === 'Registration').length}</li>
-          <li><strong>Contact Forms:</strong> ${leads.filter(l => l[6] === 'Contact').length}</li>
-          <li><strong>Project Inquiries:</strong> ${leads.filter(l => l[6] === 'Project Single').length}</li>
+          <li><strong>Registration Forms:</strong> ${leads.filter(l => l[7] === 'Registration').length}</li>
+          <li><strong>Contact Forms:</strong> ${leads.filter(l => l[7] === 'Contact').length}</li>
+          <li><strong>Project Inquiries:</strong> ${leads.filter(l => l[7] === 'Project Single').length}</li>
         </ul>
       </div>
       
       <div style="padding: 20px;">
-        <h2>📋 Today's Leads</h2>
+        <h2>Today's Leads</h2>
   `;
-  
+
   leads.forEach((lead, index) => {
-    const time = new Date(lead[0]).toLocaleString('en-PK', {
-      timeZone: 'Asia/Karachi',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-    
     emailBody += `
       <div style="border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 5px;">
-        <h3>${index + 1}. ${lead[1]} | ${time}</h3>
-        <p><strong>Email:</strong> ${lead[2]}</p>
-        <p><strong>Contact:</strong> ${lead[3]}</p>
-        <p><strong>Project Interest:</strong> ${lead[4]}</p>
-        <p><strong>Source:</strong> ${lead[6]}</p>
-        ${lead[5] !== 'No message' ? `<p><strong>Message:</strong> ${lead[5]}</p>` : ''}
+        <h3>${index + 1}. ${lead[2]} | ${lead[1]}</h3>
+        <p><strong>Date:</strong> ${lead[0]}</p>
+        <p><strong>Email:</strong> ${lead[3]}</p>
+        <p><strong>Contact:</strong> ${lead[4]}</p>
+        <p><strong>Project Interest:</strong> ${lead[5]}</p>
+        <p><strong>Source:</strong> ${lead[7]}</p>
+        ${lead[6] && lead[6] !== 'No message' ? `<p><strong>Message:</strong> ${lead[6]}</p>` : ''}
       </div>
     `;
   });
-  
+
   emailBody += `
       </div>
       
       <div style="background: #4285f4; color: white; padding: 15px; text-align: center;">
-        <p>Al Ghurair Giga Lead Management System</p>
-        <p style="font-size: 12px;">Automated report generated at ${new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'})}</p>
+        <p>Giga Group Lead Management System</p>
+        <p style="font-size: 12px;">Automated report generated at ${Utilities.formatDate(new Date(), TIMEZONE, 'dd/MM/yyyy hh:mm a')}</p>
       </div>
     </div>
   `;
-  
+
   return emailBody;
 }
 
@@ -244,10 +212,8 @@ function generateDailyEmailBody(leads, date) {
  */
 function checkAndSendDailySummary() {
   const now = new Date();
-  const pakistanTime = new Date(now.toLocaleString("en-US", {timeZone: "Asia/Karachi"}));
-  const hour = pakistanTime.getHours();
-  
-  // Send summary at 5 PM (17:00)
+  const hour = Number(Utilities.formatDate(now, TIMEZONE, 'H'));
+
   if (hour === 17) {
     sendDailyLeadSummary();
   }
@@ -261,10 +227,10 @@ function setupDailyTrigger() {
   ScriptApp.newTrigger('sendDailyLeadSummary')
     .timeBased()
     .everyDays(1)
-    .atHour(17) // 5 PM
+    .atHour(17)
     .create();
-    
-  console.log('Daily trigger set up for 5 PM PKT');
+
+  console.log('Daily trigger set up for 5 PM');
 }
 
 /**
@@ -281,7 +247,7 @@ function testFunction() {
     source: 'Test',
     status: 'Test Lead'
   };
-  
+
   addLeadToSheet(testData);
   console.log('Test completed successfully');
 }
