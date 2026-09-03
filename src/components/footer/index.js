@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link}  from 'react-router-dom'
 import Logo from '../../images/logo.svg'
-import Projects from '../../api/project'
+import Projects, { getProjectPath } from '../../api/project'
 
 
 
@@ -54,7 +54,7 @@ const Footer = (props) =>{
                             <ul>
                                 {Projects.slice(0, 5).map((project, index) => (
                                     <li key={project.Id}>
-                                        <Link onClick={ClickHandler} to={`/project-single/${project.Id}`}>
+                                        <Link onClick={ClickHandler} to={getProjectPath(project)}>
                                             {project.title}
                                         </Link>
                                     </li>
@@ -90,7 +90,7 @@ const Footer = (props) =>{
                             </div>
                             <ul className="d-flex">
                                 {Projects.slice(0, 6).map((project, pot) => (
-                                    <li key={pot}><Link onClick={ClickHandler} to={`/project-single/${project.Id}`}><img src={project.pImg} alt="" /></Link></li>
+                                    <li key={pot}><Link onClick={ClickHandler} to={getProjectPath(project)}><img src={project.pImg} alt="" /></Link></li>
                                 ))}
                             </ul>
                         </div>

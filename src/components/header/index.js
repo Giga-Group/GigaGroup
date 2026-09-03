@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import MobileMenu from '../../components/MobileMenu'
 import { connect } from "react-redux";
 import { removeFromCart } from "../../store/actions/action";
-import Projects from "../../api/project";
+import Projects, { getProjectPath } from "../../api/project";
 
 const Header = (props) => {
     const ClickHandler = () => {
@@ -43,7 +43,7 @@ const Header = (props) => {
                                             <ul className="sub-menu">
                                                 {Projects.map((project, index) => (
                                                     <li key={project.Id}>
-                                                        <Link onClick={ClickHandler} to={`/project-single/${project.Id}`}>
+                                                        <Link onClick={ClickHandler} to={getProjectPath(project)}>
                                                             {project.title}
                                                         </Link>
                                                     </li>

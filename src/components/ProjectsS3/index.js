@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Projects from '../../api/project'
+import Projects, { getProjectPath } from '../../api/project'
 
 const ProjectSectionS3 = () => {
 
@@ -27,7 +27,7 @@ const ProjectSectionS3 = () => {
                                                         <div className="right-border"></div>
                                                     </div>
                                                     <div className="wpo-project-text">
-                                                        <h2><Link onClick={ClickHandler} to={`/project-single/${project.Id}`}>{project.title}</Link></h2>
+                                                        <h2><Link onClick={ClickHandler} to={getProjectPath(project)}>{project.title}</Link></h2>
                                                         <span>{project.subTitle}</span>
                                                     </div>
                                                 </div>

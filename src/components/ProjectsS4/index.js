@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
-import Projects from '../../api/project'
+import Projects, { getProjectPath } from '../../api/project'
 
 class ProjectSectionS4 extends Component {
     render() {
@@ -65,7 +65,7 @@ class ProjectSectionS4 extends Component {
                                             <div className="right-border"></div>
                                         </div>
                                         <div className="wpo-project-text">
-                                            <h2><Link onClick={ClickHandler} to={`/project-single/${project.Id}`}>{project.title}</Link></h2>
+                                            <h2><Link onClick={ClickHandler} to={getProjectPath(project)}>{project.title}</Link></h2>
                                             <span>{project.subTitle}</span>
                                         </div>
                                     </div>

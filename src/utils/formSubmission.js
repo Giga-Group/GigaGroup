@@ -35,7 +35,11 @@ export const submitFormData = async (formData) => {
             project: formData.project || 'Not specified',
             message: formData.message || 'No message',
             source: formData.source || 'Unknown',
-            status: 'New Lead'
+            status: 'New Lead',
+            budget: formData.budget || '',
+            purchaseTimeline: formData.purchaseTimeline || '',
+            whatsapp: formData.whatsapp || '',
+            city: formData.city || ''
         };
 
         console.log('Submitting form data to:', config.googleScriptUrl);

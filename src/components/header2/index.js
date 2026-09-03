@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Logo from '../../images/logo-2.svg'
 import { Link } from 'react-router-dom'
 import MobileMenu from '../../components/MobileMenu'
-import Projects from '../../api/project'
+import Projects, { getProjectPath } from '../../api/project'
 
 
 export default class Header2 extends Component {
@@ -73,7 +73,7 @@ export default class Header2 extends Component {
                                                 <ul className="sub-menu">
                                                     <li><Link onClick={ClickHandler} to="/project">Project</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/project-s2">Project S2</Link></li>
-                                                    <li><Link onClick={ClickHandler} to="/project-single/1">Project Single</Link></li>
+                                                    <li><Link onClick={ClickHandler} to={getProjectPath(Projects[0])}>Project Single</Link></li>
                                                 </ul>
                                             </li>
                                             <li className="menu-item-has-children">
@@ -132,7 +132,7 @@ export default class Header2 extends Component {
                                                             <h3>Our Latest Projects</h3>
                                                             <ul>
                                                                 {Projects.slice(0, 6).map((project, pot) => (
-                                                                    <li key={pot}><Link onClick={ClickHandler} to={`/project-single/${project.Id}`}><img src={project.pImg} alt="" /></Link></li>
+                                                                    <li key={pot}><Link onClick={ClickHandler} to={getProjectPath(project)}><img src={project.pImg} alt="" /></Link></li>
                                                                 ))}
                                                             </ul>
                                                         </div>

@@ -29,7 +29,11 @@ const HEADERS = [
   'Source',
   'Status',
   'Notes',
-  'Follow-up Date'
+  'Follow-up Date',
+  'Budget',
+  'Purchase Timeline',
+  'WhatsApp',
+  'City'
 ];
 
 /**
@@ -68,6 +72,8 @@ function addLeadToSheet(data) {
     const leadDate = Utilities.formatDate(submittedAt, TIMEZONE, 'dd/MM/yyyy');
     const leadTime = Utilities.formatDate(submittedAt, TIMEZONE, 'hh:mm a');
 
+    ensureExtraLeadColumns(sheet);
+
     sheet.appendRow([
       leadDate,                         // A: Date
       leadTime,                         // B: Time
@@ -79,7 +85,11 @@ function addLeadToSheet(data) {
       data.source,                      // H: Source
       data.status || 'New Lead',        // I: Status
       '',                               // J: Notes
-      ''                                // K: Follow-up Date
+      '',                               // K: Follow-up Date
+      data.budget || '',                // L: Budget
+      data.purchaseTimeline || '',      // M: Purchase Timeline
+      data.whatsapp || '',              // N: WhatsApp
+      data.city || ''                   // O: City
     ]);
 
     console.log('Lead added successfully:', data.name);
@@ -115,9 +125,34 @@ function createLeadsSheet() {
   sheet.setColumnWidth(9, 100);  // Status
   sheet.setColumnWidth(10, 200); // Notes
   sheet.setColumnWidth(11, 130); // Follow-up Date
+  sheet.setColumnWidth(12, 180); // Budget
+  sheet.setColumnWidth(13, 180); // Purchase Timeline
+  sheet.setColumnWidth(14, 160); // WhatsApp
+  sheet.setColumnWidth(15, 140); // City
 
   console.log('Leads sheet created successfully');
   return sheet;
+}
+
+/**
+ * Add extra lead columns to an existing sheet without shifting current data
+ */
+function ensureExtraLeadColumns(sheet) {
+  const extraHeaders = ['Budget', 'Purchase Timeline', 'WhatsApp', 'City'];
+  const lastCol = Math.max(sheet.getLastColumn(), 1);
+  const headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+  const missing = extraHeaders.filter(header => headers.indexOf(header) === -1);
+
+  if (missing.length === 0) {
+    return;
+  }
+
+  const startCol = lastCol + 1;
+  const headerRange = sheet.getRange(1, startCol, 1, missing.length);
+  headerRange.setValues([missing]);
+  headerRange.setFontWeight('bold');
+  headerRange.setBackground('#4285f4');
+  headerRange.setFontColor('white');
 }
 
 /**
@@ -190,6 +225,10 @@ function generateDailyEmailBody(leads, date) {
         <p><strong>Project Interest:</strong> ${lead[5]}</p>
         <p><strong>Source:</strong> ${lead[7]}</p>
         ${lead[6] && lead[6] !== 'No message' ? `<p><strong>Message:</strong> ${lead[6]}</p>` : ''}
+        ${lead[11] ? `<p><strong>Budget:</strong> ${lead[11]}</p>` : ''}
+        ${lead[12] ? `<p><strong>Purchase Timeline:</strong> ${lead[12]}</p>` : ''}
+        ${lead[13] ? `<p><strong>WhatsApp:</strong> ${lead[13]}</p>` : ''}
+        ${lead[14] ? `<p><strong>City:</strong> ${lead[14]}</p>` : ''}
       </div>
     `;
   });

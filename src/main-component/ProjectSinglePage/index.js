@@ -4,7 +4,7 @@ import TransparentNavbar from '../../components/TransparentNavbar' // New transp
 import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
 import { useParams, Navigate } from 'react-router-dom'
-import Projects from '../../api/project'
+import { getProjectBySlug } from '../../api/project'
 import RelatedProject from './related';
 import Discuss from './discuss';
 import Logo from '../../images/logo.svg'
@@ -13,9 +13,9 @@ import ConstructionUpdateSection from '../../components/ConstructionUpdateSectio
 
 
 const ProjectSinglePage = (props) => {
-    const { id } = useParams()
+    const { slug } = useParams()
 
-    const projectDetails = Projects.find(item => String(item.Id) === String(id))
+    const projectDetails = getProjectBySlug(slug)
 
     if (!projectDetails) {
         return <Navigate to="/404" replace />

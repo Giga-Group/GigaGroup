@@ -1443,4 +1443,20 @@ const Projects = [
 
 ]
 
+export const getProjectSlug = (project) =>
+    String(project?.title || '')
+        .toLowerCase()
+        .trim()
+        .replace(/&/g, 'and')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+
+export const getProjectPath = (project) => `/project-single/${getProjectSlug(project)}`;
+
+export const getProjectBySlug = (slug) => {
+    const value = decodeURIComponent(slug || '').toLowerCase();
+    return Projects.find((item) => getProjectSlug(item) === value)
+        || Projects.find((item) => String(item.Id) === String(slug));
+};
+
 export default Projects;

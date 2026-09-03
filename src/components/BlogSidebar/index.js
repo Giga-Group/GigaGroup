@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import blogs from '../../api/blogs'
 import Services from '../../api/service';
-import Projects from '../../api/project'
+import Projects, { getProjectPath } from '../../api/project'
 import about from '../../images/blog/about-widget.jpg'
 
 
@@ -76,7 +76,7 @@ const BlogSidebar = (props) => {
                         {Projects.slice(0,6).map((project, pitem)=>(
                             <li className="grid" key={pitem}>
                                 <div className="img-holder">
-                                    <Link onClick={ClickHandler} to={`/project-single/${project.Id}`}>
+                                    <Link onClick={ClickHandler} to={getProjectPath(project)}>
                                         <img src={project.pImg} alt=""/>
                                     </Link>
                                 </div>
