@@ -6,12 +6,13 @@
  * 1. Create a new Apps Script project (or open the existing one)
  * 2. Paste this entire file into Code.gs
  * 3. Save
- * 4. Run testFunction once and authorize Sheets + Gmail
- * 5. Deploy → New deployment → Web app
+ * 4. Run migrateSheetColumns once (updates existing sheet headers)
+ * 5. Run testFunction once and authorize Sheets + Gmail
+ * 6. Deploy → New deployment → Web app
  *    - Execute as: Me
  *    - Who has access: Anyone
- * 6. Copy the Web App URL into .env as REACT_APP_GOOGLE_SCRIPT_URL
- * 7. After any future code change: Deploy → Manage deployments → pencil → New version
+ * 7. Copy the Web App URL into .env as REACT_APP_GOOGLE_SCRIPT_URL
+ * 8. After any future code change: Deploy → Manage deployments → pencil → New version
  */
 
 const SHEET_ID = '1AJrvfW3nolHzknDdcanjAYTNAhUxoavlrEQzMM2gspM';
@@ -28,13 +29,14 @@ const HEADERS = [
   'Message',
   'Source',
   'Status',
-  'Notes',
-  'Follow-up Date',
   'Budget',
   'Purchase Timeline',
   'WhatsApp',
   'City'
 ];
+
+const EXTRA_HEADERS = ['Budget', 'Purchase Timeline', 'WhatsApp', 'City'];
+const REMOVE_HEADERS = ['Notes', 'Follow-up Date', 'Follow-up', 'Follow Up Date', 'Follow Up'];
 
 /**
  * Handle POST requests from the website forms
@@ -72,7 +74,7 @@ function addLeadToSheet(data) {
     const leadDate = Utilities.formatDate(submittedAt, TIMEZONE, 'dd/MM/yyyy');
     const leadTime = Utilities.formatDate(submittedAt, TIMEZONE, 'hh:mm a');
 
-    ensureExtraLeadColumns(sheet);
+    ensureSheetColumns(sheet);
 
     sheet.appendRow([
       leadDate,                         // A: Date
@@ -84,12 +86,10 @@ function addLeadToSheet(data) {
       data.message,                     // G: Message
       data.source,                      // H: Source
       data.status || 'New Lead',        // I: Status
-      '',                               // J: Notes
-      '',                               // K: Follow-up Date
-      data.budget || '',                // L: Budget
-      data.purchaseTimeline || '',      // M: Purchase Timeline
-      data.whatsapp || '',              // N: WhatsApp
-      data.city || ''                   // O: City
+      data.budget || '',                // J: Budget
+      data.purchaseTimeline || '',      // K: Purchase Timeline
+      data.whatsapp || '',              // L: WhatsApp
+      data.city || ''                   // M: City
     ]);
 
     console.log('Lead added successfully:', data.name);
@@ -107,13 +107,68 @@ function createLeadsSheet() {
   const sheet = spreadsheet.insertSheet(SHEET_NAME);
 
   sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
-
-  const headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
-  headerRange.setFontWeight('bold');
-  headerRange.setBackground('#4285f4');
-  headerRange.setFontColor('white');
+  styleHeaderRange(sheet.getRange(1, 1, 1, HEADERS.length));
   sheet.setFrozenRows(1);
+  applyColumnWidths(sheet);
 
+  console.log('Leads sheet created successfully');
+  return sheet;
+}
+
+/**
+ * Run this once after pasting the updated script.
+ * Removes Notes / Follow-up columns and keeps Budget, Purchase Timeline, WhatsApp, City.
+ */
+function migrateSheetColumns() {
+  let sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+
+  if (!sheet) {
+    sheet = createLeadsSheet();
+    console.log('Leads sheet did not exist, created it');
+    return;
+  }
+
+  ensureSheetColumns(sheet);
+  applyColumnWidths(sheet);
+  console.log('Sheet columns migrated successfully');
+}
+
+/**
+ * Remove unused Notes / Follow-up columns and add extra lead columns if missing.
+ * Existing Budget / Purchase Timeline / WhatsApp / City data is kept.
+ */
+function ensureSheetColumns(sheet) {
+  let lastCol = Math.max(sheet.getLastColumn(), 1);
+  let headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+
+  for (let i = headers.length - 1; i >= 0; i--) {
+    const header = String(headers[i] || '').trim();
+    if (REMOVE_HEADERS.indexOf(header) !== -1) {
+      sheet.deleteColumn(i + 1);
+    }
+  }
+
+  lastCol = Math.max(sheet.getLastColumn(), 1);
+  headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+  const missing = EXTRA_HEADERS.filter(header => headers.indexOf(header) === -1);
+
+  if (missing.length === 0) {
+    return;
+  }
+
+  const startCol = lastCol + 1;
+  const headerRange = sheet.getRange(1, startCol, 1, missing.length);
+  headerRange.setValues([missing]);
+  styleHeaderRange(headerRange);
+}
+
+function styleHeaderRange(range) {
+  range.setFontWeight('bold');
+  range.setBackground('#4285f4');
+  range.setFontColor('white');
+}
+
+function applyColumnWidths(sheet) {
   sheet.setColumnWidth(1, 110);  // Date
   sheet.setColumnWidth(2, 100);  // Time
   sheet.setColumnWidth(3, 160);  // Name
@@ -123,36 +178,10 @@ function createLeadsSheet() {
   sheet.setColumnWidth(7, 220);  // Message
   sheet.setColumnWidth(8, 130);  // Source
   sheet.setColumnWidth(9, 100);  // Status
-  sheet.setColumnWidth(10, 200); // Notes
-  sheet.setColumnWidth(11, 130); // Follow-up Date
-  sheet.setColumnWidth(12, 180); // Budget
-  sheet.setColumnWidth(13, 180); // Purchase Timeline
-  sheet.setColumnWidth(14, 160); // WhatsApp
-  sheet.setColumnWidth(15, 140); // City
-
-  console.log('Leads sheet created successfully');
-  return sheet;
-}
-
-/**
- * Add extra lead columns to an existing sheet without shifting current data
- */
-function ensureExtraLeadColumns(sheet) {
-  const extraHeaders = ['Budget', 'Purchase Timeline', 'WhatsApp', 'City'];
-  const lastCol = Math.max(sheet.getLastColumn(), 1);
-  const headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
-  const missing = extraHeaders.filter(header => headers.indexOf(header) === -1);
-
-  if (missing.length === 0) {
-    return;
-  }
-
-  const startCol = lastCol + 1;
-  const headerRange = sheet.getRange(1, startCol, 1, missing.length);
-  headerRange.setValues([missing]);
-  headerRange.setFontWeight('bold');
-  headerRange.setBackground('#4285f4');
-  headerRange.setFontColor('white');
+  sheet.setColumnWidth(10, 180); // Budget
+  sheet.setColumnWidth(11, 180); // Purchase Timeline
+  sheet.setColumnWidth(12, 160); // WhatsApp
+  sheet.setColumnWidth(13, 140); // City
 }
 
 /**
@@ -225,10 +254,10 @@ function generateDailyEmailBody(leads, date) {
         <p><strong>Project Interest:</strong> ${lead[5]}</p>
         <p><strong>Source:</strong> ${lead[7]}</p>
         ${lead[6] && lead[6] !== 'No message' ? `<p><strong>Message:</strong> ${lead[6]}</p>` : ''}
-        ${lead[11] ? `<p><strong>Budget:</strong> ${lead[11]}</p>` : ''}
-        ${lead[12] ? `<p><strong>Purchase Timeline:</strong> ${lead[12]}</p>` : ''}
-        ${lead[13] ? `<p><strong>WhatsApp:</strong> ${lead[13]}</p>` : ''}
-        ${lead[14] ? `<p><strong>City:</strong> ${lead[14]}</p>` : ''}
+        ${lead[9] ? `<p><strong>Budget:</strong> ${lead[9]}</p>` : ''}
+        ${lead[10] ? `<p><strong>Purchase Timeline:</strong> ${lead[10]}</p>` : ''}
+        ${lead[11] ? `<p><strong>WhatsApp:</strong> ${lead[11]}</p>` : ''}
+        ${lead[12] ? `<p><strong>City:</strong> ${lead[12]}</p>` : ''}
       </div>
     `;
   });
@@ -284,7 +313,11 @@ function testFunction() {
     project: 'Goldcrest Views',
     message: 'This is a test message',
     source: 'Test',
-    status: 'Test Lead'
+    status: 'Test Lead',
+    budget: '2 Crore to 3 Crore',
+    purchaseTimeline: 'in 3 months',
+    whatsapp: '+92-300-1234567',
+    city: 'Islamabad'
   };
 
   addLeadToSheet(testData);
