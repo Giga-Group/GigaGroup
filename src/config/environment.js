@@ -4,6 +4,10 @@
 const config = {
   // Google Apps Script (required)
   googleScriptUrl: process.env.REACT_APP_GOOGLE_SCRIPT_URL,
+
+  // Google Ads tag (Giga Group Main)
+  googleAdsId: process.env.REACT_APP_GOOGLE_ADS_ID || 'AW-431870550',
+  googleAdsConversionLabel: process.env.REACT_APP_GOOGLE_ADS_CONVERSION_LABEL || '',
   
   // Email Configuration (defaults provided)
   contactEmail: process.env.REACT_APP_CONTACT_EMAIL || 'info@gigagroup.com',

@@ -41,7 +41,8 @@ class Discuss extends Component {
             purchaseTimeline: '',
             whatsapp: '',
             city: '',
-            error: {}
+            error: {},
+            isSubmitting: false
         }
     }
 
@@ -53,16 +54,30 @@ class Discuss extends Component {
         const error = this.state.error;
         error[e.target.name] = ''
 
-        this.setState({
-            [e.target.name]: e.target.value,
+        const nextValue = e.target.value;
+        const nextState = {
+            [e.target.name]: nextValue,
             error
-        })
+        };
+
+        if (e.target.name === 'project' && !hasExtraLeadFields(nextValue)) {
+            nextState.budget = '';
+            nextState.purchaseTimeline = '';
+            nextState.whatsapp = '';
+            nextState.city = '';
+        }
+
+        this.setState(nextState)
     }
 
     subimtHandler = (e) => {
         e.preventDefault();
 
-        const { name, email, contact, error } = this.state;
+        if (this.state.isSubmitting) {
+            return;
+        }
+
+        const { name, email, contact, project, error } = this.state;
 
         if (name === '') {
             error.name = "Please enter your name";
@@ -73,73 +88,66 @@ class Discuss extends Component {
         if (contact === '') {
             error.contact = "Please enter your contact number";
         }
+        if (project === '') {
+            error.project = "Please select a project";
+        }
 
         if (error) {
             this.setState({
                 error
             })
         }
-        if (error.name === '' && error.email === '' && error.contact === '') {
-            const showExtraFields = hasExtraLeadFields(this.props.currentProject);
-            const extraDetails = showExtraFields
-                ? [
-                    this.state.budget && `Budget: ${this.state.budget}`,
-                    this.state.purchaseTimeline && `Purchase timeline: ${this.state.purchaseTimeline}`,
-                    this.state.whatsapp && `WhatsApp: ${this.state.whatsapp}`,
-                    this.state.city && `City: ${this.state.city}`,
-                ].filter(Boolean)
-                : [];
-            const baseMessage = this.state.message || 'No message';
-            const message = extraDetails.length
-                ? (baseMessage === 'No message' ? extraDetails.join(' | ') : `${baseMessage} | ${extraDetails.join(' | ')}`)
-                : baseMessage;
+        if (error.name === '' && error.email === '' && error.contact === '' && project !== '') {
+            const showExtraFields = hasExtraLeadFields(this.state.project);
 
             const formData = {
                 name: this.state.name,
                 email: this.state.email,
                 contact: this.state.contact,
                 project: this.state.project || this.props.currentProject || 'Not specified',
-                message,
+                message: this.state.message || 'No message',
                 source: 'Project Single',
                 budget: showExtraFields ? this.state.budget : '',
                 purchaseTimeline: showExtraFields ? this.state.purchaseTimeline : '',
                 whatsapp: showExtraFields ? this.state.whatsapp : '',
                 city: showExtraFields ? this.state.city : '',
             };
-            
-            processFormSubmission(
-                formData,
-                () => {
-                    // Success callback - reset form
-                    this.setState({
-                        name: '',
-                        email: '',
-                        contact: '',
-                        message: '',
-                        project: this.props.currentProject || '',
-                        budget: '',
-                        purchaseTimeline: '',
-                        whatsapp: '',
-                        city: '',
-                        error: {}
-                    });
-                },
-                (error) => {
-                    // Error callback
-                    console.error('Project single form submission error:', error);
-                }
-            );
+
+            this.setState({ isSubmitting: true }, () => {
+                processFormSubmission(
+                    formData,
+                    () => {
+                        this.setState({
+                            name: '',
+                            email: '',
+                            contact: '',
+                            message: '',
+                            project: this.props.currentProject || '',
+                            budget: '',
+                            purchaseTimeline: '',
+                            whatsapp: '',
+                            city: '',
+                            error: {},
+                            isSubmitting: false
+                        });
+                    },
+                    (error) => {
+                        console.error('Project single form submission error:', error);
+                        this.setState({ isSubmitting: false });
+                    }
+                );
+            });
         }
     }
 
     render(){
-        const { name, email, contact, message, project, budget, purchaseTimeline, whatsapp, city, error } = this.state;
-        const showExtraFields = hasExtraLeadFields(this.props.currentProject);
-        const projectName = this.props.currentProject || 'this project';
+        const { name, email, contact, message, project, budget, purchaseTimeline, whatsapp, city, error, isSubmitting } = this.state;
+        const showExtraFields = hasExtraLeadFields(project);
+        const projectName = project || 'this project';
 
         return(
 
-            <div className="wpo-project-single-item">
+            <div className="wpo-project-single-item wpo-project-single-item--contact">
                 <div className="wpo-project-contact-area">
                     <div className="wpo-contact-title">
                         <h2>Interested in our projects?</h2>
@@ -148,43 +156,41 @@ class Discuss extends Component {
                     <div className="wpo-contact-form-area">
                         <form method="post" onSubmit={this.subimtHandler} className="form">
                             <div className="row">
-                                <div className="col col-lg-6 col-md-6 col-12">
+                                <div className="col col-12 col-md-6">
                                     <div className="form-field">
                                         <input className="form-control" value={name} onChange={this.changeHandler} type="text" name="name" placeholder="Full Name" required/>
                                         <p>{error.name ? error.name : ''}</p>
                                     </div>
                                 </div>
-                                <div className="col col-lg-6 col-md-6 col-12">
+                                <div className="col col-12 col-md-6">
                                     <div className="form-field">
                                         <input className="form-control" onChange={this.changeHandler} value={email} type="email" name="email" placeholder="Email Address" required/>
                                         <p>{error.email ? error.email : ''}</p>
                                     </div>
                                 </div>
-                                <div className="col col-lg-6 col-md-6 col-12">
+                                <div className="col col-12 col-md-6">
                                     <div className="form-field">
                                         <input className="form-control" onChange={this.changeHandler} value={contact} type="tel" name="contact" placeholder="Contact Number" required/>
                                         <p>{error.contact ? error.contact : ''}</p>
                                     </div>
                                 </div>
-                                <div className="col col-lg-6 col-md-6 col-12">
+                                <div className="col col-12 col-md-6">
                                      <div className="form-field">
-                                        <select className="form-control" onChange={this.changeHandler} value={project} name="project">
-                                            <option value="">Interested in Project (Optional)</option>
+                                        <select className="form-control" onChange={this.changeHandler} value={project} name="project" required>
+                                            <option value="">Select Project</option>
                                             {Projects.map((proj) => (
                                                 <option key={proj.Id} value={proj.title}>{proj.title}</option>
                                             ))}
                                         </select>
+                                        <p>{error.project ? error.project : ''}</p>
                                     </div>
                                 </div>
-                                <div className="fullwidth col col-lg-12 col-12">
-                                    <textarea className="form-control" name="message" id="message" value={message} onChange={this.changeHandler}
-                                        placeholder="Message (Optional)"></textarea>
-                                </div>
+                              
                                 {showExtraFields && (
                                     <>
-                                        <div className="fullwidth col col-lg-12 col-12">
+                                        <div className="col col-12 col-md-6">
                                             <div className="form-field">
-                                                <label className="form-label" htmlFor="budget">Please choose your budget for investing in {projectName}</label>
+                                                <label className="form-label" htmlFor="budget">Budget for {projectName}</label>
                                                 <select className="form-control" id="budget" name="budget" value={budget} onChange={this.changeHandler}>
                                                     <option value="">Select</option>
                                                     {BUDGET_OPTIONS.map((option) => (
@@ -193,9 +199,9 @@ class Discuss extends Component {
                                                 </select>
                                             </div>
                                         </div>
-                                        <div className="fullwidth col col-lg-12 col-12">
+                                        <div className="col col-12 col-md-6">
                                             <div className="form-field">
-                                                <label className="form-label" htmlFor="purchaseTimeline">How soon do you intend to purchase your Office / Shop</label>
+                                                <label className="form-label" htmlFor="purchaseTimeline">Purchase timeline</label>
                                                 <select className="form-control" id="purchaseTimeline" name="purchaseTimeline" value={purchaseTimeline} onChange={this.changeHandler}>
                                                     <option value="">Select</option>
                                                     {PURCHASE_OPTIONS.map((option) => (
@@ -204,23 +210,36 @@ class Discuss extends Component {
                                                 </select>
                                             </div>
                                         </div>
-                                        <div className="fullwidth col col-lg-12 col-12">
+                                        <div className="col col-12 col-md-6">
                                             <div className="form-field">
-                                                <label className="form-label" htmlFor="whatsapp">Please share your WhatsApp to receive project information</label>
-                                                <input className="form-control" id="whatsapp" name="whatsapp" type="text" value={whatsapp} onChange={this.changeHandler} placeholder="Enter your answer." />
+                                                <label className="form-label" htmlFor="whatsapp">WhatsApp number</label>
+                                                <input className="form-control" id="whatsapp" name="whatsapp" type="text" value={whatsapp} onChange={this.changeHandler} placeholder="WhatsApp number" required/>
                                             </div>
                                         </div>
-                                        <div className="fullwidth col col-lg-12 col-12">
+                                        <div className="col col-12 col-md-6">
                                             <div className="form-field">
                                                 <label className="form-label" htmlFor="city">City</label>
-                                                <input className="form-control" id="city" name="city" type="text" value={city} onChange={this.changeHandler} placeholder="Enter your answer." />
+                                                <input className="form-control" id="city" name="city" type="text" value={city} onChange={this.changeHandler} placeholder="City" required/>
                                             </div>
                                         </div>
                                     </>
                                 )}
+                                  <div className="col col-12">
+                                    <textarea className="form-control" name="message" id="message" value={message} onChange={this.changeHandler}
+                                        placeholder="Message (Optional)" rows="2"></textarea>
+                                </div>
                             </div>
                             <div className="submit-area">
-                                <button type="submit" className="theme-btn-s4">Submit Interest</button>
+                                <button type="submit" className="theme-btn-s4" disabled={isSubmitting} aria-busy={isSubmitting}>
+                                    {isSubmitting ? (
+                                        <>
+                                            <span className="btn-spinner" aria-hidden="true"></span>
+                                            Submitting...
+                                        </>
+                                    ) : (
+                                        'Submit Interest'
+                                    )}
+                                </button>
                             </div>
                         </form>
                     </div>

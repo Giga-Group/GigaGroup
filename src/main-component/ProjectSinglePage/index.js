@@ -31,11 +31,12 @@ const ProjectSinglePage = (props) => {
                 backgroundImage={projectDetails.coverImage}
                 logo={projectDetails.logo}
             />
-            <div className="wpo-project-single-area section-padding">
+            <div className="wpo-project-single-area section-padding wpo-project-single-area--lead">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10 col-12">
                             <div className="wpo-project-single-wrap">
+                                <Discuss currentProject={projectDetails.title} />
                                 <div className="wpo-project-single-item">
                                     <div className="row align-items-center">
                                         <div className="col-lg-7">
@@ -199,7 +200,6 @@ const ProjectSinglePage = (props) => {
                                     )}
 
                                     <RelatedProject/>
-                                    <Discuss currentProject={projectDetails.title} />
                                 </div>
                             </div>
                         </div>

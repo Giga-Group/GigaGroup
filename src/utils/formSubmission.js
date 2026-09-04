@@ -2,6 +2,7 @@
 // Handles all form submissions and sends data to Google Sheets
 
 import config from '../config/environment';
+import { trackFormSubmission } from './googleAds';
 
 /**
  * Submit form data to Google Sheets
@@ -128,6 +129,8 @@ export const processFormSubmission = async (formData, onSuccess, onError) => {
 
         // Submit data
         await submitFormData(formData);
+
+        trackFormSubmission(formData);
         
         // Show success message
         showSuccessMessage();
