@@ -89,7 +89,7 @@ const menus = [
         //     {
         //         id: 43,
         //         title: 'Projects Single',
-        //         link: '/project-single/1'
+        //         link: '/project/1'
         //     }
         // ]
     },

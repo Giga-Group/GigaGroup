@@ -5,6 +5,7 @@ import Scrollbar from '../../components/scrollbar';
 import Footer from '../../components/footer';
 import Logo from '../../images/logo.svg';
 import GigaBoutiqueMall from '../../api/giga-boutique-mall';
+import Seo from '../../components/Seo';
 
 const getYouTubeVideoId = (url) => {
     if (!url) return null;
@@ -44,6 +45,11 @@ const GigaBoutiqueMallPage = () => {
 
     return (
         <Fragment>
+            <Seo
+                title={project.title}
+                description="Giga Boutique Mall is Islamabad's luxury retail and leisure destination in Giga City, featuring premium shopping, dining, and the first water park of its kind in any Twin Cities mall."
+                image={project.coverImage}
+            />
             <TransparentNavbar Logo={Logo} />
             <PageTitle
                 pageTitle={project.title}

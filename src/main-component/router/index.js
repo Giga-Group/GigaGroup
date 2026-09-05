@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 
 import Homepage2 from '../HomePage2'
 import AboutPage from '../AboutPage'
@@ -30,6 +30,11 @@ import CompaniesPage from '../CompaniesPage'
 import GigaBoutiqueMallPage from '../GigaBoutiqueMallPage'
 
 
+const RedirectProjectSingle = () => {
+  const { slug } = useParams();
+  return <Navigate to={`/project/${slug}`} replace />;
+};
+
 const AllRoute = () => {
 
   return (
@@ -43,7 +48,8 @@ const AllRoute = () => {
           {/* <Route path='home4' element={<Homepage4/>} /> */}
           {/* <Route path='home5' element={<Homepage5/>} /> */}
           <Route path='about-us' element={<AboutPage/>} />
-          <Route path='project-single/:slug' element={<ProjectSinglePage/>} />
+          <Route path='project/:slug' element={<ProjectSinglePage/>} />
+          <Route path='project-single/:slug' element={<RedirectProjectSingle/>} />
           <Route path='service-single/:id' element={<ServiceSinglePage/>} />
           <Route path='team-single/:id' element={<TeamSinglePage/>} />
           <Route path='management' element={<ManagementPage/>} />

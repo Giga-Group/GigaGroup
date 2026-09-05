@@ -14,6 +14,7 @@ import CompanySection from '../../components/CompanySection';
 import certificateOne from '../../images/winnings/winner-black-horizontal-transparent.png';
 import certificateTwo from '../../images/winnings/winner-black-horizontal (1)-transparent.png';
 import certificateThree from '../../images/winnings/winner-black-horizontal (2)-transparent.png';
+import Seo from '../../components/Seo';
 
 
 const HomePage2 = () => {
@@ -25,6 +26,10 @@ const HomePage2 = () => {
 
     return (
         <Fragment>
+            <Seo
+                title="Giga Group"
+                description="Giga Group is a leading real estate developer in Pakistan and the UAE, delivering luxury residential and commercial projects since 1956."
+            />
             {/* <Navbar Logo={Logo}/> */} {/* Old navbar commented out */}
             <TransparentNavbar Logo={Logo} /> {/* New transparent navbar */}
             <Hero2>

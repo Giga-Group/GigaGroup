@@ -67,6 +67,7 @@ const Projects = [
         psub1img2: gcvS2,
         title: 'Goldcrest Views',
         subTitle: 'Luxury Residential Complex',
+        seoDescription: 'Goldcrest Views is a luxury residential project in Giga City, Islamabad, with seven 40-storey towers, studios to penthouses, smart homes, rooftop pools, and world-class amenities.',
         
         // Main description paragraphs (existing)
         description: [
@@ -212,6 +213,7 @@ const Projects = [
         psub1img2: gccS2,
         title: 'Goldcrest Commercial',
         subTitle: 'Premium Commercial Complex',
+        seoDescription: 'Goldcrest Commercial is a premium office and retail complex in Giga City, Islamabad, with modern infrastructure, flexible layouts, and a strategic location near Giga Mall.',
         
         description: [
             "Goldcrest Commercial represents the next phase of Al-Ghurair Giga's commercial development strategy, featuring state-of-the-art office spaces and retail outlets designed for modern businesses. Located within the thriving Giga City ecosystem, this premium commercial complex offers cutting-edge infrastructure, high-speed elevators, central air conditioning, and smart building technology to meet contemporary business requirements.",
@@ -350,6 +352,7 @@ const Projects = [
         psub1img2: gmeS2,
         title: 'Giga Mall Extension',
         subTitle: 'Mixed-Use Development',
+        seoDescription: 'Giga Mall Extension is a 30-storey mixed-use development in Giga City, Islamabad, with hotel apartments, retail, dining, and Pakistan\'s first vertical commercial market.',
         
         description: [
             "Giga Mall Extension is an ambitious 30-storey mixed-use development adjacent to the original Giga Mall in Giga City, Islamabad. This innovative project integrates luxury hotel apartments, premium retail outlets, fine dining restaurants, and Pakistan's first vertical commercial market. The extension features modern amenities and prime location connectivity, making it a landmark destination for shopping, dining, and accommodation.",
@@ -489,6 +492,7 @@ const Projects = [
         psub1img2: gbcS2,
         title: 'Giga Business Complex',
         subTitle: 'Corporate Hub',
+        seoDescription: 'Giga Business Complex is a corporate hub in Giga City, Islamabad, offering world-class office spaces, conference facilities, and premium infrastructure for modern enterprises.',
         
         description: [
             "Giga Business Complex stands as a premier corporate destination within the Giga City ecosystem, offering world-class office spaces designed for modern enterprises and multinational corporations. The complex features cutting-edge infrastructure, high-speed internet connectivity, advanced security systems, and flexible workspace solutions that cater to diverse business requirements from startups to established corporations seeking premium commercial real estate.",
@@ -626,6 +630,7 @@ const Projects = [
         psub1img2: cprS2,
         title: 'Central Palace Residence',
         subTitle: 'Ultra-Luxury Living',
+        seoDescription: 'Central Palace Residence is an ultra-luxury residential development in Islamabad with premium apartments, penthouses, smart-home technology, and world-class amenities.',
         
         description: [
             "Central Palace Residence epitomizes ultra-luxury living in Islamabad, featuring premium residential units designed with international standards and sophisticated architecture. This exclusive development offers spacious apartments, penthouses, and duplexes with high-end finishes, smart home technology, and panoramic city views. The residence incorporates sustainable design principles, energy-efficient systems, and premium materials to create an unparalleled living experience.",
@@ -776,6 +781,7 @@ const Projects = [
         psub1img2: wtcS2,
         title: 'Giga Mall WTC',
         subTitle: 'World Trade Center',
+        seoDescription: 'Giga Mall WTC is a World Trade Center development in Giga City, Islamabad, combining luxury retail, office towers, conference facilities, and hospitality in one complex.',
         
         description: [
             "Giga Mall WTC represents a prestigious World Trade Center development, establishing Islamabad as a major international business destination. This landmark project combines luxury retail spaces, premium office towers, international conference facilities, and five-star hospitality services under one integrated complex. The development features state-of-the-art infrastructure, advanced technology systems, and world-class amenities designed to attract global businesses and international trade organizations.",
@@ -1033,6 +1039,7 @@ const Projects = [
         psub1img2: gcHighlife1M1,
         title: 'Goldcrest HighLife I',
         subTitle: 'Modern Residential Living',
+        seoDescription: 'Goldcrest HighLife I is a modern residential tower in DHA 2, Islamabad, with premium layouts, rooftop amenities, and views of the surrounding greens.',
         
         description: [
             "Giga Group is proud to bring another farsighted residential project, Goldcrest Highlife. Centrally located in DHA 2 Islamabad, Goldcrest Highlife is a planned 3-tower residential development offering exceptional views of the verdant greens surrounding the locality. The project provides excellent features, fixtures, and lifestyle choices that were previously unheard of in Pakistan.",
@@ -1169,6 +1176,7 @@ const Projects = [
         psub1img2: gcHighlife23M1,
         title: 'Goldcrest HighLife II & III',
         subTitle: 'Modern Residential Living',
+        seoDescription: 'Goldcrest HighLife II & III complete the three-tower residential development in DHA 2, Islamabad, offering modern apartments, multi-level parking, and rooftop facilities.',
         
         description: [
             "Giga Group is proud to bring another farsighted residential project, Goldcrest Highlife. Centrally located in DHA 2 Islamabad, Goldcrest Highlife is a planned 3-tower residential development offering exceptional views of the verdant greens surrounding the locality. The project provides excellent features, fixtures, and lifestyle choices that were previously unheard of in Pakistan.",
@@ -1306,6 +1314,7 @@ const Projects = [
         logo: gcbLogo,
         title: 'Goldcrest Breeze Overseas',
         subTitle: 'Luxury Residential Complex',
+        seoDescription: 'Goldcrest Breeze Overseas is a luxury residential project in Giga City, Islamabad, designed for overseas investors with studios to penthouses, smart homes, and flexible payment plans.',
         
         // Main description paragraphs (existing)
         description: [
@@ -1451,7 +1460,13 @@ export const getProjectSlug = (project) =>
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
 
-export const getProjectPath = (project) => `/project-single/${getProjectSlug(project)}`;
+export const getProjectPath = (project) => `/project/${getProjectSlug(project)}`;
+
+export const getProjectSeoDescription = (project) =>
+    project?.seoDescription
+        || String(project?.description?.[0] || '')
+            .replace(/\s+/g, ' ')
+            .trim();
 
 export const getProjectBySlug = (slug) => {
     const value = decodeURIComponent(slug || '').toLowerCase();

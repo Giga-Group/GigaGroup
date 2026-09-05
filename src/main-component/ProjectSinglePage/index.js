@@ -4,7 +4,8 @@ import TransparentNavbar from '../../components/TransparentNavbar' // New transp
 import PageTitle from '../../components/pagetitle'
 import Scrollbar from '../../components/scrollbar'
 import { useParams, Navigate } from 'react-router-dom'
-import { getProjectBySlug } from '../../api/project'
+import { getProjectBySlug, getProjectSeoDescription } from '../../api/project'
+import Seo from '../../components/Seo'
 import RelatedProject from './related';
 import Discuss from './discuss';
 import Logo from '../../images/logo.svg'
@@ -23,6 +24,11 @@ const ProjectSinglePage = (props) => {
 
     return (
         <Fragment>
+            <Seo
+                title={projectDetails.title}
+                description={getProjectSeoDescription(projectDetails)}
+                image={projectDetails.coverImage}
+            />
             {/* <Navbar Logo={Logo}/> */} {/* Old navbar commented out */}
             <TransparentNavbar Logo={Logo}/> {/* New transparent navbar */}
             <PageTitle 

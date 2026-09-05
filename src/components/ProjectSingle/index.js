@@ -103,24 +103,24 @@ const ProjectSingle = (props) => {
                         <div className="tag-share clearfix">
                             <div className="tag">
                                 <ul>
-                                    <li><Link onClick={ClickHandler} to="/project-single">Consulting</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/project-single">Business</Link></li>
-                                    <li><Link onClick={ClickHandler} to="/project-single">Idea</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects">Consulting</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects">Business</Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects">Idea</Link></li>
                                 </ul>
                             </div>
                             <div className="share">
                                 <span>Share: </span>
                                 <ul>
-                                    <li><Link onClick={ClickHandler} to="/project-single"><i className="ti-facebook"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="/project-single"><i className="ti-twitter-alt"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="/project-single"><i className="ti-linkedin"></i></Link></li>
-                                    <li><Link onClick={ClickHandler} to="/project-single"><i className="ti-instagram"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects"><i className="ti-facebook"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects"><i className="ti-twitter-alt"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects"><i className="ti-linkedin"></i></Link></li>
+                                    <li><Link onClick={ClickHandler} to="/projects"><i className="ti-instagram"></i></Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="more-posts">
                             <div className="previous-post">
-                                <Link onClick={ClickHandler} to="/project-single">
+                                <Link onClick={ClickHandler} to="/projects">
                                     <div className="post-img">
                                         <img src={pn1} alt=""/>
                                     </div>
@@ -131,7 +131,7 @@ const ProjectSingle = (props) => {
                                 </Link>
                             </div>
                             <div className="next-post">
-                                <Link onClick={ClickHandler} to="/project-single">
+                                <Link onClick={ClickHandler} to="/projects">
                                     <div className="post-text">
                                         <span className="post-control-link">Next Post</span>
                                         <span className="post-name">Digital Product Development</span>

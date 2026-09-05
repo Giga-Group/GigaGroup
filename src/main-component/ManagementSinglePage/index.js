@@ -8,6 +8,7 @@ import Footer from '../../components/footer'
 import Logo from '../../images/logo.svg'
 import '../../components/ManagementSection/ManagementSection.css'
 import companiesBg from '../../images/banner/companies-banner.jpeg'
+import Seo from '../../components/Seo'
 
 const ManagementSinglePage = (props) => {
     const { id } = useParams()
@@ -16,6 +17,11 @@ const ManagementSinglePage = (props) => {
 
     return (
         <Fragment>
+            <Seo
+                title={managementDetails?.name || 'Management'}
+                description={managementDetails?.bio || "Meet Giga Group's management team and the leadership behind our developments in Pakistan and the UAE."}
+                image={managementDetails?.tImg || companiesBg}
+            />
             <TransparentNavbar Logo={Logo} />
             <PageTitle pageTitle={managementDetails.name} pagesub={managementDetails.title} backgroundImage={companiesBg} />
             <div className="team-pg-area section-padding">

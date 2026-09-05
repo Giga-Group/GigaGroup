@@ -6,10 +6,16 @@ import Footer from '../../components/footer';
 import Scrollbar from '../../components/scrollbar';
 import Logo from '../../images/logo.svg';
 import managementBg from '../../images/banner/projects.jpg';
+import Seo from '../../components/Seo';
 
 const ManagementPage = () => {
     return (
         <Fragment>
+            <Seo
+                title="Management"
+                description="Meet Giga Group's management team. Learn about the visionary leadership behind our luxury residential and commercial developments across Pakistan and the UAE."
+                image={managementBg}
+            />
             <TransparentNavbar Logo={Logo} />
             <PageTitle 
                 pageTitle={'Management'} 
